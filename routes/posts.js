@@ -4,6 +4,6 @@ var postsController = require('../controllers/postsController');
 
 router.get('/detail', postsController.detail);
 
-router.get('/create', postsController.create);
+router.get('/newpost', postsController.newPost);
 
 module.exports = router;

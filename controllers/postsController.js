@@ -4,7 +4,7 @@ var postsController = {
     detail: function (req, res) {
         res.render('postDetail', {})
     },
-    create: function (req, res) {
+    newPost: function (req, res) {
         res.render('newPost', {})
     },
 };
