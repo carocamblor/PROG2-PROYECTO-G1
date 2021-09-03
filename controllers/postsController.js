@@ -1,4 +1,5 @@
-// falta requierir la data
+const dataPost = require ('../data/posts');
+const dataUsers = require ('../data/users');
 
 var postsController = {
     detail: function (req, res) {

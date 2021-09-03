@@ -1,5 +1,5 @@
-// falta requierir la data
-
+const dataPost = require ('../data/posts');
+const dataUsers = require ('../data/users');
 var indexController = {
     feed: function (req, res) {
         res.render('index', {})
