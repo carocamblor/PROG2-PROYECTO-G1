@@ -237,142 +237,204 @@ var post = {
             username: 'carolinacamblor'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'TORTA MERENGADA DE FRUTAS DE VERANO',
+            ingredients: {
+                mass: ['140 g de azúcar', '6 yemas', '3 huevos', '100 g de harina 0000', '80 g de almidón de maíz', '80 g de manteca', 'Ralladura de la piel de 1 limón', 'Ralladura de la piel de 1 naranja'],
+                filling: ['500 g de frutas variadas', '160 g de azúcar', 'Jugo de 1/2 limón', '130 cc de agua', '14 g de gelatina sin sabor', '30 g de polvo para flan o almidón de maíz'],
+                meringue: ['240 g de azúcar', '3 claras', '70 cc de agua', '2 cucharadas de jugo de limón']
+            },
+            preparation: 'Para la masa, Fundir la manteca y entibiar. Calentar los huevos, las yemas y el azúcar sobre baño María y batir constantemente hasta llegar a 40 oC(se siente caliente al tocar con los dedos).Retirar del calor y batir con batidora eléctrica hasta alcanzar el punto letra. El punto letra se reconoce cuando tomando parte del batido con una cuchara, puedo trazar “letras” con el mismo.Perfumar con las ralladuras de limón y naranja.Tamizar dos veces la harina y el almidón de maíz. Incorporarlos al batido con espátula, mezclando con movimientos suaves y envolventes.Retirar un cuarto del batido y mezclarlo con la manteca fundida.Unirlo a la preparación.Volcar en un molde redondo de 26x4 cm, enmantecado y enharinado. Hornear a 170 °C por 30 a 35 minutos. Enfriar y ahuecar el centro. Para el relleno, Seleccionar las frutas y cortar las más grandes en cubitos. Hacer un almíbar con los 100 cc de agua y el azúcar.Agregar el jugo de limón y la gelatina.Incorporar las frutas más resistentes y llevar a primer hervor.Retirar del fuego y colar.Recuperar el jugo de cocción y espesar con el polvo para flan diluido en los 30 cc de agua.Cocinar hasta espesar.Incorporarle toda la fruta y volcar sobre la cavidad de la masa horneada y fría.Enfriar en heladera. Por último, para el merengue italiano Hacer un almíbar con tres cuartas partes del azúcar y el agua, cocinándolo hasta llegar a punto bolita media, o a una temperatura de 120 °C. Colocar las claras en el bol de la batidora con el batidor.Cuando el almíbar comience a hacer burbujas, comenzar a batir y agregar el resto del azúcar reservado. Cuando el almíbar llegue al punto, verter sobre las claras en forma de hilo batiendo siempre a velocidad media.Aumentar la velocidad y agregar el jugo de limón. El merengue estará listo cuando entibie a temperatura ambiente. Retirarlo del bol y pasarlo a una manga con boquilla lisa o rizada.Decorar de inmediato los bordes y la superficie de la torta.Opcionalmente grillar con soplete. Decorar con frutas frescas. ',
             image: '',
             username: 'carolinacamblor'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'TORTA INVERTIDA DE ANANÁ, ESTILO TATIN',
+            ingredients: ['400 g de masa de hojaldre', '100 g de azúcar impalpable', '1 plancha de masa de pionono', '200 g de crema pastelera', '300 g de azúcar', '1 vaina de vainilla', '20 g de pectina en polvo', '3 monedas de jengibre fresco', '2 estrellas de anís', '50 cc de rhum oscuro', '100 g de manteca','2 ananás grandes'],
+            preparation: 'Pelar el ananá quitando toda la piel y las asperezas. Cortar en rodajas de 5 mm de espesor y luego en tercios. Retirar el centro si es muy fibroso. Mezclar la pectina con 2 cucharadas de azúcar y reservar. Hacer un caramelo a seco con el resto del azúcar. Cuando alcance su color dorado intenso, retirar el recipiente del fuego y agregar la manteca en cubos, la vaina de vainilla y las estrellas de anís. Mezclar bien y volcar sobre la mesada enmantecada o bien sobre una placa de silicona. Enfriar. Procesar todo junto para obtener un polvo fino. Colocar el polvo de caramelo en el fondo de un molde siliconado en una capa uniforme. Distribuir los trozos de ananá, que deben quedar bien apretadas. Rociar con el rhum y con el azúcar mezclado con la pectina. Cocinar en horno suave a 150 oC hasta que esté tierno y de buen color dorado, entre 60 y 90 minutos según el grado de madurez del ananá. Dejar enfriar en la heladera en el mismo recipiente. Estirar la masa de hojaldre de 4 mm espesor, en forma de rectángulo de 30x40 cm. Picar con tenedor y apoyarle una rejilla encima. Hornear a 190 oC por unos 20 minutos para que se levante de forma pareja. Aplastar con la misma rejilla. Continuar la cocción hasta que notemos la masa con un buen color dorado. Retirar del horno y subir la temperatura a 220 °C. Dar vuelta el hojaldre sobre otra asadera y espolvorear con los 100 g de azúcar impalpable. Llevar a horno caliente hasta caramelizar. Retirar y dejar enfriar. En el momento de armar la torta, apoyar la masa de pionono sobre el ananá y untar luego con la crema pastelera. Dar vuelta el conjunto sobre la masa de hojaldre y recostar los bordes.',
             image: '',
             username: 'carolinacamblor'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'GÂTEAU FRAISIER DE FRUTILLAS Y PISTACHOS',
+            ingredients: {
+                biscuitpistache: ['120 g de pasta de almendras', '30 g de pasta de pistacho', ' 140 g de azúcar impalpable', '4 yemas', '1 huevo', '5 claras', '50 g de azúcar', '100 g de harina', '40 g de manteca fundida'],
+                mousselinecream: ['300 cc de leche', '5 yemas', '40 g de almidón de maíz', '80 g de azúcar', '1 cucharada de pasta de pistachos', '150 g de manteca fría', '150 g de manteca pomada', '2 cucharadas de kirsch' ],
+                assemble: ['400 g de frutillas frescas', 'Almíbar al kirsch, c/n']
+            },
+            preparation: 'Para el biscuit:  En el bol de la batidora, mezclar la pasta de almendras, la de pistacho y el azúcar impalpable, usando la hoja. Agregar las yemas y el huevo. Merengar las claras con el azúcar. Incorporar a la preparación anterior alternando con la harina tamizada. Finalmente incorporar la manteca fundida.Colocar en una placa de 30x40 cm con borde de 1 cm. Hornear a 180 °C por 25 minutos. Retirar del horno, cubrir con una lámina de papel y desmoldar. Para la crema: Hacer una crema pastelera con la leche, yemas, azúcar y almidón. Cocinar 2 minutos sobre el fuego.Retirar del fuego y perfumar con la pasta de pistachos. Incorporar la manteca fría y homogeneizar. Agregarle el kirsch. Cremar la manteca pomada y de a poco incorporar la crema pastelera. Armado: Forrar las paredes del molde elegido con una cinta de acetato o de papel vegetal. Cortar 3 discos o cuadrados de biscuit. Ubicar una base de masa. Disponer las frutillas fileteadas alrededor del borde. Colocar una capa de crema. Luego, otra de masa, embebida con almíbar al kirsch, y las frutillas restantes picadas. Terminar con la crema y la última capa de biscuit. Enfriar varias horas en heladera. Desmoldar y decorar con una capa de masa, pulverizada con una mezcla de 50% de chocolate cobertura blanco, 50% de manteca de cacao y colorante verde. Pulverizar la masa. Enfriar y apoyar sobre la torta. Decorar con frutillas y crema.',
             image: '',
             username: 'carolinacamblor'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'CAKE DE COCO',
+            ingredients: {
+                cake: ['120 g de manteca', '300 g de azúcar', '4 claras', '200 cc de leche de coco', '1 pizca de sal fina', '280 g de harina', '1 cucharadita de polvo de hornear'],
+                cream: ['5 claras', '360 g de azúcar', '450 g de manteca', '1 cucharadita de esencia de vainilla o esencia de coco o de limón'],
+                assemble: ['300 g de dulce de frambuesas', '200 g de coco rallado o en hebras']
+            },
+            preparation: 'Para la torta: Blanquear la manteca pomada con el azúcar. Incorporar la leche de coco de a poco al cremado. Merengar las claras a punto nieve. Tamizar la harina, la sal y el polvo leudante. Agregar a la mezcla con movimientos envolventes. Colocar la masa en tres o cuatro tarteras de 20 cm. Hornear a 180 °C de 12 a 15 minutos. Enfriar y desmoldar. Para la crema de manteca con claras: Mezclar las claras con el azúcar en un bol sobre baño María. Calentar hasta 45 o 50 °C. Retirar del calor y batir hasta que tome temperatura ambiente. Perfumar con la vainilla. Ablandar la manteca y agregar en trozos pequeños. Homogeneizar. Para el armado: Unir los discos de masa con una capa de dulce de frambuesas y otra de crema de manteca. Cubrir la torta con el resto de la crema de manteca y con el coco. Enfriar antes de presentar.',
             image: '',
             username: 'carolinacamblor'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'QUEEN OF SHEBA CAKE - REINA DE SABA CAKE',
+            ingredients: {
+                cake: ['230 g de chocolate semiamargo', '60 cc de rhum', '230 g de manteca', '100 g de azúcar impalpable', '20 g de cacao amargo', '6 yemas', '120 g de mazapán', '6 claras', '130 g de azúcar', '150 g de harina', '100 g de avellanas tostadas'],
+            },
+            preparation: 'Fundir el chocolate y mezclar con el rhum. Batir la manteca pomada con el azúcar impalpable y el cacao. Agregar el mazapán, luego las yemas y el chocolate a temperatura ambiente. Merengar las claras con el azúcar. Procesar las avellanas y tamizar junto con la harina. Unir los secos al batido junto con las claras merengadas. Distribuir la masa en 2 moldes de tubo central de 22 cm, enmantecados y espolvoreados con avellanas molidas. Hornear a 175 °C por 30 minutos. Retirar del horno y dejar enfriar 5 minutos antes de desmoldar. Opcionalmente glasear con un baño de chocolate. Decorar con confites o cereales bañados en chocolate',
             image: '',
             username: 'carolinacamblor'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'LINGOTE DE CHOCOLATE BLANCO Y GROSELLAS',
+            ingredients: {
+                dough: ['4 huevos', '160 g de azúcar impalpable', '160 g de aceite de maíz', '100 g de harina', '80 g de almidón de maíz', '15 g de polvo para hornear', '160 g de licor de huevos', '50 g de chocolate blanco rallado','Ralladura de naranjas o mandarinas'],
+                truffle: [' 240 g de chocolate blanco cobertura', '80 g de crema de leche', '30 cc de kirsch', '270 g de crema montada', ' 7 g de gelatina sin sabor', '35 cc de agua'],
+            },
+            preparation: 'Para la masa: Batir los huevos con el azúcar y el aceite. Perfumar con la ralladura. Tamizar la harina con el almidón y el polvo leudante. Incorporar al batido junto con el licor de huevos y el chocolate rallado. Colocar en una placa de 30x30 cm, empapelada y enmantecada. Hornear a 175 °C de 15 a 20 minutos. Retirar. Enfriar. Cubrir de inmediato con un film para que al retirarlo arrastre la película oscura que se forma durante la cocción de la masa. Cortar en dos bandas de 15 x 30 cm. Para la trufa de chocolate blanco: Calentar los 80 g de crema de leche hasta primer hervor. Picar el chocolate blanco y volcarlo sobre la crema removiendo constantemente hasta que se funda en su totalidad. Pasar a un bol limpio y agregar el kirsch y la gelatina hidratada y caliente. Montar a medio punto los 270 g de crema e incorporar. Homogeneizar. Para el armado: Montar dos capas de masa y dos de trufa: una gruesa y otra delgada. Enfriar, decorar con grosellas y jalea abrillantadora. Disponer algunas placas de chocolate blanco decoradas con improntas de manteca de cacao coloreada.',
             image: '',
             username: 'juligomez_'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'CAKE AUSTRALIA DE CHOCOLATE',
+            ingredients: {
+                dough: ['250 cc de agua', '330 g de azúcar', '125 g de manteca', '30 g de cacao amargo', '5 g de bicarbonato de sodio', '250 g de harina', '15 g de polvo para hornear', '2 huevos', '1 pizca de sal', 'Esencia de vainilla, c/n'],
+                glaze: ['100 g de manteca', '120 g de azúcar', '820 cc de agua', '240 g de azúcar impalpable', ' 40 g de cacao amargo'],
+            },
+            preparation: 'Para la masa: Calentar el agua, el azúcar, la manteca, el cacao y el bicarbonato. Remover con batidor para bajar la espuma formada. Cuando llegue a hervor, bajar el fuego y cocinar 3 minutos más. Retirar del fuego, pasar a un bol y enfriar a temperatura ambiente. Volcar la preparación en el bol de una batidora y agregar la harina, el polvo leudante, la sal, los huevos y la esencia de vainilla Batir durante 3 minutos. La masa resultante debe ser espesa pero blanda. Volcar la masa en un molde alargado de 26x15x5 cm. Hornear a 175 °C durante 35 a 40 minutos. Retirar. Desmoldar. Enfriar y cortar en dos capas parejas. Para el glaseado de chocolate: Calentar la manteca con el azúcar y el agua. Cocinar hasta que el azúcar se disuelva. Tamizar el azúcar impalpable con el cacao. Volcar el líquido caliente sobre el tamizado. Unir y enfriar sobre baño de hielo o en heladera por varias horas. Batir en el momento de utilizar. Este glaseado cuando endurece en frío puede batirse y así usarse como relleno, sea colocándolo con espátula o con manga y boquilla. Y si está tibio puede servir como glaseado de una torta.',
             image: '',
             username: 'juligomez_'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'TORTA OSCURA DE CHOCOLATE Y CARAMELO',
+            ingredients: {
+                dough: ['360 g de azúcar', '180 g de harina', '90 g de cacao amargo', '1 cucharadita de bicarbonato de sodio', '5 g de bicarbonato de sodio', ' 1 y 1/2 cucharadita de polvo para hornear', '1/2 cucharadita de sal fina', '1/2 cucharadita de canela molida', '2 huevos', '160 g de crema de leche', '10 cc de jugo de limón', '90 g de aceite de canola o maíz o girasol', '1 cucharada de esencia de vainilla', '180 cc de agua caliente'],
+                ganache: ['200 g de azúcar', '350 g de crema de leche doble', '180 g de chocolate semiamargo', '60 g de manteca', 'Opcional: 1 cucharada café soluble'],
+            },
+            preparation: 'Para la masa: Mezclar la crema con el jugo de limón hasta a que se corte. Tamizar los ingredientes secos. Batir ligeramente los huevos con la crema ácida, el aceite y la vainilla. Unir a los secos y formar una pasta. Agregar el agua caliente y batir por 1 minuto. Colocar en 3 moldes de 20 cm de diámetro, enmantecados y empapelados. Cocinar en horno a 180 °C de 20 a 25 minutos. Dejar enfriar muy bien antes de desmoldar, ya que la masa es muy tierna. Es preferible desmoldar cuando esté completamente fría o incluso ponerla en la heladera antes de desmoldarla. Para el caramel ganache: Hacer un caramelo con el azúcar. Desglasar con una parte de la crema caliente, y si se quiere, colocar el café en la crema también. Incorporar el resto de la crema, el chocolate y la manteca. Unir los discos con la ganache de caramelo.',
             image: '',
             username: 'juligomez_'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'TORTA MERENGADA DE CHOCOLATE Y AVELLANAS',
+            ingredients: {
+                base: ['140 g de manteca', '160 g de azúcar negra', '6 yemas', '6 claras', '300 g de chocolate semiamargo', '1 cucharada de esencia de vainilla', '2 cucharadas de rhum', '1 pizca de sal fina', '1 cucharada de harina'],
+                cover: ['100 g de avellanas tostadas', '1 cucharada de almidón de maíz', '50 g de chips de chocolate', ' 6 claras', '180 g de azúcar', '1 pizca de crémor tártaro', 'Opcional: bananas, cerezas o frambuesas frescas, c/n'],
+            },
+            preparation: 'Para la base: Fundir el chocolate picado. Blanquear la manteca y el azúcar. Agregar las yemas de a una. Luego incorporar el chocolate, la esencia y el rhum. Merengar las claras con la sal fina. Incorporar al cremado junto con la harina. Volcar la preparación en un aro de 26 cm, enmantecado y espolvoreado con harina o polvo de avellanas. Hornear a 180 °C durante 10 minutos. Para la cubierta: Batir las claras con el crémor tártaro y agregar el azúcar en forma de lluvia hasta formar un merengue. Picar las avellanas tostadas groseramente. Mezclar con el almidón y los chips. Unir al merengue con cuidado. Armado: Retirar la torta del horno. Opcionalmente colocar sobre la masa las rodajas de bananas o las cerezas. Ponerle la cubierta merengada y hornear unos 20 a 25 minutos más. Servir tibia.',
             image: '',
             username: 'juligomez_'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'TORTA CONCORDE',
+            ingredients: {
+                meringue: ['4 claras', '160 g de azúcar', '1 pizca de crémor tártaro', '120 g de azúcar impalpable', '40 g de cacao amargo'],
+                mousse: ['160 g de chocolate semiamargo', '80 g de manteca', '2 claras', '100 g de azúcar', '40 g de glucosa', '50 cc de agua', '150 g de crema de leche'],
+            },
+            preparation: 'Para el merengue de cacao: Merengar las claras con el crémor tártaro y el azúcar hasta obtener un merengue firme. Retirar de la batidora y pasar a un bol. Con espátula, incorporar suavemente el azúcar impalpable tamizado con el cacao. Integrar suavemente, tratando de no bajar el volumen del batido. Colocar en manga con boquilla lisa de 6 mm. Trazar 3 discos u óvalos de 20x16 cm y bastones de 6 cm de largo y algunas “gotas” sobre una placa empapelada y enmantecada. Hornear a 100 oC durante 1 a 2 horas o hasta que estén bien secos. Los merengues no se hornean sino que se secan dentro de un horno muy bajo. Una vez secos debemos guardarlos en recipientes herméticos para evitar que se humedezcan. Para la mousse de chocolate: Picar y fundir el chocolate y la manteca sobre baño María. Retirar del calor y enfriar a temperatura ambiente. Colocar el agua con el azúcar y la glucosa en una cacerola y cocinar para hacer un almíbar a 120 °C. Poner a batir las claras con una cucharada de azúcar y cuando espume incorporar el almíbar hirviendo. Continuar batiendo hasta que entibie a temperatura ambiente. Batir la crema a medio punto. Unir el merengue a la crema de chocolate y por último la crema. Armado: Intercalar capas de merengue y de mousse. Cubrir con el resto de la mousse y adherir las gotas de merengue en los bordes. Disponer los bastoncitos por encima. Decorar con azúcar impalpable y cacao amargo. Las gotas de merengue aquí están bañadas en la punta con chocolate cobertura templado y decoradas con grageas de chocolate.',
             image: '',
             username: 'juligomez_'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'TORTA HÚMEDA DE CHOCOLATE Y DULCE DE LECHE',
+            ingredients: {
+                dough: ['120 g de chocolate amargo', '180 g de manteca', '3 huevos', '1 pizca de sal fina', '120 g de azúcar', '100 g de harina', '150 g de nueces molidas finamente'],
+                cream: ['350 g de dulce de leche', '2 cucharadas de coñac', '125 g de queso crema', '125 g de crema', '80 g de mantequilla de maní', '7 g de gelatina sin sabor', '35 cc de agua', '300 g de crema'],
+            },
+            preparation: 'Para la masa: Picar y fundir el chocolate. Entibiar a temperatura ambiente. Batir la manteca pomada y agregar el azúcar. Blanquear. Unir el chocolate. Batir los huevos con la sal fina e incorporar en forma de hilo mientras se sigue batiendo. Pasar a un bol y unir la harina y las nueces con espátula. Dividir la masa en dos discos de 22 cm de diámetro, enmantecados y empapelados. Hornear a 180 °C de 15 a 18 minutos. Enfriar y desmoldar. Para la crema de dulce de leche: Mezclar los 125 g de crema con el dulce de leche, el queso crema, la mantequilla de maní y el coñac. Hidratar y fundir la gelatina. Unir al batido Batir los 300 g de crema a 3/4 punto, y agregar a la mezcla de dulce de leche. Para el armado: Armar la torta colocando una capa de masa y una de crema de dulce de leche. Luego repetir la operación. Opcionalmente podemos embeber los discos de masa en un almíbar de ron o coñac. Enfriar bien. Glasear con baño de chocolate o de dulce de leche. Decorar rodeando la torta con una cinta hecha de chocolate con leche templado. La mantequilla de maní puede reemplazarse por pasta de avellanas.',
             image: '',
             username: 'juligomez_'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'ALIANZA DE CHOCOLATE Y NARANJAS',
+            ingredients: {
+                biscuitcapucine: ['5 claras', '100 g de azúcar', 'Ralladura de la piel de 2 naranjas', '100 g de almendras en polvo', '50 g de harina', '120 g de azúcar impalpable', '1/2 cucharadita de cremor tártaro'],
+                moussevalencia: ['4 yemas', '1 huevo', '90 g de azúcar', '30 cc de agua', ' 40 cc licor Cointreau', ' 300 g de chocolate cobertura semiamargo', '300 g de crema','10 g de gelatina sin sabor + 50 cc de agua', ' Opcional: 50 g de cáscaras de naranjas confitadas'],
+            },
+            preparation: 'Para el biscuit capucine de naranjas: Merengar las claras con el cremor tártaro. Poco a poco incorporar el azúcar en forma de lluvia. Perfumar con la ralladura y batir unos segundos más. Tamizar la harina con las almendras y el azúcar impalpable. Unir los secos al batido con movimientos envolventes. Colocar la masa en una placa de 30x40 cm, con papel enmantecado. Alisar con espátula dándole una altura uniforme. Espolvorear con abundante azúcar impalpable. Hornear a 170 °C de 20 a 25 minutos. Retirar del horno y pasar la masa a una rejilla para enfriar. Para el mousse Valencia de chocolate y naranjas: Fundir el chocolate y entibiar a temperatura ambiente. Colocar las yemas, el huevo, el azúcar y el agua en un bol. Mezclar sobre baño María hasta formar un sabayón. Retirar del calor y batir con batidora hasta lograr una espuma tibia. Batir la crema con el licor a medio punto. Retirar un tercio y mezclar con el chocolate. Homogeneizar, agregar al resto de la crema, y por último integrar el aparato a bomba. Armado: En un marco de 30x20 cm colocar una banda de masa y rellenar con una parte de la mousse. Luego colocar otra parte de masa y el resto de la mousse. Enfriar bien. Retirar el marco y apoyar sobre la torta algunas trufas de chocolate. Luego glasear con un baño de chocolate.',
             image: '',
             username: 'juligomez_'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'CHEESECAKE TODO CHOCOLATE',
+            ingredients: {
+                base: ['300 g de masitas secas de chocolate', '100 g de manteca', '2 cucharadas de azúcar', '40 cc de coñac'],
+                filling: ['250 g de chocolate semiamargo', '200 g de crema de leche', '1 cucharada de jugo de limón', '700 g de queso tipo Philadelphia', '180 g de azúcar', '3 cucharadas de cacao amargo', '1 pizca de sal fina', '4 huevos','12 ciruelas pasas descarozadas'],
+            },
+            preparation: 'Para la base: Moler las galletitas y agregar la manteca fundida, el coñac y el azúcar. Volcar la masa en un molde de 24 cm de diámetro. Presionar bien con el revés de una cuchara para compactar la base. Hornear 5 minutos a 170 °C. Enfriar. Para el relleno: Picar y fundir el chocolate. Mezclar la crema con el jugo de limón hasta que se corte. Ablandar el queso y batir con el azúcar y la sal fina hasta hacer una crema. Incorporar el chocolate fundido, el cacao amargo y luego la crema acidificada. Agregar los huevos de a uno. Distribuir las ciruelas sobre la base cocida y volcar la preparación de queso. Hornear a baño María a 160 °C por 50 a 60 minutos. Dejar enfriar en el horno apagado por una hora más. Enfriar, desmoldar y decorar con grageas de chocolate amargo.',
             image: '',
             username: 'juligomez_'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'CHEESECAKE BIANCO-NERO',
+            ingredients: {
+                dough: ['100 g de chocolate semiamargo', '100 g de manteca', '1 pizca de sal', '4 huevos', '250 g de azúcar', '100 g de harina'],
+                filling: ['950 g de queso tipo Philadelphia', '200 g de azúcar', '6 huevos', '2 cucharadas de esencia de vainilla', '150 g de chocolate blanco', '180 g de chocolate semiamargo'],
+            },
+            preparation: 'Para la masa: Fundir el chocolate con la manteca. Batir los huevos con el azúcar y la pizca de sal a punto letra. Mezclar el chocolate al batido y la harina tamizada. Repartir la masa en 2 moldes de 22 cm. Hornear a 180 °C de 12 a 15 minutos. Retirar y enfriar. Para el relleno: Picar y fundir los chocolates por separado. Ablandar el queso con una espátula, luego agregar el azúcar y la esencia de vainilla. Unir y agregar los huevos de a uno. Dividir la preparación en dos mitades. A la primera agregarle el chocolate blanco; a la segunda, el oscuro. Armar colocando una base de masa en un molde de 22 cm diámetro. Volcar la crema oscura y alisar. Cubrir con la masa restante. Volcar con sumo cuidado la preparación de chocolate blanco. Hornear a baño María en horno a 160 °C por espacio de una hora aproximadamente. Esperar a que enfríe bien antes de desmoldar. Decorar los bordes con una ganache de chocolate.',
             image: '',
             username: 'juligomez_'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'CHEESECAKE CON FRAMBUESAS Y ARÁNDANOS',
+            ingredients: {
+                base: ['300 g de galletitas dulces', '120 g de manteca fundida', '30 g de azúcar', '30 cc de licor de frambuesas o kirsch'],
+                filling: ['700 g de queso tipo Philadelphia', '300 g de azúcar', '4 huevos', ' 1 cucharada de almidón de maíz', '200 g de crema de leche', '2 cucharadas de jugo de limón', '150 g de chocolate blanco', '100 g de pulpa concentrada de frambuesas', '150 g de arándanos frescos o congelados'],
+            },
+            preparation: 'Para la base: Moler las galletitas y mezclar con la manteca fundida y el azúcar. Hidratar con el licor. Formar un granulado y colocar en la base de una tortera desmontable de 22 a 24 cm de diámetro, y 6 cm de altura, enmantecada. Hornear por 5 minutos a 170 °C. Enfriar. Para el relleno: Ablandar el queso con una espátula. Mezclar la crema y el jugo de limón. Tamizar el azúcar con el almidón y agregar los huevos. Incorporar al queso y la crema cortada. Separar 2/3 de la preparación y agregarle el chocolate blanco fundido. Al tercio restante, agregarle la pulpa concentrada de frambuesas, reforzando el color si es necesario con unas gotas de colorante rojo. Colocar la preparación de la siguiente forma: sobre la masa base poner los arándanos, luego la parte con chocolate blanco, y alisar. Colocar la parte de frambuesas en una manga y trazar puntos sobre lo blanco. Con un palillo de brochette, hacer un dibujo uniendo ambas preparaciones. Los rellenos irán alisándose y formando el dibujo característico. Con sumo cuidado apoyar sobre una fuente de horno. Hornear a baño María en horno suave (160 °C) por una hora. Dejar reposar en el horno apagado por lo menos una hora más. Enfriar bien antes de cortar.',
             image: '',
             username: 'juligomez_'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'DAIQUIRI CHEESECAKE',
+            ingredients: {
+                base: ['200 g de galletitas dulces', '30 g de azúcar impalpable', ' 2 cucharadas de ron blanco', ' 90 g de manteca'],
+                filling: ['120 g de azúcar impalpable', '70 cc de ron blanco', '100 cc de jugo de limón', '1 cucharadita de ralladura de limón', '1 cucharadita de almidón de maíz', '14 g de gelatina sin sabor', ' 70 cc de agua', '4 yemas', '500 g de queso tipo Philadelphia', '3 claras', '100 g de azúcar', '30 cc de agua',' 240 g de crema' ],
+                compote: [' 200 g de ananá en almíbar', '50 g de miel', 'Jengibre fresco, c/n'],
+            },
+            preparation: 'Para la base: Procesar todos los ingredientes juntos hasta obtener una pasta. Colocarla en el fondo de un molde desmontable de 22x5 cm. Presionar para compactarla. Hornear 10 minutos a 180 °C y después enfriar. Para el relleno con compota de ananá: Colocar en un bol el azúcar impalpable, el ron, el jugo, la ralladura, el almidón, y las yemas. Cocinar sobre baño María hasta espesar. Volcar sobre la gelatina hidratada con los 70 cc de agua. Agregar el queso ablandado y homogeneizar. Confeccionar un merengue italiano con las claras y un almíbar hecho con los 150 g de azúcar y los 30 cc de agua. Incorporar el merengue a la crema de queso con movimientos envolventes. Por último, agregar la crema batida a medio punto. Rellenar el aro con la crema y enfriar en heladera hasta que solidifique. Para la compota, cortar las frutas en cubitos parejos. Sartenearlos con la miel y el jengibre. Cocinar durante 5 minutos o hasta que se pongan transparentes.',
             image: '',
             username: 'nicorodri'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'CHEESECAKE DE LIMÓN',
+            ingredients: {
+                base: ['200 g de galletitas dulces', '30 g de azúcar impalpable', ' 2 cucharadas de ron blanco', ' 90 g de manteca'],
+                fillingcheese: ['700 g de queso tipo Philadelphia', '150 g de azúcar', '20 g de almidón de maíz', '3 huevos', '11 cucharada de esencia de vainilla', 'Jugo y ralladura de 1/2 limón'],
+                fillinglemon: [' 4 yemas', '2 huevos', '150 g de azúcar', '120 cc de jugo de limón', 'Ralladura de 1 limón', '120 g de manteca'],
+            },
+            preparation: 'Para la base: Procesar todos los ingredientes juntos hasta obtener una pasta. Colocarla en el fondo de un molde circular, desmontable, de 22x5 cm. Presionar para compactarla. Hornear 10 minutos a 180 °C y después enfriar. Para el relleno de queso: Mezclar el queso con el azúcar hasta que no queden grumos. Agregar los huevos. Desleír el almidón de maíz con el jugo de limón y agregar junto con la ralladura y la vainilla. Volcar en el molde sobre la masa. Para el relleno de limón: Mezclar las yemas con los huevos, el azúcar y el jugo. Colocar sobre un baño María y cocinar removiendo hasta que espese y nape el revés de una cuchara. Cambiar rápido de recipiente y agregar la ralladura. Entibiar y agregar la manteca fría por cucharadas. Formar una crema homogénea. Armado: Volcar el relleno de queso sobre la masa, y luego poner el de limón de a cucharadas. Con un palillo de brochette, trazar un dibujo marmolado. Hornear a 170 °C de 45 a 50 minutos. Apagar el horno y dejar en el interior hasta que enfríe. Luego enfriar en heladera y desmoldar con sumo cuidado.',
             image: '',
             username: 'nicorodri'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'TORTA RUSA ZUPFKUCHEN',
+            ingredients: {
+                dough: ['150 g de azúcar', '150 g de manteca', '1 cucharada de esencia de vainilla', '1 huevos', '30 g de cacao amargo', '300 g de harina', '1 cucharadita de polvo para hornear'],
+                filling: ['200 g de manteca', '500 g de ricotta entera cremosa', '200 g de azúcar', '1 cucharada de esencia de vainilla', '3 huevos', '40 g de polvo para preparar postre o flan de vainilla'],
+            },
+            preparation: 'Para la masa: Batir a blanco la manteca pomada con el azúcar. Luego incorporar el cacao y la esencia de vainilla. Cuando logremos una crema homogénea, agregar el huevo y luego la harina tamizada con el polvo de hornear. Unir la masa sin amasar. Cubrir con film y enfriar en heladera por lo menos 1 hora y no más de 24 horas. Para el relleno: Fundir la manteca y dejar entibiar a temperatura ambiente. Mezclar la ricotta con el azúcar, la esencia, los huevos y el polvo de postre de vainilla. Unir bien y por último incorporar la manteca. Para el armado, colocar el relleno dentro de la masa. Alisar la superficie. Disponer los recortes de masa sobrante sobre el relleno sin hundirlos. Hornear a 175 °C por espacio de 50 minutos.',
             image: '',
             username: 'nicorodri'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'BROWNIE CHEESECAKE',
+            ingredients: {
+                brownie: ['370 g de azúcar', '4 huevos', '150 g de manteca', '240 g de chocolate semiamargo', '160 g de harina', '1 pizca de sal', '2 cucharadas de esencia de vainilla'],
+                cover: ['250 g de queso tipo Philadelphia', '50 g de azúcar', 'Ralladura de 1/2 limón', '2 claras'],
+            },
+            preparation: 'Para el brownie: Fundir el chocolate con la manteca y entibiar. Batir los huevos con la sal y la esencia de vainilla solo hasta mezclarlo. Colocar el azúcar en un bol y dejar caer la mezcla de huevos en el centro e integrar. Finalmente agregar el chocolate y la harina. Colocar la preparación en una placa de 25x35 cm. Para la cubierta: Ablandar el queso con una espátula, incorporar el azúcar, la ralladura y las claras. Mezclar solo hasta incorporar, evitando que la preparación se vuelva líquida. Distribuir la preparación de queso por cucharadas sobre el brownie o bien con una manga. Luego trazar un marmolado con un palillo de brochette. Hornear a 175 oC de 25 a 30 minutos, hasta que las vetas del queso empiecen a quebrarse. Enfriar muy bien antes de desmoldar y cortar.',
             image: '',
             username: 'nicorodri'
         },
         {
-            name: '',
-            ingredients: '',
-            preparation: '',
+            name: 'ARROLLADO DE CHOCOLATE Y PRALINÉ',
+            ingredients: {
+                rolled: ['4 huevos', ' 1 cucharada de miel', '60 g de harina', '20 g de cacao amargo', '20 g de manteca'],
+                ganache: ['250 cc de leche', '50 g de crema de leche', '280 g de chocolate cobertura semiamargo', '90 g de manteca'],
+                almonds: ['140 g de azúcar', '100 cc de agua', ' 300 g de almendras fileteadas o picadas fino'],
+            },
+            preparation: 'Para el arrollado de chocolate: Batir los huevos, el azúcar y la miel a punto letra. Fundir la manteca y entibiar. Tamizar la harina con el cacao amargo. Incorporar los secos al batido con movimientos envolventes, luego unir la manteca. Colocar la preparación en una placa de 30x40 cm, empapelada y enmantecada. Hornear a 190-200 oC de 10 a 12 minutos. Retirar del horno y desmoldar sobre un papel espolvoreado con azúcar. También puede hacerse sobre un repasador limpio. Tapar con la placa para mantener la humedad. Dejar en reposo 5 minutos y luego arrollar sobre sí mismo. Para la ganache: Calentar la leche y la crema de leche a primer hervor. Retirar del fuego y volcar sobre el chocolate picado. Dejar en reposo 2 minutos. Integrar con espátula hasta que esté liso. Ablandar la manteca. Integrar cuando la mezcla de chocolate alcance los 35 °C. Para las almendras caramelizadas: Hacer un almíbar con el agua y el azúcar. Dejarlo hervir a fuego vivo por un minuto. Retirar y mezclar con las almendras. Volcar sobre una placa de horno con tapiz antiadherente. Hornear a 180 oC de 12 a 15 minutos o hasta que adquieran un buen tono dorado. Retirar. Enfriar y picar finamente. Armado: Colocar la masa sobre un papel que facilite el enrollado. Opcionalmente, embeber con 200 cc de almíbar perfumado con algún licor. Extender la ganache en una capa uniforme y poner la mitad de las almendras caramelizadas. Enrollar formando un cilindro. Enfriar. Bañar con un glaseado de chocolate y el resto de las almendras caramelizadas.',
             image: '',
             username: 'nicorodri'
         },
