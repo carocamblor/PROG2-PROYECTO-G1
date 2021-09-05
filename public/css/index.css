@@ -66,9 +66,13 @@ article.post div.post-comentarios ul li a{
 article.post div.post-comentarios ul li p{
     margin: 0 5px;
 }
+.user{
+    color:black;
+}
 
 .user :hover{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bolder;
 }
+
 
