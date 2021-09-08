@@ -8,20 +8,21 @@
     <%- include('partials/headerLoggedOn')%>
 
       <main>
-        <div class="card" style="width: 18rem;">
+        <% for (post of posts) { %> 
+          <div class="card" style="width: 18rem;">
             <a class="streched-link" href="posts/postDetail">
-            <img src="https://www.cookforyourlife.org/wp-content/uploads/2020/06/Dark-Chocolate-Brownies-shutterstock_112430981.jpg" class="card-img-top" alt="...">
+            <img src="/<%= post.image %>" class="card-img-top" alt="...">
             </a>
             <div class="card-body">
               <a class="streched-link" href="posts/postdetail">
-                <h4 class="post-title">Brownies</h4>
+                <h4 class="post-title"><%= post.name %></h4>
               </a>
               <a class="streched-link" href="users/userDetail">
                 <img class="card-post-profile-picture" src="/images/logo.png" alt="">
-                <p class="post-username"> carocamblor </p>
+                <p class="post-username"> <%= post.username %> </p>
               </a>
               <a class="streched-link" href="posts/postdetail">
-                <p class="post-description card-text">Los brownies más ricos que vas a probar. Rápidos y fáciles!</p>
+                <p class="post-description card-text"><%= post.name %></p>
               </a>
               <p class="post-like">Like</p>
               <p class="post-comment">Comment</p>
@@ -32,24 +33,11 @@
               <p class="post-comment-content">Muy buenooo!!</p>
             </div>
         </div>
+        <% } %> 
         
       </main>
 
-      <footer style="margin: 0!important" class="fixed-bottom d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-          </a>
-          <span class="text-muted">&copy; 2021 Company, Inc</span>
-        </div>
-    
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
-        </ul>
-      </footer>
-
+      <%- include('partials/footer')%>
 </body>
     
 </html>
