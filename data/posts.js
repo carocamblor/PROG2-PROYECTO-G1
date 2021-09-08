@@ -497,11 +497,7 @@ var post = {
         },
         {
             name: 'ROLLO DE FRUTILLAS Y CREMA DIPLOMATA',
-            ingredients: {
-                roll: ['5 huevos', '100 g de azúcar', '1 cucharada de esencia de vainilla', '100 g de harina', '30 g de manteca'],
-                cream: ['250 cc de leche', '1 vaina de vainilla', '3 yemas', '65 g de azúcar', '30 g de almidón de maíz', '30 g de manteca', ' 300 g de crema de leche'],
-                others: ['500 g de frutillas', '100 g de jalea de frutillas o mermelada'],
-            },
+            ingredients: '5 huevos, 100 g de azúcar, 1 cucharada de esencia de vainilla, 100 g de harina, 30 g de manteca, 250 cc de leche, 1 vaina de vainilla, 3 yemas, 65 g de azúcar, 30 g de almidón de maíz, 30 g de manteca, 300 g de crema de leche, 500 g de frutillas, 100 g de jalea de frutillas o mermelada',
             preparation: 'Para el arrollado de vainilla: Batir los huevos, el azúcar y la esencia de vainilla a punto letra. Fundir la manteca y entibiar. Tamizar la harina. Incorporar la harina al batido con movimientos envolventes, luego unir la manteca. Colocar la preparación en una placa de 30x40 cm, empapelada y enmantecada. Hornear a 190-200 °C de 10 a 12 minutos. Debemos notar que la masa está dorada en la base y se despega fácil. Retirar del horno y desmoldar sobre un papel espolvoreado con azúcar. También puede hacerse sobre un repasador limpio. Tapar con la placa para mantener la humedad. Dejar en reposo 5 minutos y luego arrollar sobre sí mismo. Para la crema diplomata de vainilla: Colocar la leche y la vaina de vainilla (abierta por la mitad longitudinalmente) en una cacerolita de acero inoxidable profunda. Calentar y agregar la mitad del azúcar. Tamizar juntos el almidón de maíz y el azúcar restante para evitar grumos. Agregar las yemas y unir sin batir. Verter la mitad de la leche sobre el batido de yemas, mezclando bien. Llevar al fuego el resto de la leche. Cuando rompa el hervor, volcar la preparación de yemas, mezclando con batidor para evitar la formación de grumos. Cocinar durante 1 minuto, removiendo bien para que no se pegue. Retirar del calor y pasar a un bol. Enfriar a temperatura ambiente sobre baño de hielo. Batir la crema a tres cuartos punto e integrar a la pastelera con movimientos envolventes. Si no usamos vaina de vainilla, podemos perfumar con esencia de vainilla al retirar del calor. Armado: Extender la mermelada o la jalea sobre la masa. Poner una capa uniforme de crema diplomata y ubicar las frutillas limpias y sin cabitos cortadas pequeñas. Enrollar y apretar para dar buena forma. Enfriar. Decorar con crema chantilly o diplomata y frutillas.',
             image: 'images/rollofrutill.png',
             username: 'nicorodri',
@@ -510,11 +506,7 @@ var post = {
         },
         {
             name: 'TORTA DE CHOCOLATE Y NARANJAS',
-            ingredients: {
-                palet: ['150 g de crema de leche', '50 cc de jugo de naranjas', 'Ralladura de 1 naranja', '3 yemas', '50 g de azúcar', '5 g de gelatina'],
-                mousse: ['4 yemas', '100 g de azúcar', '50 cc de agua', '160 g de crema de leche', '10 g de té Earl Grey', '250 g de chocolate semiamargo', ' 180 g de crema de leche batida'],
-                others: ['1 banda de biscuit relieve', '2 discos de biscuit Joconde Chocolat'],
-            },
+            ingredients: '150 g de crema de leche, 50 cc de jugo de naranjas, Ralladura de 1 naranja, 3 yemas, 50 g de azúcar, 5 g de gelatina, 4 yemas, 100 g de azúcar, 50 cc de agua, 160 g de crema de leche, 10 g de té Earl Grey, 250 g de chocolate semiamargo, 180 g de crema de leche batida, 1 banda de biscuit relieve, 2 discos de biscuit Joconde Chocolat',
             preparation: 'Para el palet de naranjas: Hervir el jugo con la mitad del azúcar, mezclar con la crema y la ralladura. Calentar. Blanquear las yemas con el resto del azúcar. Unir la crema y cocinar como una inglesa. Volcar sobre la gelatina disuelta con dos cucharadas de jugo de naranjas o agua. Pasar por un chino y moldear en un círculo de 16 cm. Freezar. Para el Mousse Chocolate Al Té Earl Grey: Colocar las yemas con el azúcar y el agua sobre baño María y batir hasta que lleguen a 80 °C. Continuar el batido en batidora hasta que alcance temperatura ambiente. Hacer una infusión con el té y los 160 g de crema. Llevar a primer hervor y volcar sobre el chocolate picado para hacer una ganache. Enfriar. Unir la ganache al batido de yemas, y por último agregar los 180 g de crema batida. Armado: En un aro con acetato colocar la banda de relieve y en el fondo un disco de Joconde. Colocar una capa de mousse, otro disco de Joconde, el palet de naranjas y cubrir con la mousse. Freezar. Pasar una capa de jalea abrillantadora en frío por la superficie. Luego retirar el aro y desmoldar. Decorar y mantener en la heladera.',
             image: 'images/chocoynaranj.png',
             username: 'nicorodri',
@@ -523,11 +515,7 @@ var post = {
         },
         {
             name: 'TORTA DE QUESO Y MANGOS',
-            ingredients: {
-                mousse: ['3 yemas', '100 g de azúcar', '50 cc de agua', '10 g de gelatina sin sabor', '30 cc de jugo de limón', '20 cc de agua', '250 g de queso crema', '250 g de crema de leche'],
-                palet: [' 300 de puré de mango', '80 g de azúcar', '7 g de gelatina sin sabor', '35 cc de agua'],
-                others: ['1 banda de biscuit imprimé', '2 discos de biscuit capucine de limón'],
-            },
+            ingredients: '3 yemas, 100 g de azúcar, 50 cc de agua, 10 g de gelatina sin sabor, 30 cc de jugo de limón, 20 cc de agua, 250 g de queso crema, 250 g de crema de leche, 300 de puré de mango, 80 g de azúcar, 7 g de gelatina sin sabor, 35 cc de agua, 1 banda de biscuit imprimé, 2 discos de biscuit capucine de limón',
             preparation: 'Para el mousse de queso crema: Colocar en un bol las yemas, los 50 cc de agua y el azúcar. Hacer un sabayón sobre baño María. Continuar batiendo fuera del calor. Hidratar la gelatina con el agua (20 cc) y el limón. Fundir. Agregar al batido. Luego incorporar el queso y la crema batida a medio punto. Para el Palet de mangos: Mezclar un tercio del puré con el azúcar y calentar hasta que se disuelva. Hidratar la gelatina con el agua. Fundir al calor e incorporar al puré de frutas. Unir el resto de puré. Moldear la preparación en un aro de 16 cm y congelar. Podemos combinar el puré de mangos con maracuyá o bananas procesadas. Armado: Forrar las paredes de un aro circular de 20 cm de diámetro con una tira de masa de biscuit imprimé, cuyo ancho sea 1 cm menor en altura que el molde de la torta. Poner en la base un disco de biscuit capucine. Luego distribuir una capa uniforme de mousse de queso. Apoyar encima un disco de capucine y el palet de mangos. Completar el molde con la mousse restante. Alisar y congelar. Glasear con alguna jalea abrillantadora y desmoldar. Servir a temperatura de heladera.',
             image: 'images/quesoymang.png',
             username: 'nicorodri',
@@ -536,11 +524,7 @@ var post = {
         },
         {
             name: 'TORTA DE PERAS Y CHOCOLATE',
-            ingredients: {
-                creamy: ['250 cc de leche', '4 yemas', '70 g de azúcar', '80 g de pasta gianduja o de avellanas', '250 g de chocolate amargo', '200 g de crema de leche'],
-                pears: ['3 peras grandes', '150 g de azúcar', '50 g de manteca', '1/2 vaina de vainilla', '1 cucharada de polvo para flan o de almidón de maíz'],
-                others: ['2 discos de masa biscuit de gianduja'],
-            },
+            ingredients: '250 cc de leche, 4 yemas, 70 g de azúcar, 80 g de pasta gianduja o de avellanas, 250 g de chocolate amargo, 200 g de crema de leche, 3 peras grandes, 150 g de azúcar, 50 g de manteca, 1/2 vaina de vainilla, 1 cucharada de polvo para flan o de almidón de maíz, 2 discos de masa biscuit de gianduja',
             preparation: 'Para el cremoso de chocolate: Calentar la leche con la mitad del azúcar. Blanquear las yemas con el resto del azúcar. Unir y cocinar sobre baño María como una crema inglesa a 83 °C. Tamizar sobre el chocolate picado. Unir la pasta de gianduja. Revolver con un batidor hasta homogeneizar. Entibiar a 30 °C. Montar la crema de leche y unir. Para las peras vainilladas: Pelar, despepitar y cortar las frutas en cuartos o en gajos pequeños. Ubicar en una fuente térmica alta. Cubrir con el azúcar, la manteca, el polvo para flan y la vaina de vainilla abierta. Tapar muy bien con film y cocinar en microondas hasta que estén transparentes pero no deshechas, aproximadamente 5 minutos en máxima potencia. Enfriar sin quitar el film. De esta manera, las peras quedarán tiernas y muy impregnadas de sabor y color. Armado: En un aro de 20x6 cm, colocar un disco de masa en la base. Luego el cremoso hasta una altura de 1 cm. Ubicar un segundo disco de masa y las peras cocidas por encima. Completar con el cremoso restante. Alisar bien la superficie. Congelar 3 o 4 horas. Desmoldar. Glasear con algún baño de chocolate. Decorar con peras, cereales y chocolate.',
             image: 'images/perasychoco.png',
             username: 'nicorodri',
