@@ -8,7 +8,7 @@ var post = {
             username: 'nicolelapidus',
             postId: '1',
             description: 'La pasta frolla más rica del mundo.',
-            date: '2021-09-08',
+            date: '2020-09-08',
         },
         {
             name: 'TORTA DE LA SELVA NEGRA',
@@ -258,7 +258,7 @@ var post = {
             username: 'carolinacamblor',
             postId: '26',
             description: 'A mi famila le encantó!',
-            date: '2021-09-08',
+            date: '2020-09-08',
         },
         {
             name: 'TORTA INVERTIDA DE ANANÁ, ESTILO TATIN',
@@ -268,7 +268,7 @@ var post = {
             username: 'carolinacamblor',
             postId: '27',
             description: 'Muy buena esta receta.',
-            date: '2021-09-08',
+            date: '2020-12-08',
         },
         {
             name: 'GÂTEAU FRAISIER DE FRUTILLAS Y PISTACHOS',
@@ -278,7 +278,7 @@ var post = {
             username: 'carolinacamblor',
             postId: '28',
             description: 'Riquísimooooo, no se lo pueden perder',
-            date: '2021-09-08',
+            date: '2020-11-18',
         },
         {
             name: 'CAKE DE COCO',
@@ -288,7 +288,7 @@ var post = {
             username: 'carolinacamblor',
             postId: '29',
             description: 'El postre perfecto para una tarde con amgios',
-            date: '2021-09-08',
+            date: '2020-11-18',
         },
         {
             name: 'QUEEN OF SHEBA CAKE - REINA DE SABA CAKE',
@@ -298,7 +298,7 @@ var post = {
             username: 'carolinacamblor',
             postId: '30',
             description: 'Riquísima esta recetaaaaaa',
-            date: '2021-09-08',
+            date: '2020-11-18',
         },
         {
             name: 'LINGOTE DE CHOCOLATE BLANCO Y GROSELLAS',
@@ -308,7 +308,7 @@ var post = {
             username: 'juligomez_',
             postId: '31',
             description: 'Muy rico y, además, muy fácil!!',
-            date: '2021-09-08',
+            date: '2020-10-31',
         },
         {
             name: 'CAKE AUSTRALIA DE CHOCOLATE',
@@ -318,7 +318,7 @@ var post = {
             username: 'juligomez_',
             postId: '32',
             description: 'El postre más rico que vas a probar!',
-            date: '2021-09-08',
+            date: '2020-9-11',
         },
         {
             name: 'TORTA OSCURA DE CHOCOLATE Y CARAMELO',
@@ -328,7 +328,7 @@ var post = {
             username: 'juligomez_',
             postId: '33',
             description: 'La torta más rica de todo el mundo',
-            date: '2021-09-08',
+            date: '2020-09-08',
         },
         {
             name: 'TORTA MERENGADA DE CHOCOLATE Y AVELLANAS',
@@ -338,7 +338,7 @@ var post = {
             username: 'juligomez_',
             postId: '34',
             description: 'Me encantoooo!!',
-            date: '2021-09-08',
+            date: '2020-08-19',
         },
         {
             name: 'TORTA CONCORDE',
@@ -348,7 +348,7 @@ var post = {
             username: 'juligomez_',
             postId: '35',
             description: 'El postre favorito de mi hermana',
-            date: '2021-09-08',
+            date: '2020-04-28',
         },
         {
             name: 'TORTA HÚMEDA DE CHOCOLATE Y DULCE DE LECHE',
@@ -358,7 +358,7 @@ var post = {
             username: 'juligomez_',
             postId: '36',
             description: 'De otro mundo',
-            date: '2021-09-08',
+            date: '2020-03-11',
         },
         {
             name: 'ALIANZA DE CHOCOLATE Y NARANJAS',
@@ -368,7 +368,7 @@ var post = {
             username: 'juligomez_',
             postId: '37',
             description: 'Muuy muy muuuy ricoo',
-            date: '2021-09-08',
+            date: '2020-03-05',
         },
         {
             name: 'CHEESECAKE TODO CHOCOLATE',
@@ -378,7 +378,7 @@ var post = {
             username: 'juligomez_',
             postId: '38',
             description: 'El postre más rico que vas a probar!',
-            date: '2021-09-08',
+            date: '2020-02-29',
         },
         {
             name: 'CHEESECAKE BIANCO-NERO',
@@ -388,7 +388,7 @@ var post = {
             username: 'juligomez_',
             postId: '39',
             description: 'Mi receta favorita :)',
-            date: '2021-09-08',
+            date: '2020-02-22',
         },
         {
             name: 'CHEESECAKE CON FRAMBUESAS Y ARÁNDANOS',
@@ -398,7 +398,7 @@ var post = {
             username: 'juligomez_',
             postId: '40',
             description: 'Tremenda cheesecake',
-            date: '2021-09-08',
+            date: '2020-02-11',
         },
         {
             name: 'DAIQUIRI CHEESECAKE',
@@ -408,7 +408,7 @@ var post = {
             username: 'nicorodri',
             postId: '41',
             description: 'Una cheescake diferente',
-            date: '2021-09-08',
+            date: '2020-02-05',
         },
         {
             name: 'CHEESECAKE DE LIMÓN',
@@ -418,7 +418,7 @@ var post = {
             username: 'nicorodri',
             postId: '42',
             description: 'Me encanto esta recetaaa!!',
-            date: '2021-09-08',
+            date: '2020-02-25',
         },
         {
             name: 'TORTA RUSA ZUPFKUCHEN',
@@ -428,7 +428,7 @@ var post = {
             username: 'nicorodri',
             postId: '43',
             description: 'Muy buena',
-            date: '2021-09-08',
+            date: '2020-01-30',
         },
         {
             name: 'BROWNIE CHEESECAKE',
@@ -438,7 +438,7 @@ var post = {
             username: 'nicorodri',
             postId: '44',
             description: 'El postre más rico que vas a probar!',
-            date: '2021-09-08',
+            date: '2020-01-28',
         },
         {
             name: 'ARROLLADO DE CHOCOLATE Y PRALINÉ',
@@ -448,7 +448,7 @@ var post = {
             username: 'nicorodri',
             postId: '45',
             description: 'El postre más rico que vas a probar!',
-            date: '2021-09-08',
+            date: '2020-01-27',
         },
         {
             name: 'BÛCHE DE LAS ANTILLAS',
@@ -458,7 +458,7 @@ var post = {
             username: 'nicorodri',
             postId: '46',
             description: 'El postre más rico que vas a probar!',
-            date: '2021-09-08',
+            date: '2020-01-26',
         },
         {
             name: 'ROLLO DE FRUTILLAS Y CREMA DIPLOMATA',
@@ -468,7 +468,7 @@ var post = {
             username: 'nicorodri',
             postId: '47',
             description: 'El postre más rico que vas a probar!',
-            date: '2021-09-08',
+            date: '2020-01-23',
         },
         {
             name: 'TORTA DE CHOCOLATE Y NARANJAS',
@@ -478,7 +478,7 @@ var post = {
             username: 'nicorodri',
             postId: '48',
             description: 'El postre más rico que vas a probar!',
-            date: '2021-09-08',
+            date: '2020-01-22',
         },
         {
             name: 'TORTA DE QUESO Y MANGOS',
@@ -488,7 +488,7 @@ var post = {
             username: 'nicorodri',
             postId: '49',
             description: 'El postre más rico que vas a probar!',
-            date: '2021-09-08',
+            date: '2020-01-09',
         },
         {
             name: 'TORTA DE PERAS Y CHOCOLATE',
@@ -498,7 +498,7 @@ var post = {
             username: 'nicorodri',
             postId: '50',
             description: 'El postre más rico que vas a probar!',
-            date: '2021-09-08',
+            date: '2020-01-01',
         },
     ]
 }
