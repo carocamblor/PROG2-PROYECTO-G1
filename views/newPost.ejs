@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<%- include('partials/head')%>
-
+    <%- include('partials/head') %> 
+<head>
+    <link rel="stylesheet" href="/css/newPost.css">
+</head>
 <body>
-    <%- include('partials/headerLoggedOn')%>
+    <%- include('partials/headerLoggedOn') %> 
 
-    <main>
-        <div class="uk-section uk-section-small">
-            <div class="uk-container uk-container-large uk-flex">
-                <form action="">
-                    <h2>Compartir nueva receta</h2>
+    <h4 class="title">Share a new recepie</h4>
 
-                    <label for="">Nombre</label>
-                    <input type="text">
-                    <br>
-                    <label for="">Foto</label>
-                    <input type="file">
-                    <br>
-                    <label for="">Ingredientes</label>
-                    <input type="textarea">
-                    <br>
-                    <label for="">Paso a paso</label>
-                    <input type="textarea">
-                    <br>
-
-                </form>
-
-            </div>
+    <form class="new-post">
+      <div class="input-group">
+        <span class="input-group-text">Title</span>
+        <input type="text" aria-label="First name" class="form-control">
+      </div>
+        <div class="input-group">
+          <span class="input-group-text">Description</span>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
         </div>
-    </main>
-    
-    <%- include('partials/footer')%>
+        <div class="input-group">
+            <span class="input-group-text">Ingredients</span>
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+          </div>
+          <div class="input-group">
+            <span class="input-group-text">Instructions</span>
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+          </div>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupFile01">Image</label>
+          <input type="file" class="form-control" id="inputGroupFile01">
+        </div>
+        <button type="submit" class="btn btn-primary">Done</button>
+      </form>
 
+    <%- include('partials/footer') %> 
 </body>
-
 </html>

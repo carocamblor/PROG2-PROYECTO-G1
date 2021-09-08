@@ -1,66 +1,60 @@
-section.detalle-container{
-    border: 1px solid lightgray;
-}
-article.detalle-post{
-    /* border-right: 1px solid lightgray; */
+div.card {
+    margin: 16px;
 }
 
-article.detalle-post .imagen-post{
-
+div.card div.title {
+    font-family: georgia;
+    font-weight: bold;
+    font-size: x-large;
 }
 
-.comentarios-detalle{
-    border-left: 1px solid lightgray;
+div.card-body {
+    display: grid;
+    grid-template-columns: 20% 55% 20%;
+    gap: 16px;
+    width: 100%;
+    justify-content: space-between;
 }
 
-.comentarios-detalle .info-post{
-    height: 10%;
-    border-bottom: 1px solid lightgray;
-    padding-left: 5px;
-}
-.comentarios-detalle .info-post img{
-    border-radius: 50%;
-}
-.comentarios-detalle .info-post h3{
-    font-size: 14px;
-    font-weight: bolder;
-    margin: 0 0 0 8px;
-}
-.comentarios-detalle .lista-comentarios{
-    height: 75%;
-    padding-left: 5px;
-    border-bottom: 1px solid lightgray;
-    overflow: scroll;
-}
-.comentarios-detalle .lista-comentarios::-webkit-scrollbar{
-    display: none;
-}
-.comentarios-detalle .agregar-comentario{
-    height: 15%;
-    padding-left: 5px;
+.card-body hr {
+    margin: 5px 0px;
 }
 
-.comentarios-detalle .lista-comentarios{
-    padding-right: 2px;
-}
-.comentarios-detalle .lista-comentarios .comentario .icono-meGusta{
-    font-weight: bolder;
-}
-.comentarios-detalle .lista-comentarios .comentario div img{
-    border-radius: 50%;
+p.post-username-comment {
+  display: inline;
+  font-size: 13px;
+  font-weight: bold;
 }
 
-.comentarios-detalle .lista-comentarios .comentario h6{
-    font-size: 13px;
-    margin-left: 2px !important;
+p.post-comment-content {
+  display: inline;
+  font-size: 13px;
 }
-.comentarios-detalle .lista-comentarios .comentario h6 a{
-    font-weight: bolder;
-    font-size: 15px;
-    color: black;
+
+p.description {
+    margin-top: 5px;
+}
+
+.instructions-title, .leave-comment-title {
+    margin-top: 5px;
+}
+
+a.streched-link {
+    color: palevioletred;
     text-decoration: none;
-    margin-right: 4px !important;
+    font-weight: bold;
 }
 
+div.input-group {
+    margin: 5px 0px;
+}
 
+button {
+    background-color: #65bbaa!important;
+    border-color: #65bbaa!important;
+}
 
+button:hover {
+    background-color: #459787!important;
+    border-color: #459787!important;
+}

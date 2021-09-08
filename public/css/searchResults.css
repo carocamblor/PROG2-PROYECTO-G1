@@ -11,23 +11,22 @@ main div {
 }
 
 img.card-post-profile-picture {
-    height: 20px;
-    width: 20px;
+    height: 10px;
+    width: 10px;
     display: inline;
 }
 
-h4.post-title {
+h4.title {
+    margin: 16px 16px 0px 16px;
+  }
+
+  h4.post-title {
     font-family: georgia;
     font-weight: bold;
     margin: 0;
-    color: black;
-}
-
-p.post-description {
-    color: black;
-}
+  }
   
-p.post-username {
+  p.post-username {
     font-weight: bold;
     color: #65bbaa;
     margin: 0;
@@ -37,7 +36,7 @@ p.post-username {
   p.post-username :hover {
     color: #459787!important;
   }
-  
+
   p.post-like, p.post-comment {
     font-weight: bold;
     color: palevioletred;
@@ -51,17 +50,3 @@ p.post-username {
     color: rgb(182, 79, 113)!important;
   }
   
-  .card-body hr {
-      margin: 5px 0px;
-  }
-
-  p.post-username-comment {
-    display: inline;
-    font-size: 13px;
-    font-weight: bold;
-  }
-
-  p.post-comment-content {
-    display: inline;
-    font-size: 13px;
-  }

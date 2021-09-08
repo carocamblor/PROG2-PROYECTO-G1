@@ -1,80 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<%- include('partials/head')%>
-
+    <%- include('partials/head') %>
+    <head>
+      <link rel="stylesheet" href="/css/myProfile.css">
+    </head> 
 <body>
-    <%- include('partials/headerLoggedOn')%>
+    <%- include('partials/headerLoggedOn') %> 
 
+    <div class="card user-card" style="width: 100;">
+        <img src="/images/logo.png" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Caro Camblor</h5>
+          <h6 class="card-subtitle mb-2 text-muted">@carocamblor</h6>
+          <p class="card-text">Me encanta cocinar y por acá comparto todas mis recetas!</p>
+          <p class="card-text follows">Followers: 100</p>
+          <p class="card-text follows">Following: 100</p>
+          <form action="/users/editprofile">
+          <button type="submit" class="btn btn-secondary btn-sm">Edit Profile</button>
+          </form>
+        </div>
+      </div>
     <main>
-        <div class="uk-section uk-section-small">
-            <div class="uk-container uk-container-small">
-                <section class="info-usuario uk-flex uk-flex-around uk-width-1-1">
-                    <div class="uk-width-1-3 uk-flex uk-flex-center uk-flex-middle">
-                        <img src="https://via.placeholder.com/150" alt="foto de perfil" class="foto-perfil">
-                    </div>
-                    <div class="uk-width-2-3 uk-flex uk-flex-column uk-flex-around">
-                        <div class="uk-flex uk-flex-middle">
-                            <h3 class="uk-margin-remove">Nombre de usuario</h3>
-                            <a href="/users/editprofile" uk-icon="icon:cog; ratio: 1.2" class="uk-margin-left"></a>
-                        </div>
-                        <div>
-                            <ul class="red-usuario uk-flex uk-flex-between uk-width-1-2">
-                                <li>100 posts</li>
-                                <li>200 seguidores</li>
-                                <li>300 seguidos</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </section>
-
-                <section class="muro uk-flex uk-flex-middle uk-flex-center">
-                    <div class="uk-grid uk-child-width-1-3 uk-width-1-1 uk-margin-remove" uk-grid>
-                        <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="detallePost.html" class="link-detalle">
-                                <img src="https://via.placeholder.com/200" alt="foto de perfil" class="foto-perfil">
-                                <p class="uk-text-center">Lorem ipsum</p>
-                            </a>
-                        </div>
-                        <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="detallePost.html" class="link-detalle">
-                                <img src="https://via.placeholder.com/200" alt="foto de perfil" class="foto-perfil">
-                                <p class="uk-text-center">Lorem ipsum</p>
-                            </a>
-                        </div>
-                        <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="detallePost.html" class="link-detalle">
-                                <img src="https://via.placeholder.com/200" alt="foto de perfil" class="foto-perfil">
-                                <p class="uk-text-center">Lorem ipsum</p>
-                            </a>
-                        </div>
-                        <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="detallePost.html" class="link-detalle">
-                                <img src="https://via.placeholder.com/200" alt="foto de perfil" class="foto-perfil">
-                                <p class="uk-text-center">Lorem ipsum</p>
-                            </a>
-                        </div>
-                        <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="detallePost.html" class="link-detalle">
-                                <img src="https://via.placeholder.com/200" alt="foto de perfil" class="foto-perfil">
-                                <p class="uk-text-center">Lorem ipsum</p>
-                            </a>
-                        </div>
-                        <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="detallePost.html" class="link-detalle">
-                                <img src="https://via.placeholder.com/200" alt="foto de perfil" class="foto-perfil">
-                                <p class="uk-text-center">Lorem ipsum</p>
-                            </a>
-                        </div>                        
-                    </div>
-                </section>
-            </div>
+      <div class="card" style="width: 18rem;">
+        <a class="streched-link" href="posts/postDetail">
+        <img src="https://www.cookforyourlife.org/wp-content/uploads/2020/06/Dark-Chocolate-Brownies-shutterstock_112430981.jpg" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+          <a class="streched-link" href="posts/postdetail">
+            <h4 class="post-title">Brownies</h4>
+          </a>
+          <a class="streched-link" href="posts/postdetail">
+            <p class="post-description card-text">Los brownies más ricos que vas a probar. Rápidos y fáciles!</p>
+          </a>
+          <hr>
+          <a class="streched-link" href="/users/userdetail"><p class="post-username-comment">nombreusuario</p></a>
+              <p class="post-comment-content">Muy buenooo!!</p>
+              <a class="streched-link" href="/users/userdetail"><p class="post-username-comment">nombreusuario</p></a>
+              <p class="post-comment-content">Muy buenooo!!</p>
         </div>
     </main>
 
-    <%- include('partials/footer')%>
-
+    <%- include('partials/footer') %> 
 </body>
-
 </html>

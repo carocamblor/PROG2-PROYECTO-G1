@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var postsController = require('../controllers/postsController');
 
-router.get('/detail', postsController.detail);
+router.get('/postdetail', postsController.detail);
 
 router.get('/newpost', postsController.newPost);
 

@@ -1,18 +1,32 @@
-.info-usuario .foto-perfil{
-    border-radius: 50%;
+div.user-card {
+    display: grid;
+    width: 100;
+    grid-template-columns: 20% 80%;
 }
 
-.info-usuario .red-usuario{
-    list-style: none;
-    padding: 0  ;
+div.user-card img {
+  height: 160px;
+  width: 160px;
+  place-self: center;
 }
 
-.muro{
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid lightgray;
+div.user-card p {
+  margin: 0 0 8px;
 }
-.muro .link-detalle{
-    color: gray;
-    text-decoration: none;
+
+div.user-card p.follows {
+  display: inline;
+  margin-right: 8px;
+}
+
+div.user-card button {
+  background-color: palevioletred;
+  border-color: palevioletred;
+  display: block;
+  margin-top: 8px;
+}
+
+div.user-card button:hover {
+  background-color: rgb(182, 79, 113);
+  border-color: rgb(182, 79, 113);
 }

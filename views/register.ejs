@@ -1,48 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+  <%- include('partials/head') %> 
+  <head>
+    <link rel="stylesheet" href="/css/register.css">
+  </head>
+<body class="text-center">
 
-<%- include('partials/head')%>
-
-<body>
-    <%- include('partials/headerLoggedOff')%>
-
-    <main>
-        <div class="uk-section uk-section-small">
-            <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
-                <form action="">
-                    
-                    <h2>Registrate</h2>
-
-                    <label for="">Nombre</label>
-                    <input type="text">
-                    <br>
-                    <label for="">Apellido</label>
-                    <input type="text">
-                    <br>
-                    <label for="">Nombre de usuario</label>
-                    <input type="text">
-                    <br>
-                    <label for="">Mail</label>
-                    <input type="text">
-                    <br>
-                    <label for="">Contraseña</label>
-                    <input type="text">
-                    <br>
-                    <label for="">Nivel</label>
-                    <select name="" id="">
-                        <option value="0">Seleccionar</option>
-                        <option value="1">Principiante</option>
-                        <option value="2">Avanzado</option>
-                        <option value="3">Experto</option>
-                    </select>
-            
-                </form>
-            </div>
-        </div>
-    </main>
-
-    <%- include('partials/footer')%>
-
-</body>
+  <%- include('partials/headerLoggedOff') %> 
+    
+  <main class="form-signin">
+    <form style="padding: 30px 500px 0px 500px;">
+      <img class="mb-4" src="/images/logo.png" alt="" width="110" height="110">
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+  
+      <div class="form-floating">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Username</label>
+      </div>
+      <div class="form-floating">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+  
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button style="background-color: #48b9a8ff; border-color: #48b9a8ff;" class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+    </form>
+  </main>
+    
+    <%- include('partials/footer') %> 
+        
+      </body>
 
 </html>

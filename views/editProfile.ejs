@@ -1,43 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<%- include('partials/head')%>
-
+    <%- include('partials/head') %> 
+<head>
+    <link rel="stylesheet" href="/css/editProfile.css">
+</head>
 <body>
-    <%- include('partials/headerLoggedOn')%>
+    <%- include('partials/headerLoggedOn') %> 
 
-    <main>
-        <div class="uk-section uk-section-small">
-            <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
-                <form action="">
-                    
-                    <h2>Editar perfil</h2>
+    <h4 class="title"> Edit Profile</h4>
 
-                    <label for="">Nombre</label>
-                    <input type="text">
-                    <br>
-                    <label for="">Apellido</label>
-                    <input type="text">
-                    <br>
-                    <label for="">Nombre de usuario</label>
-                    <input type="text">
-                    <br>
-                    <label for="">Sitio web</label>
-                    <input type="text">
-                    <br>
-                    <label for="">Presentación</label>
-                    <input type="text">
-                    <br>
-
-            
-                </form>
-            </div>
+    <form class="edit-profile">
+      <div class="input-group">
+        <span class="input-group-text">First and last name</span>
+        <input type="text" aria-label="First name" class="form-control">
+        <input type="text" aria-label="Last name" class="form-control">
+      </div>
+        <div class="input-group">
+          <span class="input-group-text">Biography</span>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
         </div>
-    </main>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupFile01">Profile Picture</label>
+          <input type="file" class="form-control" id="inputGroupFile01">
+        </div>
+        <div class="input-group">
+          <span class="input-group-text">Birth Date</span>
+          <input type="date" class="form-control" id="inputGroupFile01">
+        </div>
+        <button type="submit" class="btn btn-primary">Done</button>
+      </form>
 
-    <%- include('partials/footer')%>
-
-
+    <%- include('partials/footer') %> 
 </body>
-
 </html>

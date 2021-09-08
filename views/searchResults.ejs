@@ -1,23 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<%- include('partials/head')%>
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/global.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</head>
+<head>
+  <link rel="stylesheet" href="/css/searchResults.css">
+</head>
 <body>
     <%- include('partials/headerLoggedOn')%>
 
-    <main>
-        <div class="uk-section uk-section-small">
-            <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
-               
-                <h2>(Mostar resultados de busqueda)</h2>
+    <h4 class="title"> Showing results for ""</h4>
 
-            </div>
-        </div>
-    </main>
+      <main>
+        <div class="card" style="width: 18rem;">
+          <a class="streched-link" href="posts/postDetail">
+          <img src="https://www.cookforyourlife.org/wp-content/uploads/2020/06/Dark-Chocolate-Brownies-shutterstock_112430981.jpg" class="card-img-top" alt="...">
+          </a>
+          <div class="card-body">
+            <a class="streched-link" href="posts/postdetail">
+              <h4 class="post-title">Brownies</h4>
+            </a>
+            <a class="streched-link" href="users/userDetail">
+              <img class="card-post-profile-picture" src="/images/logo.png" alt="">
+              <p class="post-username"> carocamblor </p>
+            </a>
+            <a class="streched-link" href="posts/postdetail">
+              <p class="post-description card-text">Los brownies más ricos que vas a probar. Rápidos y fáciles!</p>
+            </a>
+            <p class="post-like">Like</p>
+            <p class="post-comment">Comment</p>
+            <hr>
+            <p class="post-username-comment">nombreusuario</p>
+            <p class="post-comment-content">Muy buenooo!!</p>
+            <p class="post-username-comment">nombreusuario</p>
+            <p class="post-comment-content">Muy buenooo!!</p>
+          </div>
+        
+      </main>
 
-    <%- include('partials/footer')%>
+      <%- include('partials/footer') %> 
 
 </body>
-
+    
 </html>

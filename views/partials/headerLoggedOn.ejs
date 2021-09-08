@@ -1,25 +1,33 @@
-<header class="uk-background-primary">
-    <section class=" uk-container uk-container-large">
-        <div class="">
-            <nav class="" uk-navbar>
-                <div class="uk-navbar-left">
-                    <h2 class="logo"><a href="/">Avenida Dulce</a></h2>
-                </div>
-                <div class="uk-navbar-center">
-                    <ul class="uk-flex uk-flex-between uk-flex-middle">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="">Logout</a></li>
-                    </ul>
-                </div>
-                <div class="uk-navbar-right">
-                    <a href="/posts/newpost">Agregar post</a>
-                    <a href="/users/myprofile">Mi perfil</a>
-                    <form action="" class="uk-search uk-search-default">
-                        <span uk-search-icon></span>
-                        <input type="search" class="uk-search-input" placeholder="Buscar...">
-                    </form>
-                </div>
-            </nav>
+<header style="margin: 0!important" class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+          <img style="height: 55px; width: 55px; margin-right: 20px;" src="/images/logo.png" alt="">
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="/" class="nav-link px-2 link-dark">Home</a></li>
+          <li><a href="/posts/newpost" class="nav-link px-2 link-dark">New Post</a></li>
+          <li><a href="/users/myprofile" class="nav-link px-2 link-dark">My Profile</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Logout</a></li>
+        </ul>
+
+        <form action="/results" method="GET" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+            <li><a class="dropdown-item" href="/posts/newpost">New Post</a></li>
+            <li><a class="dropdown-item" href="/users/editprofile">Edit profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign Out</a></li>
+          </ul>
         </div>
-    </section>
-</header>
+      </div>
+    </div>
+  </header>
