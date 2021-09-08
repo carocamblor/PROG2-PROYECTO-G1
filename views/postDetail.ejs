@@ -12,12 +12,13 @@
           <%= post.name %> 
         </div>
         <div class="card-header username">
-          <a class="streched-link" href="/users/userdetail"> <%= post.username %> </a>
+          <a class="streched-link" href="/users/userdetail/username/<%= post.username %>"> <%= post.username %> </a>
         </div>
         <div class="card-body">
           <section>
             <img src="/<%= post.image %> " class="card-img-top" alt="...">
-            <p class="card-text description">With supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text description"><%= post.description %></p>
+            <p class="card-text post-date">Date: <%= post.date %></p>
           </section>
           <section>
             <h5 class="card-title">Ingredients</h5>

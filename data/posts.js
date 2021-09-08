@@ -1,4 +1,4 @@
-var post = {
+var posts = {
     list: [
         {
             name: 'PASTA FROLLA',
@@ -502,3 +502,5 @@ var post = {
         },
     ]
 }
+
+module.exports = posts;

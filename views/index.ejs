@@ -10,33 +10,34 @@
       <main>
         <% for (post of posts) { %> 
           <div class="card" style="width: 18rem;">
-            <a class="streched-link" href="posts/postDetail">
+            <a class="streched-link" href="posts/postdetail/postid/<%=post.postId%>">
             <img src="/<%= post.image %>" class="card-img-top" alt="...">
             </a>
             <div class="card-body">
-              <a class="streched-link" href="posts/postdetail">
+              <a class="streched-link" href="posts/postdetail/postid/<%= post.postId %>">
                 <h4 class="post-title"><%= post.name %></h4>
               </a>
-              <a class="streched-link" href="users/userDetail">
+              <a class="streched-link" href="users/userDetail/username/<%= post.username %>">
                 <img class="card-post-profile-picture" src="/images/logo.png" alt="">
                 <p class="post-username"> <%= post.username %> </p>
               </a>
-              <a class="streched-link" href="posts/postdetail">
-                <p class="post-description card-text"><%= post.name %></p>
+              <a class="streched-link" href="posts/postdetail/postid/<%= post.postId %>">
+                <p class="post-description card-text"><%= post.description %></p>
               </a>
+              <p class="card-text post-date">Date: <%= post.date %></p>
               <p class="post-like">Like</p>
               <p class="post-comment">Comment</p>
               <hr>
-              <a class="streched-link" href="/users/userdetail"><p class="post-username-comment">@nicolelapidus</p></a>
+              <a class="streched-link" href="/users/userdetail/username/"><p class="post-username-comment">@nicolelapidus</p></a>
               <p class="post-comment-content">Muy buenooo!!</p>
               <br>
-              <a class="streched-link" href="/users/userdetail"><p class="post-username-comment">@carolinacamblor</p></a>
+              <a class="streched-link" href="/users/userdetail/username/"><p class="post-username-comment">@carolinacamblor</p></a>
               <p class="post-comment-content"> Me gusto la idea</p>
               <br>
-              <a class="streched-link" href="/users/userdetail"><p class="post-username-comment">@tatianakatz</p></a>
+              <a class="streched-link" href="/users/userdetail/username/"><p class="post-username-comment">@tatianakatz</p></a>
               <p class="post-comment-content">Intente hacerlo y no pude</p>
               <br>
-              <a class="streched-link" href="/users/userdetail"><p class="post-username-comment">@nicorodri</p></a>
+              <a class="streched-link" href="/users/userdetail/username/"><p class="post-username-comment">@nicorodri</p></a>
               <p class="post-comment-content">Tengo una receta mucho mejor!</p>
             </div>
           </div>

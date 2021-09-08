@@ -12,23 +12,37 @@ var usersController = {
         var username = req.params.username;
         var user = {};
         var posts = [];
-
         for (let i = 0; i < dataUsers.list.length; i++) {
             const element = dataUsers.list[i];
             if (element.username == username) {
-                var user = element
-            }
-        }
+                var user = element;
+            };
+        };
         for (let i = 0; i < dataPost.list.length; i++) {
             const element = dataPost.list[i];
             if (element.username == username) {
                 posts.push(element);
-            }
-        }
+            };
+        };
         res.render('userDetail', {user: user, posts: posts}) 
     },
     myProfile: function (req, res) {
-        res.render('myProfile', {})
+        var username = req.params.username;
+        var user = {};
+        var posts = [];
+        for (let i = 0; i < dataUsers.list.length; i++) {
+            const element = dataUsers.list[i];
+            if (element.username == username) {
+                var user = element;
+            };
+        };
+        for (let i = 0; i < dataPost.list.length; i++) {
+            const element = dataPost.list[i];
+            if (element.username == username) {
+                posts.push(element);
+            };
+        };
+        res.render('myProfile', {user: user, posts: posts}) 
     },
     editProfile: function (req, res) {
         res.render('editProfile', {})
