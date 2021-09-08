@@ -7,7 +7,8 @@ var post = {
             image: 'images/pastafrola.png',
             username: 'nicolelapidus',
             postId: '1',
-            description: 'La pasta frolla más rica del mundo.'
+            description: 'La pasta frolla más rica del mundo.',
+            date: '2021-09-08',
         },
         {
             name: 'TORTA DE LA SELVA NEGRA',
@@ -16,7 +17,8 @@ var post = {
             image: 'images/selvanegra.png',
             username: 'nicolelapidus',
             postId: '2',
-            description: 'El postre más rico que vas a probar!'
+            description: 'El postre más rico que vas a probar!',
+            date: '2021-09-07',
         },
         {
             name: 'TORTA MOKA',
@@ -25,7 +27,9 @@ var post = {
             image: 'images/moka.png',
             username: 'nicolelapidus',
             postId: '3',
-            description: 'El postre más rico que vas a probar!',       },
+            description: 'El postre más rico que vas a probar!',
+            date: '2021-09-06',
+        },
         {
             name: 'TORTA DE BROWNIE MERENGADA',
             ingredients: '3 huevos, 250 g de azúcar, 200 g de manteca, 125 g de chocolate amargo, 130 g de harina, 20 g de cacao amargo, 125 g de nueces3 claras, 220 g de azúcar, 70 cc de agua, Gotas de jugo de limón',
@@ -34,6 +38,7 @@ var post = {
             username: 'nicolelapidus',
             postId: '4',
             description: 'Con esta receta vas a impresionar a todos tus amigos',
+            date: '2021-09-05',
         },
         {
             name: 'POSTRE BALCARCE',
@@ -42,7 +47,9 @@ var post = {
             image: 'images/balcarce.png',
             username: 'nicolelapidus',
             postId: '5',
-            description: 'Si preparas este postre, toda tu familia te va a amar.',       },
+            description: 'Si preparas este postre, toda tu familia te va a amar.',
+            date: '2021-09-04',
+        },
         {
             name: 'TORTA EL MOLINO',
             ingredients: '5 huevos, 2 yemas, 160 g de azúcar, 160 g de harina, 40 g de almidón de maíz, Ralladura de 1 limón, Ralladura de 1 limón,3 yemas, 3 yemas, 50 cc de agua, 2 cucharadas de esencia de vainilla, 150 g de manteca, 80 g de almendras tostadas',
@@ -50,7 +57,9 @@ var post = {
             image: 'images/molino.png',
             username: 'nicolelapidus',
             postId: '6',
-            description: 'La receta de mi abuela :)',       },
+            description: 'La receta de mi abuela :)',
+            date: '2021-09-03',
+        },
         {
             name: 'TARTA DE LIMÓN MERENGADA',
             ingredients: '100 g de manteca, 80 g de azúcar, 1 pizca de sal fina, 1 huevo, 180 g de harina, 4 yemas, 500 cc de agua o leche, 120 g de azúcar, 50 g de almidón de maíz, 100 cc de jugo de limón, Ralladura de 1 limón, 50 g de manteca',
@@ -59,6 +68,7 @@ var post = {
             username: 'nicolelapidus',
             postId: '7',
             description: 'Comparto con ustedes mi receta favorita!',
+            date: '2021-09-02',
         },
         {
             name: 'POSTRE CHAJÁ',
@@ -68,6 +78,7 @@ var post = {
             username: 'nicolelapidus',
             postId: '8',
             description: 'Este postre es lo más',
+            date: '2021-09-01',
         },
         {
             name: 'TORTA DOBOS',
@@ -77,18 +88,17 @@ var post = {
             username: 'nicolelapidus',
             postId: '9',
             description: 'Esta torta es re rica, no te vas a arrepentir',
+            date: '2021-08-20',
         },
         {
             name: 'TORTA LEGUISAMO',
-            ingredients: {
-                mass: ['1 plancha de genoise de vainilla de 1 cm de espesor', '1 plancha de hojaldre', '1 plancha de merengue francés'],
-                cream: ['4 yemas', '180 g de azúcar', '70 cc de agua', '2 cucharadas de esencia de vainilla', '300 g de manteca', '100 g de almendras tostadas']
-            },
+            ingredients: '1 plancha de genoise de vainilla de 1 cm de espesor, 1 plancha de hojaldre, 1 plancha de merengue francés, 4 yemas, 180 g de azúcar, 70 cc de agua, 2 cucharadas de esencia de vainilla, 300 g de manteca, 100 g de almendras tostadas',
             preparation: 'Batir las yemas con un puñado del azúcar con batidora eléctrica. Colocar el agua y el resto del azúcar en una cacerolita. Agregar la vainilla y calentar hasta lograr un almíbar denso a 118 °C. Volcar el almíbar hirviente sobre las yemas, sin dejar de batir. Continuar el batido hasta que la preparación resulte muy espumosa y tibia. Tomar la manteca y darle unos golpes para hacerla maleable, sin que por ello se caliente. Incorporar poco a poco la manteca pomada al batido. La crema de manteca estará lista cuando la preparación se ponga lisa, homogénea y brillante. Retirar de la máquina e incorporar las almendras tostadas, frías, y picadas muy finas junto con la esencia de vainilla.',
             image: 'images/leguisamo.png',
             username: 'nicolelapidus',
             postId: '10',
             description: 'El postre más rico que vas a probar!',
+            date: '2021-08-18',
         },
         {
             name: 'RED VELVET CAKE',
@@ -98,6 +108,7 @@ var post = {
             username: 'tatianakatz',
             postId: '11',
             description: 'El postre más rico que vas a probar!',
+            date: '2021-08-15',
         },
         {
             name: 'TROPICAL COCONUT CAKE',
@@ -107,6 +118,7 @@ var post = {
             username: 'tatianakatz',
             postId: '12',
             description: 'Fácil y rico!',
+            date: '2021-08-13',
         },
         {
             name: 'KUCHEN DE MANZANAS, CANELA Y SEMILLAS DE GIRASOL',
@@ -116,6 +128,7 @@ var post = {
             username: 'tatianakatz',
             postId: '13',
             description: 'El postre más rico que vas a probar!',
+            date: '2021-08-08',
         },
         {
             name: 'CITRUS POUND CAKE',
@@ -125,6 +138,7 @@ var post = {
             username: 'tatianakatz',
             postId: '14',
             description: 'Prueben esta recetaaaa!',
+            date: '2021-08-05',
         },
         {
             name: 'ANILLO DE AMAPOLAS CON CEREZAS',
@@ -134,6 +148,7 @@ var post = {
             username: 'tatianakatz',
             postId: '15',
             description: 'El mejor postre que comí en toda mi vida',
+            date: '2021-08-01',
         },
         {
             name: 'PUDDING TIBIO DE CAFÉ, CARAMELO Y NUECES PECAN',
@@ -143,6 +158,7 @@ var post = {
             username: 'tatianakatz',
             postId: '16',
             description: 'Ideal para la hora del té',
+            date: '2021-06-27',
         },
         {
             name: 'BUDÍN AUSTRÍACO DE LICOR DE HUEVOS',
@@ -152,6 +168,7 @@ var post = {
             username: 'tatianakatz',
             postId: '17',
             description: 'El postre más rico que vas a probar!',
+            date: '2021-06-20',
         },
         {
             name: 'CAKE INGLESA DE PASAS DE UVA Y ALMENDRAS',
@@ -161,6 +178,7 @@ var post = {
             username: 'tatianakatz',
             postId: '18',
             description: 'Ideal para compartir con amigos',
+            date: '2021-06-17',
         },
         {
             name: 'BUDÍN DE CAFÉ, NUECES Y PISTACHOS',
@@ -170,6 +188,7 @@ var post = {
             username: 'tatianakatz',
             postId: '19',
             description: 'Mi receta favorita',
+            date: '2021-06-13',
         },
         {
             name: 'CAKE DE MAÍZ Y FRUTOS ROJOS (SIN TACC)',
@@ -179,6 +198,7 @@ var post = {
             username: 'tatianakatz',
             postId: '20',
             description: 'La mejor opción para una torta de cumpleaños',
+            date: '2021-05-08',
         },
         {
             name: 'BUDÍN HÚMEDO DE BANANA Y NUECES',
@@ -188,6 +208,7 @@ var post = {
             username: 'carolinacamblor',
             postId: '21',
             description: 'Les recomiendo que prueben esta receta!!!',
+            date: '2021-04-29',
         },
         {
             name: 'TORTA DE DURAZNOS Y ALMENDRAS',
@@ -197,6 +218,7 @@ var post = {
             username: 'carolinacamblor',
             postId: '22',
             description: 'Buenísima esta torta para compartir con familia y amigos',
+            date: '2021-04-24',
         },
         {
             name: 'TORTA DE ZANAHORIAS Y ALMENDRAS',
@@ -206,6 +228,7 @@ var post = {
             username: 'carolinacamblor',
             postId: '23',
             description: 'Super recomendada esta receta',
+            date: '2021-03-10',
         },
         {
             name: 'TORTA GRUMOSA DE CEREZAS',
@@ -215,6 +238,7 @@ var post = {
             username: 'carolinacamblor',
             postId: '24',
             description: 'No se pierdan de probar esta delicia',
+            date: '2021-02-02',
         },
         {
             name: 'PASTEL VIENÉS DE QUESO Y CIRUELAS',
@@ -224,6 +248,7 @@ var post = {
             username: 'carolinacamblor',
             postId: '25',
             description: 'Recomendada para personas que recién empiezan en la cocina!',
+            date: '2021-01-21',
         },
         {
             name: 'TORTA MERENGADA DE FRUTAS DE VERANO',
@@ -233,6 +258,7 @@ var post = {
             username: 'carolinacamblor',
             postId: '26',
             description: 'A mi famila le encantó!',
+            date: '2021-09-08',
         },
         {
             name: 'TORTA INVERTIDA DE ANANÁ, ESTILO TATIN',
@@ -242,6 +268,7 @@ var post = {
             username: 'carolinacamblor',
             postId: '27',
             description: 'Muy buena esta receta.',
+            date: '2021-09-08',
         },
         {
             name: 'GÂTEAU FRAISIER DE FRUTILLAS Y PISTACHOS',
@@ -251,6 +278,7 @@ var post = {
             username: 'carolinacamblor',
             postId: '28',
             description: 'Riquísimooooo, no se lo pueden perder',
+            date: '2021-09-08',
         },
         {
             name: 'CAKE DE COCO',
@@ -260,6 +288,7 @@ var post = {
             username: 'carolinacamblor',
             postId: '29',
             description: 'El postre perfecto para una tarde con amgios',
+            date: '2021-09-08',
         },
         {
             name: 'QUEEN OF SHEBA CAKE - REINA DE SABA CAKE',
@@ -269,6 +298,7 @@ var post = {
             username: 'carolinacamblor',
             postId: '30',
             description: 'Riquísima esta recetaaaaaa',
+            date: '2021-09-08',
         },
         {
             name: 'LINGOTE DE CHOCOLATE BLANCO Y GROSELLAS',
@@ -278,6 +308,7 @@ var post = {
             username: 'juligomez_',
             postId: '31',
             description: 'Muy rico y, además, muy fácil!!',
+            date: '2021-09-08',
         },
         {
             name: 'CAKE AUSTRALIA DE CHOCOLATE',
@@ -287,6 +318,7 @@ var post = {
             username: 'juligomez_',
             postId: '32',
             description: 'El postre más rico que vas a probar!',
+            date: '2021-09-08',
         },
         {
             name: 'TORTA OSCURA DE CHOCOLATE Y CARAMELO',
@@ -296,6 +328,7 @@ var post = {
             username: 'juligomez_',
             postId: '33',
             description: 'La torta más rica de todo el mundo',
+            date: '2021-09-08',
         },
         {
             name: 'TORTA MERENGADA DE CHOCOLATE Y AVELLANAS',
@@ -305,6 +338,7 @@ var post = {
             username: 'juligomez_',
             postId: '34',
             description: 'Me encantoooo!!',
+            date: '2021-09-08',
         },
         {
             name: 'TORTA CONCORDE',
@@ -314,6 +348,7 @@ var post = {
             username: 'juligomez_',
             postId: '35',
             description: 'El postre favorito de mi hermana',
+            date: '2021-09-08',
         },
         {
             name: 'TORTA HÚMEDA DE CHOCOLATE Y DULCE DE LECHE',
@@ -323,6 +358,7 @@ var post = {
             username: 'juligomez_',
             postId: '36',
             description: 'De otro mundo',
+            date: '2021-09-08',
         },
         {
             name: 'ALIANZA DE CHOCOLATE Y NARANJAS',
@@ -332,6 +368,7 @@ var post = {
             username: 'juligomez_',
             postId: '37',
             description: 'Muuy muy muuuy ricoo',
+            date: '2021-09-08',
         },
         {
             name: 'CHEESECAKE TODO CHOCOLATE',
@@ -341,6 +378,7 @@ var post = {
             username: 'juligomez_',
             postId: '38',
             description: 'El postre más rico que vas a probar!',
+            date: '2021-09-08',
         },
         {
             name: 'CHEESECAKE BIANCO-NERO',
@@ -350,6 +388,7 @@ var post = {
             username: 'juligomez_',
             postId: '39',
             description: 'Mi receta favorita :)',
+            date: '2021-09-08',
         },
         {
             name: 'CHEESECAKE CON FRAMBUESAS Y ARÁNDANOS',
@@ -359,6 +398,7 @@ var post = {
             username: 'juligomez_',
             postId: '40',
             description: 'Tremenda cheesecake',
+            date: '2021-09-08',
         },
         {
             name: 'DAIQUIRI CHEESECAKE',
@@ -368,6 +408,7 @@ var post = {
             username: 'nicorodri',
             postId: '41',
             description: 'Una cheescake diferente',
+            date: '2021-09-08',
         },
         {
             name: 'CHEESECAKE DE LIMÓN',
@@ -377,6 +418,7 @@ var post = {
             username: 'nicorodri',
             postId: '42',
             description: 'Me encanto esta recetaaa!!',
+            date: '2021-09-08',
         },
         {
             name: 'TORTA RUSA ZUPFKUCHEN',
@@ -386,6 +428,7 @@ var post = {
             username: 'nicorodri',
             postId: '43',
             description: 'Muy buena',
+            date: '2021-09-08',
         },
         {
             name: 'BROWNIE CHEESECAKE',
@@ -395,6 +438,7 @@ var post = {
             username: 'nicorodri',
             postId: '44',
             description: 'El postre más rico que vas a probar!',
+            date: '2021-09-08',
         },
         {
             name: 'ARROLLADO DE CHOCOLATE Y PRALINÉ',
@@ -404,19 +448,17 @@ var post = {
             username: 'nicorodri',
             postId: '45',
             description: 'El postre más rico que vas a probar!',
+            date: '2021-09-08',
         },
         {
             name: 'BÛCHE DE LAS ANTILLAS',
-            ingredients: {
-                dacquoise: ['5 claras', '80 g de azúcar', '200 g de azúcar impalpable', '100 g de coco rallado', '100 g de avellanas', '1 pizca de cremor tártaro'],
-                fruits: [' 50 g de manteca', ' 50 g de azúcar', ' 200 g de mango en cubos', '150 g de bananas en rodajas', '150 g de ananá en cubos', '20 g de ron oscuro o coñac', '20 g de polvo para flan'],
-                mousse: ['50 g de pulpa de maracuyá', ' 50 g de azúcar', ' 100 g de pulpa de ananá', '20 cc de jugo de lima o de limón verde', '14 g de gelatina', '70 cc de agua fría', '100 g de pulpa de mango', '150 g de pulpa de coco', ' 300 g de crema de leche', ' 150 g de merengue italiano'],
-            },
+            ingredients: '5 claras, 80 g de azúcar, 200 g de azúcar impalpable, 100 g de coco rallado, 100 g de avellanas, 1 pizca de cremor tártaro,  50 g de manteca,  50 g de azúcar, 200 g de mango en cubos, 150 g de bananas en rodajas, 150 g de ananá en cubos, 20 g de ron oscuro o coñac, 20 g de polvo para flan, 50 g de pulpa de maracuyá,  50 g de azúcar,  100 g de pulpa de ananá, 20 cc de jugo de lima o de limón verde, 14 g de gelatina, 70 cc de agua fría, 100 g de pulpa de mango, 150 g de pulpa de coco,  300 g de crema de leche,  150 g de merengue italiano',
             preparation: 'Para la Dacquoise de coco: Montar las claras con un poco del azúcar y el crémor tártaro. Cuando estén firmes, unir el resto del azúcar. Procesar las avellanas hasta obtener un polvo fino. Hacer lo mismo con el coco rallado. Mezclar ambos polvos con el azúcar impalpable. Unir los secos al merengue con una espátula tratando de no bajar la preparación. Colocar la masa en una placa de 20x30 cm intentando conseguir un espesor de 1,5 cm. Espolvorear con azúcar impalpable 2 veces. Colocar en horno alto a 200 °C por 5 minutos, y luego continuar a 170 °C por 20 minutos más. Retirar del horno y enfriar sobre una rejilla. Para el interior de frutas: Cortar las frutas en cubos de 2 cm de lado y las bananas en rodajas. Fundir la manteca y agregar las frutas. Cocinar a fuego vivo para caramelizar las mismas ligeramente. Incorporar el azúcar y cocinar lentamente durante 3 minutos aproximadamente. Flambear con ron o coñac. Agregar el polvo para flan y cocinar medio minuto más. Enfriar en molde rectangular, logrando 1 cm de espesor, y luego congelar. Para el mousse tropical: Calentar la pulpa de ananá con la de maracuyá, el azúcar y el limón hasta llegar al primer hervor. Hidratar la gelatina con el agua fría. Volcar los purés calientes sobre la gelatina para que se disuelva. Luego, unir la pulpa de mango y la pulpa de coco para bajar la temperatura a unos 30 °C. Sumar el merengue italiano y finalmente la crema batida a medio punto. Colocar parte de la mousse en moldes de semiesfera de distintos diámetros, y el resto en un molde de media caña. Colocar bandas del interior de frutas y dos bandas de dacquoise de coco. Congelar. Desmoldar los domos y aplicar sobre la bûche. Congelar todo y pulverizar con una mezcla de 50% de manteca de cacao y 50% de chocolate blanco teñido con colorante amarillo y naranja. La mezcla debe estar caliente a 40 °C al momento de pulverizar sobre el tronco congelado. Apoyar la bûche sobre una base crocante de 150 g de chocolate blanco fundido con 150 g de copos de cereales y 60 g de pistachos molidos.',
             image: 'images/bucheantillas.png',
             username: 'nicorodri',
             postId: '46',
             description: 'El postre más rico que vas a probar!',
+            date: '2021-09-08',
         },
         {
             name: 'ROLLO DE FRUTILLAS Y CREMA DIPLOMATA',
@@ -426,6 +468,7 @@ var post = {
             username: 'nicorodri',
             postId: '47',
             description: 'El postre más rico que vas a probar!',
+            date: '2021-09-08',
         },
         {
             name: 'TORTA DE CHOCOLATE Y NARANJAS',
@@ -435,6 +478,7 @@ var post = {
             username: 'nicorodri',
             postId: '48',
             description: 'El postre más rico que vas a probar!',
+            date: '2021-09-08',
         },
         {
             name: 'TORTA DE QUESO Y MANGOS',
@@ -444,6 +488,7 @@ var post = {
             username: 'nicorodri',
             postId: '49',
             description: 'El postre más rico que vas a probar!',
+            date: '2021-09-08',
         },
         {
             name: 'TORTA DE PERAS Y CHOCOLATE',
@@ -453,6 +498,7 @@ var post = {
             username: 'nicorodri',
             postId: '50',
             description: 'El postre más rico que vas a probar!',
+            date: '2021-09-08',
         },
     ]
 }
