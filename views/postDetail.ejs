@@ -9,21 +9,21 @@
 
       <div class="card post-detail">
         <div class="card-header title">
-          Brownies
+          <%= post.name %> 
         </div>
         <div class="card-header username">
-          <a class="streched-link" href="/users/userdetail">@carocamblor</a>
+          <a class="streched-link" href="/users/userdetail"> <%= post.username %> </a>
         </div>
         <div class="card-body">
           <section>
-            <img src="https://www.cookforyourlife.org/wp-content/uploads/2020/06/Dark-Chocolate-Brownies-shutterstock_112430981.jpg" class="card-img-top" alt="...">
+            <img src="/<%= post.image %> " class="card-img-top" alt="...">
             <p class="card-text description">With supporting text below as a natural lead-in to additional content.</p>
           </section>
           <section>
             <h5 class="card-title">Ingredients</h5>
             <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In placeat dicta eaque adipisci quis. Soluta autem odio, dignissimos voluptatem eaque quidem omnis reiciendis assumenda dolorum quo rem dolore ipsam nemo. Velit facilis, officiis eum vero eligendi repudiandae ipsa dolore enim autem porro molestias error in debitis, totam corrupti veritatis soluta.</p>
             <h5 class="card-title instructions-title">Instructions</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptate eligendi amet officiis vel dolorum esse dicta, quis odio adipisci molestiae quod odit commodi rem ducimus aut incidunt similique at omnis. Quos delectus maiores, perspiciatis reiciendis totam placeat necessitatibus ea consectetur, eos atque repellat tempora? Deleniti illum laboriosam illo in quae magni ut ullam, et iste libero exercitationem praesentium neque at qui non blanditiis harum dolorum ex quidem veniam porro temporibus? Quos voluptatibus illo iste suscipit libero blanditiis molestiae tempore fugit eum, dignissimos sunt repellat unde labore tenetur odio necessitatibus beatae commodi, sequi in quo ad earum quia. Asperiores, eveniet!</p>
+            <p class="card-text"><%= post.preparation %> </p>
           </section>
           <section>
             <h5 class="card-title">Comments</h5>

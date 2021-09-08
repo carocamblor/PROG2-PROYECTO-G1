@@ -7,36 +7,39 @@
 <body>
     <%- include('partials/headerLoggedOn') %> 
 
-    <div class="card user-card" style="width: 100;">
+      <div class="card user-card" style="width: 100;">
         <img src="/images/logo.png" alt="">
         <div class="card-body">
-          <h5 class="card-title">Caro Camblor</h5>
-          <h6 class="card-subtitle mb-2 text-muted">@carocamblor</h6>
-          <p class="card-text">Me encanta cocinar y por acá comparto todas mis recetas!</p>
+          <h5 class="card-title"> <%= user.name %>  <%= user.surname %> </h5>
+          <h6 class="card-subtitle mb-2 text-muted"> <%= user.username %> </h6>
+          <p class="card-text"> <%= user.biography %> </p>
           <p class="card-text follows">Followers: 100</p>
           <p class="card-text follows">Following: 100</p>
           <button type="button" class="btn btn-secondary btn-sm">Follow</button>
         </div>
       </div>
-    <main>
-      <div class="card" style="width: 18rem;">
-        <a class="streched-link" href="posts/postDetail">
-        <img src="https://www.cookforyourlife.org/wp-content/uploads/2020/06/Dark-Chocolate-Brownies-shutterstock_112430981.jpg" class="card-img-top" alt="...">
-        </a>
-        <div class="card-body">
-          <a class="streched-link" href="posts/postdetail">
-            <h4 class="post-title">Brownies</h4>
-          </a>
-          <a class="streched-link" href="posts/postdetail">
-            <p class="post-description card-text">Los brownies más ricos que vas a probar. Rápidos y fáciles!</p>
-          </a>
-          <hr>
-          <a class="streched-link" href="/users/userdetail"><p class="post-username-comment">nombreusuario</p></a>
-              <p class="post-comment-content">Muy buenooo!!</p>
+      <main>
+        <% for( let i = 0; i < posts.length; i++ ) { %>
+          <% const element = posts[i]%> 
+          <div class="card" style="width: 18rem;">
+            <a class="streched-link" href="/posts/postdetail/postId/<%= element.postId %> ">
+            <img src="/<%= element.image %> " class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+              <a class="streched-link" href="posts/postdetail">
+                <h4 class="post-title"> <%= element.name %> </h4>
+              </a>
+              <a class="streched-link" href="posts/postdetail">
+                <p class="post-description card-text">Los brownies más ricos que vas a probar. Rápidos y fáciles!</p>
+              </a>
+              <hr>
               <a class="streched-link" href="/users/userdetail"><p class="post-username-comment">nombreusuario</p></a>
-              <p class="post-comment-content">Muy buenooo!!</p>
-        </div>
-    </main>
+                  <p class="post-comment-content">Muy buenooo!!</p>
+                  <a class="streched-link" href="/users/userdetail"><p class="post-username-comment">nombreusuario</p></a>
+                  <p class="post-comment-content">Muy buenooo!!</p>
+            </div>
+        <% } %>
+      </main>
 
     <%- include('partials/footer') %> 
 </body>

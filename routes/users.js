@@ -6,7 +6,7 @@ router.get('/login', usersController.login);
 
 router.get('/register', usersController.register);
 
-router.get('/userdetail', usersController.userDetail);
+router.get('/userdetail/username/:username', usersController.userDetail);
 
 router.get('/myprofile', usersController.myProfile);
 

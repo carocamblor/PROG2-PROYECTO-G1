@@ -30,3 +30,15 @@ div.user-card button:hover {
   background-color: rgb(182, 79, 113);
   border-color: rgb(182, 79, 113);
 }
+
+main {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr 1fr !important;
+  gap: 16px !important;
+  padding: 16px !important;
+  margin-bottom: 60px !important;
+}
+
+main div {
+  width: 100%!important;
+}
