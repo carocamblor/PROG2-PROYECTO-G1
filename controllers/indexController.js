@@ -2,11 +2,11 @@ const dataPost = require ('../data/posts');
 const dataUsers = require ('../data/users'); 
 //requerimos los modulos para usar la data de ahi
 
-var indexController = {
-    feed: function (req, res) {
+var indexController = { //creamos objeto literal que va a tener la logica
+    feed: function (req, res) { 
         res.render('index', {posts: dataPost.list})
     },
-    results: function (req, res) {
+    results: function (req, res) { //la propiedad results hace que cuando haya un requerimiento responda en la pagina searchResults
         res.render('searchResults', {})
     },
 };
