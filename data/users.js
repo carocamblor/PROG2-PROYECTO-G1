@@ -8,7 +8,8 @@ var users = {
             posts: '100',
             username: 'nicolelapidus',
             dayBirth: '2001-09-18',
-            image: 'images/nicole.jpg'
+            image: 'images/nicole.jpg',
+            idUser: '1'
         },
         {
             name: 'Tatiana',
@@ -18,7 +19,8 @@ var users = {
             posts: '203',
             username: 'tatianakatz',
             dayBirth: '2002-03-19',
-            image: 'images/tatiana.jpg'
+            image: 'images/tatiana.jpg',
+            idUser: '2'
         },
         {
             name: 'Carolina',
@@ -28,7 +30,8 @@ var users = {
             posts: '55',
             username: 'carolinacamblor',
             dayBirth: '2002-04-9',
-            image: 'images/carolina.jpg'
+            image: 'images/carolina.jpg',
+            idUser: '3'
         },
         {
             name: 'Julian',
@@ -38,7 +41,8 @@ var users = {
             posts: '3',
             username: 'juligomez_',
             dayBirth: '1990-08-8',
-            image: 'images/julian.jpeg'
+            image: 'images/julian.jpeg',
+            idUser: '4'
         },
         {
             name: 'Nicolas',
@@ -48,7 +52,8 @@ var users = {
             posts: '49',
             username: 'nicorodri',
             dayBirth: '1960-12-1',
-            image: 'images/nicolas.jpeg'
+            image: 'images/nicolas.jpeg',
+            idUser: '5'
         }
     ]
 };
