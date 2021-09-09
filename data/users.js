@@ -7,7 +7,8 @@ var users = {
             level: 'Experto',
             posts: '100',
             username: 'nicolelapidus',
-            dayBirth: '2001-09-18'
+            dayBirth: '2001-09-18',
+            image: 'images/nicole.jpg'
         },
         {
             name: 'Tatiana',
@@ -16,7 +17,8 @@ var users = {
             level: 'Avanzado',
             posts: '203',
             username: 'tatianakatz',
-            dayBirth: '2002-03-19'
+            dayBirth: '2002-03-19',
+            image: 'images/tatiana.jpg'
         },
         {
             name: 'Carolina',
@@ -25,7 +27,8 @@ var users = {
             level: 'Principiante',
             posts: '55',
             username: 'carolinacamblor',
-            dayBirth: '2002-04-9'
+            dayBirth: '2002-04-9',
+            image: 'images/carolina.jpg'
         },
         {
             name: 'Julian',
@@ -34,7 +37,8 @@ var users = {
             level: 'Experto',
             posts: '3',
             username: 'juligomez_',
-            dayBirth: '1990-08-8'
+            dayBirth: '1990-08-8',
+            image: 'images/julian.jpeg'
         },
         {
             name: 'Nicolas',
@@ -43,7 +47,8 @@ var users = {
             level: 'Avanzado',
             posts: '49',
             username: 'nicorodri',
-            dayBirth: '1960-12-1'
+            dayBirth: '1960-12-1',
+            image: 'images/nicolas.jpeg'
         }
     ]
 }
