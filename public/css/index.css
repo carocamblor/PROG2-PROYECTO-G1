@@ -26,12 +26,18 @@ h4.post-title {
 p.post-description {
     color: black;
 }
-  
+
+p.post-description.card-text{
+  font-family: sans-serif;
+}
+
+
 p.post-username {
     font-weight: bold;
     color: #65bbaa;
     margin: 0;
     display: inline;
+    font-family: unset;
   }
   
   p.post-username :hover {

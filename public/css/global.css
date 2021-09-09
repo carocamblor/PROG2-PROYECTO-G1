@@ -11,6 +11,11 @@ main div {
   width: 100%!important;
 }
 
+h1 {
+  font-size: 25px;
+  margin-right: 20px;
+}
+
 body {
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
@@ -60,6 +65,16 @@ h4.post-title {
   font-weight: bold;
   margin: 0;
   color: black;
+}
+
+.form-control {
+  color: white;
+  background-color: #48b9a8ff;
+  border-color: #48b9a8ff;
+}
+
+input::placeholder {
+  color: white;
 }
 
 p.post-description {
