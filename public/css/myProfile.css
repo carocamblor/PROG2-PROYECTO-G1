@@ -1,7 +1,7 @@
 div.user-card {
-    display: grid;
-    width: 100;
-    grid-template-columns: 20% 80%;
+  display: grid;
+  width: 100;
+  grid-template-columns: 20% 80%;
 }
 
 div.user-card img {

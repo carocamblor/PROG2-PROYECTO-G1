@@ -1,56 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('partials/head') %>
-    <head>
-      <link rel="stylesheet" href="/css/postDetail.css">
-    </head> 
-<body>
+  <%- include('partials/head') %>
+
+  <head>
+    <link rel="stylesheet" href="/css/postDetail.css">
+  </head> 
+
+  <body>
     <%- include('partials/headerLoggedOn') %> 
 
-      <div class="card post-detail">
-        <div class="card-header title">
-          <%= post.name %> 
-        </div>
-        <div class="card-header username">
-          <a class="streched-link" href="/users/userdetail/username/<%= post.username %>"> <%= post.username %> </a>
-        </div>
-        <div class="card-body">
-          <section>
-            <img src="/<%= post.image %> " class="card-img-top" alt="...">
-            <p class="card-text description"><%= post.description %></p>
-            <p class="card-text post-date">Date: <%= post.date %></p>
-          </section>
-          <section>
-            <h5 class="card-title">Ingredients</h5>
-            <p class="card-text"> <%= post.ingredients%> </p>
-            <h5 class="card-title instructions-title">Instructions</h5>
-            <p class="card-text"><%= post.preparation %> </p>
-          </section>
-          <section>
-            <h5 class="card-title">Comments</h5>
-            <a class="streched-link" href="/users/userdetail/username/juligomez_"><p class="post-username-comment">@juligomez_</p></a>
-            <p class="post-comment-content">Normal, no me encanto</p>
-            <br>
-            <a class="streched-link" href="/users/userdetail/username/tatianakatz"><p class="post-username-comment">@tatianakatz</p></a>
-            <p class="post-comment-content">Muy mal explicada</p>
-            <br>
-            <a class="streched-link" href="/users/userdetail/username/nicorodri"><p class="post-username-comment">@nicorodri</p></a>
-            <p class="post-comment-content">Buena</p>
-            <br>
-            <a class="streched-link" href="/users/userdetail/username/nicolelapidus"><p class="post-username-comment">@nicolelapidus</p></a>
-            <p class="post-comment-content">Queria hacerla pero muy malos comentarios jajaj</p>
-            <br>
-            <h5 class="card-title leave-comment-title">Leave a comment</h5>
-            <form class="form-comment">
-                  <div class="input-group">
-                    <textarea class="form-control" aria-label="With textarea"></textarea>
-                  </div>
-                <button type="submit" class="btn btn-primary">Comment</button>
-              </form>
-          </section>
-        </div>
+    <div class="card post-detail">
+      <div class="card-header title">
+        <%= post.name %> 
       </div>
-
+      <div class="card-header username">
+        <a class="streched-link" href="/users/userdetail/username/<%= post.username %>"> <%= post.username %> </a>
+      </div>
+      <div class="card-body">
+        <section>
+          <img src="/<%= post.image %> " class="card-img-top" alt="...">
+          <p class="card-text description"><%= post.description %></p>
+          <p class="card-text post-date">Date: <%= post.date %></p>
+        </section>
+        <section>
+          <h5 class="card-title">Ingredients</h5>
+          <p class="card-text"> <%= post.ingredients%> </p>
+          <h5 class="card-title instructions-title">Instructions</h5>
+          <p class="card-text"><%= post.preparation %> </p>
+        </section>
+        <section>
+          <h5 class="card-title">Comments</h5>
+          <a class="streched-link" href="/users/userdetail/username/juligomez_"><p class="post-username-comment">@juligomez_</p></a>
+          <p class="post-comment-content">Normal, no me encanto</p>
+          <br>
+          <a class="streched-link" href="/users/userdetail/username/tatianakatz"><p class="post-username-comment">@tatianakatz</p></a>
+          <p class="post-comment-content">Muy mal explicada</p>
+          <br>
+          <a class="streched-link" href="/users/userdetail/username/nicorodri"><p class="post-username-comment">@nicorodri</p></a>
+          <p class="post-comment-content">Buena</p>
+          <br>
+          <a class="streched-link" href="/users/userdetail/username/nicolelapidus"><p class="post-username-comment">@nicolelapidus</p></a>
+          <p class="post-comment-content">Queria hacerla pero muy malos comentarios jajaj</p>
+          <br>
+          <h5 class="card-title leave-comment-title">Leave a comment</h5>
+          <form class="form-comment">
+              <div class="input-group">
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Comment</button>
+          </form>
+        </section>
+      </div>
+    </div>
     <%- include('partials/footer') %> 
-</body>
+  </body>
 </html>

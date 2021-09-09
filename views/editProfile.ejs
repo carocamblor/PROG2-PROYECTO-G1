@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('partials/head') %> 
-<head>
+  <%- include('partials/head') %> 
+
+  <head>
     <link rel="stylesheet" href="/css/editProfile.css">
-</head>
-<body>
+  </head>
+
+  <body>
     <%- include('partials/headerLoggedOn') %> 
 
     <h4 class="title"> Edit Profile</h4>
@@ -15,17 +17,22 @@
         <input type="text" aria-label="First name" class="form-control">
         <input type="text" aria-label="Last name" class="form-control">
       </div>
-        <div class="input-group">
-          <span class="input-group-text">Biography</span>
-          <textarea class="form-control" aria-label="With textarea"></textarea>
-        </div>
-        <div class="input-group mb-3">
-          <label class="input-group-text" for="inputGroupFile01">Profile Picture</label>
-          <input type="file" class="form-control" id="inputGroupFile01">
-        </div>
-        <button type="submit" class="btn btn-primary">Done</button>
-      </form>
+
+      <div class="input-group">
+        <span class="input-group-text">Biography</span>
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+      </div>
+
+      <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupFile01">Profile Picture</label>
+        <input type="file" class="form-control" id="inputGroupFile01">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Done</button>
+    
+    </form>
 
     <%- include('partials/footer') %> 
-</body>
+
+  </body>
 </html>

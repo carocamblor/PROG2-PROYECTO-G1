@@ -51,6 +51,6 @@ var users = {
             image: 'images/nicolas.jpeg'
         }
     ]
-}
+};
 
 module.exports = users;

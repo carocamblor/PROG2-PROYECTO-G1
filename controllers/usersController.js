@@ -5,9 +5,11 @@ var usersController = {
     login: function (req, res) {
         res.render('login', {})
     },
+
     register: function (req, res) {
         res.render('register', {})
     },
+
     userDetail: function (req, res) {
         var username = req.params.username;
         var user = {};
@@ -26,6 +28,7 @@ var usersController = {
         };
         res.render('userDetail', {user: user, posts: posts}) 
     },
+
     myProfile: function (req, res) {
         var username = req.params.username;
         var user = {};
@@ -44,6 +47,7 @@ var usersController = {
         };
         res.render('myProfile', {user: user, posts: posts}) 
     },
+    
     editProfile: function (req, res) {
         res.render('editProfile', {})
     },

@@ -11,42 +11,42 @@ main div {
 }
 
 img.card-post-profile-picture {
-    height: 10px;
-    width: 10px;
-    display: inline;
+  height: 10px;
+  width: 10px;
+  display: inline;
 }
 
 h4.title {
-    margin: 16px 16px 0px 16px;
-  }
+  margin: 16px 16px 0px 16px;
+}
 
-  h4.post-title {
-    font-family: georgia;
-    font-weight: bold;
-    margin: 0;
-  }
+h4.post-title {
+  font-family: georgia;
+  font-weight: bold;
+  margin: 0;
+}
   
-  p.post-username {
-    font-weight: bold;
-    color: #65bbaa;
-    margin: 0;
-    display: inline;
-  }
+p.post-username {
+  font-weight: bold;
+  color: #65bbaa;
+  margin: 0;
+  display: inline;
+}
   
-  p.post-username :hover {
-    color: #459787!important;
-  }
+p.post-username :hover {
+  color: #459787!important;
+}
 
-  p.post-like, p.post-comment {
-    font-weight: bold;
-    color: palevioletred;
-    margin: 0;
-    display: inline;
-    font-size: 13px;
-    margin-right: 5px;
-  }
+p.post-like, p.post-comment {
+  font-weight: bold;
+  color: palevioletred;
+  margin: 0;
+  display: inline;
+  font-size: 13px;
+  margin-right: 5px;
+}
   
-  p.post-like :hover, p.post-comment :hover {
-    color: rgb(182, 79, 113)!important;
-  }
+p.post-like :hover, p.post-comment :hover {
+  color: rgb(182, 79, 113)!important;
+}
   

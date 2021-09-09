@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('partials/head') %>
-    <head>
-      <link rel="stylesheet" href="/css/myProfile.css">
-    </head> 
-<body>
-    <%- include('partials/headerLoggedOn') %> 
+  <%- include('partials/head') %>
+  
+  <head>
+    <link rel="stylesheet" href="/css/myProfile.css">
+  </head> 
 
+  <body>
+    <%- include('partials/headerLoggedOn') %> 
     <div class="card user-card" style="width: 100;">
         <img src="/<%= user.image %>" alt="">
+
         <div class="card-body">
           <h5 class="card-title"><%= user.name %> <%= user.surname %></h5>
           <h6 class="card-subtitle mb-2 text-muted">@<%= user.username %></h6>
@@ -19,39 +21,38 @@
           <button type="submit" class="btn btn-secondary btn-sm">Edit Profile</button>
           </form>
         </div>
-      </div>
+    </div>
     <main>
       <% for(post of posts) { %> 
-      <div class="card" style="width: 18rem;">
-        <a class="streched-link" href="posts/postdetail/id/<%= post.id %>">
-        <img src="/<%= post.image %>" class="card-img-top" alt="...">
-        </a>
-        <div class="card-body">
+        <div class="card" style="width: 18rem;">
           <a class="streched-link" href="posts/postdetail/id/<%= post.id %>">
-          <h4 class="post-title"><%= post.name %></h4>
+          <img src="/<%= post.image %>" class="card-img-top" alt="...">
           </a>
-          <a class="streched-link" href="posts/postdetail/id/<%= post.id %>">
-          <p class="post-description card-text"><%= post.description %></p>
-          </a>
-          <p class="card-text post-date">Date: <%= post.date %></p>
-          <hr>
-          <a class="streched-link" href="/users/userdetail/username/nicorodri"><p class="post-username-comment">@nicorodri</p></a>
-          <p class="post-comment-content">Muy buenooo!!</p>
-          <br>
-          <a class="streched-link" href="/users/userdetail/username/nicolelapidus "><p class="post-username-comment">@nicolelapidus</p></a>
-          <p class="post-comment-content">Epicooooo</p>
-          <br>
-          <a class="streched-link" href="/users/userdetail/username/juligomez_"><p class="post-username-comment">@juligomez_</p></a>
-          <p class="post-comment-content">Me salio genial</p>
-          <br>
-          <a class="streched-link" href="/users/userdetail/username/carolinacamblor"><p class="post-username-comment">@carolinacamblor</p></a>
-          <p class="post-comment-content">Excelente receta. Recomedadisima</p>
+          <div class="card-body">
+            <a class="streched-link" href="posts/postdetail/id/<%= post.id %>">
+            <h4 class="post-title"><%= post.name %></h4>
+            </a>
+            <a class="streched-link" href="posts/postdetail/id/<%= post.id %>">
+            <p class="post-description card-text"><%= post.description %></p>
+            </a>
+            <p class="card-text post-date">Date: <%= post.date %></p>
+            <hr>
+            <a class="streched-link" href="/users/userdetail/username/nicorodri"><p class="post-username-comment">@nicorodri</p></a>
+            <p class="post-comment-content">Muy buenooo!!</p>
+            <br>
+            <a class="streched-link" href="/users/userdetail/username/nicolelapidus "><p class="post-username-comment">@nicolelapidus</p></a>
+            <p class="post-comment-content">Epicooooo</p>
+            <br>
+            <a class="streched-link" href="/users/userdetail/username/juligomez_"><p class="post-username-comment">@juligomez_</p></a>
+            <p class="post-comment-content">Me salio genial</p>
+            <br>
+            <a class="streched-link" href="/users/userdetail/username/carolinacamblor"><p class="post-username-comment">@carolinacamblor</p></a>
+            <p class="post-comment-content">Excelente receta. Recomedadisima</p>
+          </div>
         </div>
-      </div>
-        <% } %> 
+      <% } %> 
     </main>
 
     <%- include('partials/footer') %> 
-    
-</body>
+  </body>
 </html>
