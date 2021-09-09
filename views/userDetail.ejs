@@ -22,7 +22,7 @@
     </div>
 
     <main>
-      <% for( let i = 0; i < posts.length; i++ ) { %> <%# hacemos un for que recorra todos los posteos %>
+      <% for( let i = 0; i < posts.length; i++ ) { %> <%# hacemos un for que recorra todos los posts del usuario %>
         <% const element = posts[i]%> 
         <div class="card" style="width: 18rem;">
           <a class="streched-link" href="/posts/postdetail/postId/<%= element.postId %> "> <%# a la imagen la linkeamos para que despues lleve al detalle %>
