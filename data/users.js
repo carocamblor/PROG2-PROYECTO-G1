@@ -54,3 +54,4 @@ var users = {
 };
 
 module.exports = users;
+//exportamos el modulo

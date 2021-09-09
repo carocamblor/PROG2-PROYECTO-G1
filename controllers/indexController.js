@@ -1,5 +1,6 @@
 const dataPost = require ('../data/posts');
-const dataUsers = require ('../data/users');
+const dataUsers = require ('../data/users'); 
+//requerimos los modulos para usar la data de ahi
 
 var indexController = {
     feed: function (req, res) {
@@ -11,3 +12,4 @@ var indexController = {
 };
 
 module.exports = indexController;
+//exportamos el controlador para poder usarlo en las rutas

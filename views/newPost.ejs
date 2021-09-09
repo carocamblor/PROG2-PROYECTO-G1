@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('partials/head') %> 
+  <%- include('partials/head') %>  <%# incluimos el head comun %>
   <head>
-      <link rel="stylesheet" href="/css/newPost.css">
+      <link rel="stylesheet" href="/css/newPost.css"> <%# incluimos el css que solo sirve para nuevos posteos %>
   </head>
 
   <body>
-    <%- include('partials/headerLoggedOn') %> 
+    <%- include('partials/headerLoggedOn') %>  <%# incluimos el header de cuando estamos logeados %>
 
     <h4 class="title">Share a new recepie</h4>
 
-    <form action="/" class="new-post">
+    <form action="/" class="new-post"> <%# formulario para nuevo posteo %>
       <div class="input-group">
         <span class="input-group-text">Title</span>
         <input type="text" aria-label="First name" class="form-control">
@@ -39,6 +39,6 @@
       <button type="submit" class="btn btn-primary">Done</button>
     </form>
 
-    <%- include('partials/footer') %> 
+    <%- include('partials/footer') %> <%# incluimos el footer comun %>
   </body>
 </html>

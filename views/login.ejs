@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+  <head> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +11,9 @@
   </head>
 
   <body class="text-center">
-    <%- include('partials/headerLoggedOff') %> 
+    <%- include('partials/headerLoggedOff') %>  <%# incluimos el header de cuando no estamos logeados %>
       
-      <main class="form-signin">
+      <main class="form-signin"> <%# formulario de login %>
         <form action="/" style="padding: 30px 500px 0px 500px;">
           <img class="mb-4" src="/images/logo.png" alt="" width="110" height="110">
           <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
@@ -36,7 +36,7 @@
           <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
         </form>
       </main>
-    <%- include('partials/footer') %> 
+    <%- include('partials/footer') %> <%# incluimos el footer comun %>
   </body>
 
 </html>

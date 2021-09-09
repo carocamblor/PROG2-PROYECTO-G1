@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('partials/head') %>
+  <%- include('partials/head') %> <%# incluimos el head comun %>
   
   <head>
-    <link rel="stylesheet" href="/css/myProfile.css">
+    <link rel="stylesheet" href="/css/myProfile.css"> <%# incluimos el css solo para mi perfil%>
   </head> 
 
   <body>
-    <%- include('partials/headerLoggedOn') %> 
+    <%- include('partials/headerLoggedOn') %>  <%# incluimos el header de cuando estamos logeados %>
     <div class="card user-card" style="width: 100;">
-        <img src="/<%= user.image %>" alt="">
+        <img src="/<%= user.image %>" alt=""> <%# incluimos la foto de perfil %>
 
         <div class="card-body">
-          <h5 class="card-title"><%= user.name %> <%= user.surname %></h5>
-          <h6 class="card-subtitle mb-2 text-muted">@<%= user.username %></h6>
-          <p class="card-text"><%= user.biography %></p>
+          <h5 class="card-title"><%= user.name %> <%= user.surname %></h5> <%# incluimos nombre y apellido %>
+          <h6 class="card-subtitle mb-2 text-muted">@<%= user.username %></h6> <%# incluimos el nombre de usuario  %>
+          <p class="card-text"><%= user.biography %></p> <%# incluimos la bibliografia %>
           <p class="card-text follows">Followers: 100</p>
           <p class="card-text follows">Following: 100</p>
           <form action="/users/editprofile">
@@ -23,20 +23,21 @@
         </div>
     </div>
     <main>
-      <% for(post of posts) { %> 
+      <% for(post of posts) { %>  <%# for que recorre el modulo de posteos %>
         <div class="card" style="width: 18rem;">
-          <a class="streched-link" href="posts/postdetail/id/<%= post.id %>">
+          <a class="streched-link" href="posts/postdetail/id/<%= post.id %>"> <%# incluimos el link para el detalle %>
           <img src="/<%= post.image %>" class="card-img-top" alt="...">
-          </a>
+          </a> <%# incluimos la imagen de la torta %>
           <div class="card-body">
-            <a class="streched-link" href="posts/postdetail/id/<%= post.id %>">
-            <h4 class="post-title"><%= post.name %></h4>
+            <a class="streched-link" href="posts/postdetail/id/<%= post.id %>"> <%# incluimos link para ir al detalle %>
+            <h4 class="post-title"><%= post.name %></h4> <%# incluimos el nombre de la torta %>
             </a>
-            <a class="streched-link" href="posts/postdetail/id/<%= post.id %>">
+            <a class="streched-link" href="posts/postdetail/id/<%= post.id %>"> <%# incluimos link para ir al detalle %>
             <p class="post-description card-text"><%= post.description %></p>
-            </a>
-            <p class="card-text post-date">Date: <%= post.date %></p>
+            </a> <%# incluimos la descripcion del posteo %>
+            <p class="card-text post-date">Date: <%= post.date %></p> <%# incluimos el dia del posteo %>
             <hr>
+            <%# los comentarios %>
             <a class="streched-link" href="/users/userdetail/username/nicorodri"><p class="post-username-comment">@nicorodri</p></a>
             <p class="post-comment-content">Muy buenooo!!</p>
             <br>
@@ -53,6 +54,6 @@
       <% } %> 
     </main>
 
-    <%- include('partials/footer') %> 
+    <%- include('partials/footer') %> <%# incluimos el footer comun %>
   </body>
 </html>

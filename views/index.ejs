@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <%- include('partials/head')%>
+  <%- include('partials/head')%>  <%# incluimos el head comun %>
   <head>
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/index.css"> <%# incluimos el css solo para el index %>
   </head>
 
   <body>
-    <%- include('partials/headerLoggedOn')%>
+    <%- include('partials/headerLoggedOn')%>  <%# incluimos el header de cuando estamos logeados %>
 
     <main>
-      <% for (post of posts) { %> 
+      <% for (post of posts) { %>  <%# hacemos un for del modulo de los posteos %>
         <div class="card" style="width: 18rem;">
           <a class="streched-link" href="posts/postdetail/postid/<%=post.postId%>">
-          <img src="/<%= post.image %>" class="card-img-top" alt="..."></a>
+          <img src="/<%= post.image %>" class="card-img-top" alt="..."></a> <%# ponemos la imagen de la torta y el id para cuando lo toque que lleve al detalle %>
           <div class="card-body">
             <a class="streched-link" href="posts/postdetail/postid/<%= post.postId %>">
-              <h4 class="post-title"><%= post.name %></h4>
+              <h4 class="post-title"><%= post.name %></h4> <%# ponemos el nombre de la torta y el id para cuando lo toque que lleve al detalle %>
             </a>
             <a class="streched-link" href="users/userDetail/username/<%= post.username %>">
               <img class="card-post-profile-picture" src="/images/logo.png" alt="">
-              <p class="post-username"> <%= post.username %> </p>
+              <p class="post-username"> <%= post.username %> </p> <%# ponemos el nombre del que publico de la torta y el id para cuando lo toque que lleve al perfil %>
             </a>
             <a class="streched-link" href="posts/postdetail/postid/<%= post.postId %>">
-              <p class="post-description card-text"><%= post.description %></p>
+              <p class="post-description card-text"><%= post.description %></p> <%# ponemos la descripcion de la torta y el id para cuando lo toque que lleve al detalle %>
             </a>
-            <p class="card-text post-date">Date: <%= post.date %></p>
+            <p class="card-text post-date">Date: <%= post.date %></p> <%# ponemos fecha que se publico %>
             <p class="post-like">Like</p>
-            <p class="post-comment">Comment</p>
+            <p class="post-comment">Comment</p> <%# comentarios %>
             <hr>
             <a class="streched-link" href="/users/userdetail/username/nicolelapidus"><p class="post-username-comment">@nicolelapidus</p></a>
             <p class="post-comment-content">Muy buenooo!!</p>
@@ -46,7 +46,7 @@
     </main>
 
     
-    <%- include('partials/footer')%>
+    <%- include('partials/footer')%> <%# incluimos el footer comun %>
 
   </body>
 

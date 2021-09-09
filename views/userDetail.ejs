@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('partials/head') %> 
+  <%- include('partials/head') %>  <%# incluimos el head comun %>
   <head>
-    <link rel="stylesheet" href="/css/userDetail.css">
+    <link rel="stylesheet" href="/css/userDetail.css"> <%# incluimos el css solo que sirve para el detalle del usuario %>
   </head> 
     
   <body>
-    <%- include('partials/headerLoggedOn') %> 
+    <%- include('partials/headerLoggedOn') %>  <%# incluimos el header de cuando estamos logeados %>
 
     <div class="card user-card" style="width: 100;">
-      <img src="/<%= user.image %>" alt="">
+      <img src="/<%= user.image %>" alt=""> <%# traemos la foto de perfil del modulo de usuarios %>
       <div class="card-body">
-        <h5 class="card-title"> <%= user.name %>  <%= user.surname %> </h5>
-        <h6 class="card-subtitle mb-2 text-muted"> <%= user.username %> </h6>
-        <p class="card-text"> <%= user.biography %> </p>
+        <h5 class="card-title"> <%= user.name %>  <%= user.surname %> </h5> <%# traemos el nombre y apellido del modulo de usuarios %>
+        <h6 class="card-subtitle mb-2 text-muted"> <%= user.username %> </h6> <%# traemos el nombre de usuario del modulo de usuarios %>
+        <p class="card-text"> <%= user.biography %> </p> <%# traemos la bibliografia del modulo de usuarios %>
         <p class="card-text follows">Followers: 100</p>
         <p class="card-text follows">Following: 100</p>
         <button type="button" class="btn btn-secondary btn-sm">Follow</button>
@@ -21,21 +21,21 @@
     </div>
 
     <main>
-      <% for( let i = 0; i < posts.length; i++ ) { %>
+      <% for( let i = 0; i < posts.length; i++ ) { %> <%# hacemos un for que recorra todos los posteos %>
         <% const element = posts[i]%> 
         <div class="card" style="width: 18rem;">
-          <a class="streched-link" href="/posts/postdetail/postId/<%= element.postId %> ">
+          <a class="streched-link" href="/posts/postdetail/postId/<%= element.postId %> "> <%# a la imagen la linkeamos para que despues lleve al detalle %>
           <img src="/<%= element.image %> " class="card-img-top" alt="...">
           </a>
           
           <div class="card-body">
             <a class="streched-link" href="posts/postdetail">
-              <h4 class="post-title"> <%= element.name %> </h4>
+              <h4 class="post-title"> <%= element.name %> </h4> <%# traemos el nombre de la torta %>
             </a>
             <a class="streched-link" href="posts/postdetail">
               <p class="post-description card-text">Los brownies más ricos que vas a probar. Rápidos y fáciles!</p>
             </a>
-            <hr>
+            <hr> <%# comentarios %>
             <a class="streched-link" href="/users/userdetail/username/nicolelapidus"><p class="post-username-comment">@nicolelapidus</p></a>
             <p class="post-comment-content">Muy buenooo!!</p>
             <br>
@@ -50,9 +50,9 @@
           </div>
 
         </div>
-      <% } %>
+      <% } %> <%# cerramos el for %>
     </main>
-    <%- include('partials/footer') %> 
+    <%- include('partials/footer') %> <%# traemos el footer de partials %>
   </body>
 
 </html>

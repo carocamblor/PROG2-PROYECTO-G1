@@ -1,5 +1,6 @@
 const dataPost = require ('../data/posts');
 const dataUsers = require ('../data/users');
+//requerimos los modulos para usar la data de ahi
 
 var postsController = {
     detail: function (req, res) {
@@ -16,3 +17,4 @@ var postsController = {
 };
 
 module.exports = postsController;
+//exportamos el controlador para poder usarlo en las rutas
