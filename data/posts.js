@@ -502,6 +502,5 @@ var posts = {
         },
     ]
 }
-
 module.exports = posts;
 //exportamos el modulo
