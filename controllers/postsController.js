@@ -8,8 +8,9 @@ var postsController = { //creamos objeto literal que va a tener la logica
             const element = dataPost.list[i];
             if (element.postId == req.params.postid) {
                 res.render('postDetail', {post: element})
-            }
+            } 
         } //hacemos un for que recorra el modulo de posteos y que si el id es el mismo que el uduario pide, .....
+        res.render('error', {error: 'Lo sentimos! No encontramos la receta buscada.'})
     },
     newPost: function (req, res) {
         res.render('newPost', {})
