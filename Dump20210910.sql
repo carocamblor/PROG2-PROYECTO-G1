@@ -28,7 +28,9 @@ CREATE TABLE `comments` (
   `id_user` int(11) NOT NULL,
   `text` text NOT NULL,
   `date_creation` date NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`id_post`) REFERENCES posts(`id`),
+  FOREIGN KEY (`id_user`) REFERENCES users(`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -58,7 +60,8 @@ CREATE TABLE `posts` (
   `ingredients` text NOT NULL,
   `instructions` text NOT NULL,
   `name` varchar(25) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`id_user`) REFERENCES users(`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
