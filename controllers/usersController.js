@@ -13,12 +13,12 @@ var usersController = {
 
     userDetail: function (req, res) {
         var username = req.params.username;
-        var user = {};
+        var user;
         var posts = [];
         for (let i = 0; i < dataUsers.list.length; i++) {
             const element = dataUsers.list[i];
             if (element.username == username) {
-                var user = element;
+                user = element;
             };
         };
         for (let i = 0; i < dataPost.list.length; i++) {
@@ -27,7 +27,11 @@ var usersController = {
                 posts.push(element);
             };
         };
-        res.render('userDetail', {user: user, posts: posts}) 
+        if (user) {
+            res.render('userDetail', {user: user, posts: posts})
+        } else {
+            res.render('error', {error: 'Lo sentimos! No encontramos ningun usuario con ese nombre.'}) 
+        }
     },
 
     myProfile: function (req, res) {
