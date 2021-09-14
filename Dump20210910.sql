@@ -53,7 +53,7 @@ DROP TABLE IF EXISTS `posts`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `posts` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `id_user` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL, 
   `picture` varchar(155) NOT NULL,
   `description` text,
   `date_creation` date NOT NULL,
@@ -61,7 +61,7 @@ CREATE TABLE `posts` (
   `instructions` text NOT NULL,
   `name` varchar(25) NOT NULL,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (`id_user`) REFERENCES users(`id`)
+  FOREIGN KEY (`id_user`) REFERENCES users(`id`) /* la clave foreign tiene la propiedad que traimos de la otra tabla, en referencias el nombre de la otra tabla y como esta nombrado el id en la otra tabla */
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
