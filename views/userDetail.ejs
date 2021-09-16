@@ -37,17 +37,11 @@
               <p class="post-description card-text">Los brownies más ricos que vas a probar. Rápidos y fáciles!</p>
             </a>
             <hr> <%# comentarios %>
-            <a class="streched-link" href="/users/nicolelapidus"><p class="post-username-comment">@nicolelapidus</p></a>
-            <p class="post-comment-content">Muy buenooo!!</p>
-            <br>
-            <a class="streched-link" href="/users/nicorodri"><p class="post-username-comment">@nicorodri</p></a>
-            <p class="post-comment-content">Medio pelo</p>
-            <br>
-            <a class="streched-link" href="/users/juligomez_"><p class="post-username-comment">@juligomez_</p></a>
-            <p class="post-comment-content">Nunca probe algo asi</p>
-            <br>
-            <a class="streched-link" href="/users/tatianakatz"><p class="post-username-comment">@tatianakatz</p></a>
-            <p class="post-comment-content">Genial</p>
+            <% for (let comment of element.comments) { %>
+              <a class="streched-link" href="/users/<%=comment.user.username%>"><p class="post-username-comment">@<%=comment.user.username%></p></a>
+              <p class="post-comment-content"><%=comment.text%></p>
+              <br>
+            <% } %> 
           </div>
 
         </div>

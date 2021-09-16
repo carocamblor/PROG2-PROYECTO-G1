@@ -16,18 +16,18 @@
     <form action="/users/myprofile/nicolelapidus" class="edit-profile">
       <div class="input-group">
         <span class="input-group-text">First and last name</span>
-        <input type="text" aria-label="First name" class="form-control">
-        <input type="text" aria-label="Last name" class="form-control">
+        <input type="text" aria-label="First name" name="first_name" class="form-control">
+        <input type="text" aria-label="Last name" name="last_name" class="form-control">
       </div>
 
       <div class="input-group">
         <span class="input-group-text">Biography</span>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+        <textarea class="form-control" aria-label="With textarea" name="biography"></textarea>
       </div>
 
       <div class="input-group mb-3">
         <label class="input-group-text" for="inputGroupFile01">Profile Picture</label>
-        <input type="file" class="form-control" id="inputGroupFile01">
+        <input type="file" accept=".jpg, .png, .jpeg" name="profile_picture" class="form-control" id="inputGroupFile01">
       </div>
 
       <button type="submit" class="btn btn-primary">Done</button>

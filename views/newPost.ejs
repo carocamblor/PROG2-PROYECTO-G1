@@ -15,27 +15,27 @@
     <form action="/" class="new-post"> <%# formulario para nuevo posteo %>
       <div class="input-group">
         <span class="input-group-text">Title</span>
-        <input type="text" aria-label="First name" class="form-control">
+        <input type="text" aria-label="Title" name="title" class="form-control">
       </div>
       
       <div class="input-group">
         <span class="input-group-text">Description</span>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+        <textarea class="form-control" aria-label="With textarea" name="description"></textarea>
       </div>
       
       <div class="input-group">
           <span class="input-group-text">Ingredients</span>
-          <textarea class="form-control" aria-label="With textarea"></textarea>
+          <textarea class="form-control" aria-label="With textarea" name="ingredients"></textarea>
       </div>
       
       <div class="input-group">
           <span class="input-group-text">Instructions</span>
-          <textarea class="form-control" aria-label="With textarea"></textarea>
+          <textarea class="form-control" aria-label="With textarea" name="instructions"></textarea>
       </div>
       
       <div class="input-group mb-3">
         <label class="input-group-text" for="inputGroupFile01">Image</label>
-        <input type="file" class="form-control" id="inputGroupFile01">
+        <input type="file" accept=".jpg, .png, .jpeg" class="form-control" name="picture" id="inputGroupFile01">
       </div>
       
       <button type="submit" class="btn btn-primary">Done</button>

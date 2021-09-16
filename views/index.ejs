@@ -31,23 +31,16 @@
             <p class="post-like">Like</p>
             <p class="post-comment">Comment</p> <%# comentarios %>
             <hr>
-            <a class="streched-link" href="/users/nicolelapidus"><p class="post-username-comment">@nicolelapidus</p></a>
-            <p class="post-comment-content">Muy buenooo!!</p>
-            <br>
-            <a class="streched-link" href="/users/carolinacamblor"><p class="post-username-comment">@carolinacamblor</p></a>
-            <p class="post-comment-content"> Me gusto la idea</p>
-            <br>
-            <a class="streched-link" href="/users/tatianakatz"><p class="post-username-comment">@tatianakatz</p></a>
-            <p class="post-comment-content">Intente hacerlo y no pude</p>
-            <br>
-            <a class="streched-link" href="/users/nicorodri"><p class="post-username-comment">@nicorodri</p></a>
-            <p class="post-comment-content">Tengo una receta mucho mejor!</p>
-          </div>
+            <% for (let comment of post.comments) { %>
+              <a class="streched-link" href="/users/<%=comment.user.username%>"><p class="post-username-comment">@<%=comment.user.username%></p></a>
+              <p class="post-comment-content"><%=comment.text%></p>
+              <br>
+            <% } %> 
+            </div>
         </div>
       <% } %>   
     </main>
 
-    
     <%- include('partials/footer')%> <%# incluimos el footer comun %>
 
   </body>
