@@ -55,7 +55,15 @@ var users = {
             image: 'images/nicolas.jpeg',
             idUser: '5'
         }
-    ]
+    ],
+    findByUsername: function (username) {
+        for (let i = 0; i < users.list.length; i++) {
+            const element = users.list[i];
+            if (element.username == username) {
+                return element;
+            };
+        };
+    },
 };
 
 module.exports = users;

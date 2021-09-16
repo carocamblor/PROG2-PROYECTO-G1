@@ -15,7 +15,7 @@
         <%= post.name %>  <%# traemos el nombre del posteo %>
       </div>
       <div class="card-header username">
-        <a class="streched-link" href="/users/userdetail/username/<%= post.username %>"> <%= post.username %> </a> <%# pusimos el nombre de usuario de quien hiz el posteo %>
+        <a class="streched-link" href="/users/<%= post.username %>"> <%= post.username %> </a> <%# pusimos el nombre de usuario de quien hiz el posteo %>
       </div> <%# linkeamos para que nos lleve al perfil del usuario %>
       <div class="card-body">
         <section>
@@ -31,18 +31,11 @@
         </section>
         <section> <%# seccion con comentarios %>
           <h5 class="card-title">Comments</h5>
-          <a class="streched-link" href="/users/userdetail/username/juligomez_"><p class="post-username-comment">@juligomez_</p></a>
-          <p class="post-comment-content">Normal, no me encanto</p>
-          <br>
-          <a class="streched-link" href="/users/userdetail/username/tatianakatz"><p class="post-username-comment">@tatianakatz</p></a>
-          <p class="post-comment-content">Muy mal explicada</p>
-          <br>
-          <a class="streched-link" href="/users/userdetail/username/nicorodri"><p class="post-username-comment">@nicorodri</p></a>
-          <p class="post-comment-content">Buena</p>
-          <br>
-          <a class="streched-link" href="/users/userdetail/username/nicolelapidus"><p class="post-username-comment">@nicolelapidus</p></a>
-          <p class="post-comment-content">Queria hacerla pero muy malos comentarios jajaj</p>
-          <br>
+          <% for(let comment of postComments) { %>
+            <a class="streched-link" href="/users/<%= comment.user.username %>"><p class="post-username-comment">@<%= comment.user.username %></p></a>
+            <p class="post-comment-content"><%= comment.text%></p>
+            <br>
+          <% } %> 
           <h5 class="card-title leave-comment-title">Leave a comment</h5>
           <form class="form-comment">
               <div class="input-group">

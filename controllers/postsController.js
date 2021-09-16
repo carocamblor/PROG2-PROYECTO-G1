@@ -1,16 +1,17 @@
-const dataPost = require ('../data/posts');
-const dataUsers = require ('../data/users');
+const posts = require ('../data/posts');
+const users = require ('../data/users');
+const comments = require('../data/comments')
 //requerimos los modulos para usar la data de ahi
 
 var postsController = { //creamos objeto literal que va a tener la logica
-    detail: function (req, res) { 
-        for (let i = 0; i < dataPost.list.length; i++) {
-            const element = dataPost.list[i];
-            if (element.postId == req.params.postid) {
-                res.render('postDetail', {post: element})
-            } 
-        } //hacemos un for que recorra el modulo de posteos y que si el id es el mismo que el uduario pide, .....
-        res.render('error', {error: 'Lo sentimos! No encontramos la receta buscada.'})
+
+    detail: function (req, res) {
+        var post = posts.findByID(req.params.postid);
+        if (post) {
+            var postComments = comments.findByPost(post.postId)
+            res.render('postDetail', {post, postComments})
+        };
+        res.render('error', {error: 'Lo sentimos! No encontramos la receta buscada.'}) 
     },
     newPost: function (req, res) {
         res.render('newPost', {})

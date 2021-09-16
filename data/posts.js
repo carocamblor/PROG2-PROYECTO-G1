@@ -1,3 +1,5 @@
+const comments = require("./comments");
+
 var posts = {
     list: [
         {
@@ -8,6 +10,7 @@ var posts = {
             username: 'nicolelapidus',
             postId: '1',
             description: 'La pasta frolla más rica del mundo.',
+            comments: comments.findByPost(this.postId),
             date: '2020-09-08',
         },
         {
@@ -18,6 +21,7 @@ var posts = {
             username: 'nicolelapidus',
             postId: '2',
             description: 'El postre más rico que vas a probar!',
+            comments: comments.findByPost(this.postId),
             date: '2021-09-07',
         },
         {
@@ -28,6 +32,7 @@ var posts = {
             username: 'nicolelapidus',
             postId: '3',
             description: 'El postre más rico que vas a probar!',
+            comments: comments.findByPost(this.postId),
             date: '2021-09-06',
         },
         {
@@ -38,6 +43,7 @@ var posts = {
             username: 'nicolelapidus',
             postId: '4',
             description: 'Con esta receta vas a impresionar a todos tus amigos',
+            comments: comments.findByPost(this.postId),
             date: '2021-09-05',
         },
         {
@@ -48,6 +54,7 @@ var posts = {
             username: 'nicolelapidus',
             postId: '5',
             description: 'Si preparas este postre, toda tu familia te va a amar.',
+            comments: comments.findByPost(this.postId),
             date: '2021-09-04',
         },
         {
@@ -58,6 +65,7 @@ var posts = {
             username: 'nicolelapidus',
             postId: '6',
             description: 'La receta de mi abuela :)',
+            comments: comments.findByPost(this.postId),
             date: '2021-09-03',
         },
         {
@@ -68,6 +76,7 @@ var posts = {
             username: 'nicolelapidus',
             postId: '7',
             description: 'Comparto con ustedes mi receta favorita!',
+            comments: comments.findByPost(this.postId),
             date: '2021-09-02',
         },
         {
@@ -78,6 +87,7 @@ var posts = {
             username: 'nicolelapidus',
             postId: '8',
             description: 'Este postre es lo más',
+            comments: comments.findByPost(this.postId),
             date: '2021-09-01',
         },
         {
@@ -88,6 +98,7 @@ var posts = {
             username: 'nicolelapidus',
             postId: '9',
             description: 'Esta torta es re rica, no te vas a arrepentir',
+            comments: comments.findByPost(this.postId),
             date: '2021-08-20',
         },
         {
@@ -98,6 +109,7 @@ var posts = {
             username: 'nicolelapidus',
             postId: '10',
             description: 'El postre más rico que vas a probar!',
+            comments: comments.findByPost(this.postId),
             date: '2021-08-18',
         },
         {
@@ -108,6 +120,7 @@ var posts = {
             username: 'tatianakatz',
             postId: '11',
             description: 'El postre más rico que vas a probar!',
+            comments: comments.findByPost(this.postId),
             date: '2021-08-15',
         },
         {
@@ -118,6 +131,7 @@ var posts = {
             username: 'tatianakatz',
             postId: '12',
             description: 'Fácil y rico!',
+            comments: comments.findByPost(this.postId),
             date: '2021-08-13',
         },
         {
@@ -128,6 +142,7 @@ var posts = {
             username: 'tatianakatz',
             postId: '13',
             description: 'El postre más rico que vas a probar!',
+            comments: comments.findByPost(this.postId),
             date: '2021-08-08',
         },
         {
@@ -138,6 +153,7 @@ var posts = {
             username: 'tatianakatz',
             postId: '14',
             description: 'Prueben esta recetaaaa!',
+            comments: comments.findByPost(this.postId),
             date: '2021-08-05',
         },
         {
@@ -148,6 +164,7 @@ var posts = {
             username: 'tatianakatz',
             postId: '15',
             description: 'El mejor postre que comí en toda mi vida',
+            comments: comments.findByPost(this.postId),
             date: '2021-08-01',
         },
         {
@@ -158,6 +175,7 @@ var posts = {
             username: 'tatianakatz',
             postId: '16',
             description: 'Ideal para la hora del té',
+            comments: comments.findByPost(this.postId),
             date: '2021-06-27',
         },
         {
@@ -168,6 +186,7 @@ var posts = {
             username: 'tatianakatz',
             postId: '17',
             description: 'El postre más rico que vas a probar!',
+            comments: comments.findByPost(this.postId),
             date: '2021-06-20',
         },
         {
@@ -178,6 +197,7 @@ var posts = {
             username: 'tatianakatz',
             postId: '18',
             description: 'Ideal para compartir con amigos',
+            comments: comments.findByPost(this.postId),
             date: '2021-06-17',
         },
         {
@@ -188,6 +208,7 @@ var posts = {
             username: 'tatianakatz',
             postId: '19',
             description: 'Mi receta favorita',
+            comments: comments.findByPost(this.postId),
             date: '2021-06-13',
         },
         {
@@ -198,6 +219,7 @@ var posts = {
             username: 'tatianakatz',
             postId: '20',
             description: 'La mejor opción para una torta de cumpleaños',
+            comments: comments.findByPost(this.postId),
             date: '2021-05-08',
         },
         {
@@ -208,6 +230,7 @@ var posts = {
             username: 'carolinacamblor',
             postId: '21',
             description: 'Les recomiendo que prueben esta receta!!!',
+            comments: comments.findByPost(this.postId),
             date: '2021-04-29',
         },
         {
@@ -218,6 +241,7 @@ var posts = {
             username: 'carolinacamblor',
             postId: '22',
             description: 'Buenísima esta torta para compartir con familia y amigos',
+            comments: comments.findByPost(this.postId),
             date: '2021-04-24',
         },
         {
@@ -228,6 +252,7 @@ var posts = {
             username: 'carolinacamblor',
             postId: '23',
             description: 'Super recomendada esta receta',
+            comments: comments.findByPost(this.postId),
             date: '2021-03-10',
         },
         {
@@ -238,6 +263,7 @@ var posts = {
             username: 'carolinacamblor',
             postId: '24',
             description: 'No se pierdan de probar esta delicia',
+            comments: comments.findByPost(this.postId),
             date: '2021-02-02',
         },
         {
@@ -248,6 +274,7 @@ var posts = {
             username: 'carolinacamblor',
             postId: '25',
             description: 'Recomendada para personas que recién empiezan en la cocina!',
+            comments: comments.findByPost(this.postId),
             date: '2021-01-21',
         },
         {
@@ -258,6 +285,7 @@ var posts = {
             username: 'carolinacamblor',
             postId: '26',
             description: 'A mi famila le encantó!',
+            comments: comments.findByPost(this.postId),
             date: '2020-09-08',
         },
         {
@@ -268,6 +296,7 @@ var posts = {
             username: 'carolinacamblor',
             postId: '27',
             description: 'Muy buena esta receta.',
+            comments: comments.findByPost(this.postId),
             date: '2020-12-08',
         },
         {
@@ -278,6 +307,7 @@ var posts = {
             username: 'carolinacamblor',
             postId: '28',
             description: 'Riquísimooooo, no se lo pueden perder',
+            comments: comments.findByPost(this.postId),
             date: '2020-11-18',
         },
         {
@@ -288,6 +318,7 @@ var posts = {
             username: 'carolinacamblor',
             postId: '29',
             description: 'El postre perfecto para una tarde con amgios',
+            comments: comments.findByPost(this.postId),
             date: '2020-11-18',
         },
         {
@@ -298,6 +329,7 @@ var posts = {
             username: 'carolinacamblor',
             postId: '30',
             description: 'Riquísima esta recetaaaaaa',
+            comments: comments.findByPost(this.postId),
             date: '2020-11-18',
         },
         {
@@ -308,6 +340,7 @@ var posts = {
             username: 'juligomez_',
             postId: '31',
             description: 'Muy rico y, además, muy fácil!!',
+            comments: comments.findByPost(this.postId),
             date: '2020-10-31',
         },
         {
@@ -318,6 +351,7 @@ var posts = {
             username: 'juligomez_',
             postId: '32',
             description: 'El postre más rico que vas a probar!',
+            comments: comments.findByPost(this.postId),
             date: '2020-9-11',
         },
         {
@@ -328,6 +362,7 @@ var posts = {
             username: 'juligomez_',
             postId: '33',
             description: 'La torta más rica de todo el mundo',
+            comments: comments.findByPost(this.postId),
             date: '2020-09-08',
         },
         {
@@ -338,6 +373,7 @@ var posts = {
             username: 'juligomez_',
             postId: '34',
             description: 'Me encantoooo!!',
+            comments: comments.findByPost(this.postId),
             date: '2020-08-19',
         },
         {
@@ -348,6 +384,7 @@ var posts = {
             username: 'juligomez_',
             postId: '35',
             description: 'El postre favorito de mi hermana',
+            comments: comments.findByPost(this.postId),
             date: '2020-04-28',
         },
         {
@@ -358,6 +395,7 @@ var posts = {
             username: 'juligomez_',
             postId: '36',
             description: 'De otro mundo',
+            comments: comments.findByPost(this.postId),
             date: '2020-03-11',
         },
         {
@@ -368,6 +406,7 @@ var posts = {
             username: 'juligomez_',
             postId: '37',
             description: 'Muuy muy muuuy ricoo',
+            comments: comments.findByPost(this.postId),
             date: '2020-03-05',
         },
         {
@@ -378,6 +417,7 @@ var posts = {
             username: 'juligomez_',
             postId: '38',
             description: 'El postre más rico que vas a probar!',
+            comments: comments.findByPost(this.postId),
             date: '2020-02-29',
         },
         {
@@ -388,6 +428,7 @@ var posts = {
             username: 'juligomez_',
             postId: '39',
             description: 'Mi receta favorita :)',
+            comments: comments.findByPost(this.postId),
             date: '2020-02-22',
         },
         {
@@ -398,6 +439,7 @@ var posts = {
             username: 'juligomez_',
             postId: '40',
             description: 'Tremenda cheesecake',
+            comments: comments.findByPost(this.postId),
             date: '2020-02-11',
         },
         {
@@ -408,6 +450,7 @@ var posts = {
             username: 'nicorodri',
             postId: '41',
             description: 'Una cheescake diferente',
+            comments: comments.findByPost(this.postId),
             date: '2020-02-05',
         },
         {
@@ -418,6 +461,7 @@ var posts = {
             username: 'nicorodri',
             postId: '42',
             description: 'Me encanto esta recetaaa!!',
+            comments: comments.findByPost(this.postId),
             date: '2020-02-25',
         },
         {
@@ -428,6 +472,7 @@ var posts = {
             username: 'nicorodri',
             postId: '43',
             description: 'Muy buena',
+            comments: comments.findByPost(this.postId),
             date: '2020-01-30',
         },
         {
@@ -438,6 +483,7 @@ var posts = {
             username: 'nicorodri',
             postId: '44',
             description: 'El postre más rico que vas a probar!',
+            comments: comments.findByPost(this.postId),
             date: '2020-01-28',
         },
         {
@@ -448,6 +494,7 @@ var posts = {
             username: 'nicorodri',
             postId: '45',
             description: 'El postre más rico que vas a probar!',
+            comments: comments.findByPost(this.postId),
             date: '2020-01-27',
         },
         {
@@ -458,6 +505,7 @@ var posts = {
             username: 'nicorodri',
             postId: '46',
             description: 'El postre más rico que vas a probar!',
+            comments: comments.findByPost(this.postId),
             date: '2020-01-26',
         },
         {
@@ -468,6 +516,7 @@ var posts = {
             username: 'nicorodri',
             postId: '47',
             description: 'El postre más rico que vas a probar!',
+            comments: comments.findByPost(this.postId),
             date: '2020-01-23',
         },
         {
@@ -478,6 +527,7 @@ var posts = {
             username: 'nicorodri',
             postId: '48',
             description: 'El postre más rico que vas a probar!',
+            comments: comments.findByPost(this.postId),
             date: '2020-01-22',
         },
         {
@@ -488,6 +538,7 @@ var posts = {
             username: 'nicorodri',
             postId: '49',
             description: 'El postre más rico que vas a probar!',
+            comments: comments.findByPost(this.postId),
             date: '2020-01-09',
         },
         {
@@ -498,9 +549,28 @@ var posts = {
             username: 'nicorodri',
             postId: '50',
             description: 'El postre más rico que vas a probar!',
+            comments: comments.findByPost(this.postId),
             date: '2020-01-01',
         },
-    ]
+    ],
+    findByUsername: function (username) {
+        let results = [];
+        for (let i = 0; i < posts.list.length; i++) {
+            const element = posts.list[i];
+            if (element.username == username) {
+                results.push(element)
+            };
+        };
+        return results;
+    },
+    findByID: function (id) {
+        for (let i = 0; i < posts.list.length; i++) {
+            const element = posts.list[i];
+            if (element.postId == id) {
+                return element;
+            };
+        };
+    },
 }
 module.exports = posts;
 //exportamos el modulo

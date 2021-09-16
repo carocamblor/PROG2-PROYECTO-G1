@@ -11,12 +11,17 @@ main div {
   width: 100%!important;
 }
 
+header {
+  background-color: white;
+}
+
 h1 {
   font-size: 25px;
   margin-right: 20px;
 }
 
 body {
+  padding-top: 88px;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll; 
@@ -52,6 +57,10 @@ p {
 
 main div {
   width: 100%!important;
+}
+
+main.form-signin {
+  display: block;
 }
 
 img.card-post-profile-picture {
@@ -92,6 +101,12 @@ p.post-like, p.post-comment {
   
 p.post-like :hover, p.post-comment :hover {
   color: rgb(182, 79, 113)!important;
+}
+
+p.post-date {
+  color: grey;
+  font-weight: bold;
+  font-size: small;
 }
   
 .card-body hr {
