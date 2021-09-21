@@ -12,6 +12,7 @@ var posts = {
             description: 'La pasta frolla más rica del mundo.',
             comments: comments.findByPost(1),
             date: '2020-09-08',
+            profileImage: 'images/nicole.jpg'
         },
         {
             name: 'TORTA DE LA SELVA NEGRA',
@@ -23,6 +24,7 @@ var posts = {
             description: 'El postre más rico que vas a probar!',
             comments: comments.findByPost(2),
             date: '2021-09-07',
+            profileImage: 'images/nicole.jpg'
         },
         {
             name: 'TORTA MOKA',
@@ -34,6 +36,7 @@ var posts = {
             description: 'El postre más rico que vas a probar!',
             comments: comments.findByPost(3),
             date: '2021-09-06',
+            profileImage: 'images/nicole.jpg'
         },
         {
             name: 'TORTA DE BROWNIE MERENGADA',
@@ -45,6 +48,7 @@ var posts = {
             description: 'Con esta receta vas a impresionar a todos tus amigos',
             comments: comments.findByPost(4),
             date: '2021-09-05',
+            profileImage: 'images/nicole.jpg'
         },
         {
             name: 'POSTRE BALCARCE',
@@ -56,6 +60,7 @@ var posts = {
             description: 'Si preparas este postre, toda tu familia te va a amar.',
             comments: comments.findByPost(5),
             date: '2021-09-04',
+            profileImage: 'images/nicole.jpg'
         },
         {
             name: 'TORTA EL MOLINO',
@@ -67,6 +72,7 @@ var posts = {
             description: 'La receta de mi abuela :)',
             comments: comments.findByPost(6),
             date: '2021-09-03',
+            profileImage: 'images/nicole.jpg'
         },
         {
             name: 'TARTA DE LIMÓN MERENGADA',
@@ -78,6 +84,7 @@ var posts = {
             description: 'Comparto con ustedes mi receta favorita!',
             comments: comments.findByPost(7),
             date: '2021-09-02',
+            profileImage: 'images/nicole.jpg'
         },
         {
             name: 'POSTRE CHAJÁ',
@@ -89,6 +96,7 @@ var posts = {
             description: 'Este postre es lo más',
             comments: comments.findByPost(8),
             date: '2021-09-01',
+            profileImage: 'images/nicole.jpg'
         },
         {
             name: 'TORTA DOBOS',
@@ -100,6 +108,7 @@ var posts = {
             description: 'Esta torta es re rica, no te vas a arrepentir',
             comments: comments.findByPost(9),
             date: '2021-08-20',
+            profileImage: 'images/nicole.jpg'
         },
         {
             name: 'TORTA LEGUISAMO',
@@ -111,6 +120,7 @@ var posts = {
             description: 'El postre más rico que vas a probar!',
             comments: comments.findByPost(10),
             date: '2021-08-18',
+            profileImage: 'images/nicole.jpg'
         },
         {
             name: 'RED VELVET CAKE',
@@ -122,6 +132,7 @@ var posts = {
             description: 'El postre más rico que vas a probar!',
             comments: comments.findByPost(11),
             date: '2021-08-15',
+            profileImage: 'images/tatiana.jpg'
         },
         {
             name: 'TROPICAL COCONUT CAKE',
@@ -133,6 +144,7 @@ var posts = {
             description: 'Fácil y rico!',
             comments: comments.findByPost(12),
             date: '2021-08-13',
+            profileImage: 'images/tatiana.jpg'
         },
         {
             name: 'KUCHEN DE MANZANAS, CANELA Y SEMILLAS DE GIRASOL',
@@ -144,6 +156,7 @@ var posts = {
             description: 'El postre más rico que vas a probar!',
             comments: comments.findByPost(13),
             date: '2021-08-08',
+            profileImage: 'images/tatiana.jpg'
         },
         {
             name: 'CITRUS POUND CAKE',
@@ -155,6 +168,7 @@ var posts = {
             description: 'Prueben esta recetaaaa!',
             comments: comments.findByPost(14),
             date: '2021-08-05',
+            profileImage: 'images/tatiana.jpg'
         },
         {
             name: 'ANILLO DE AMAPOLAS CON CEREZAS',
@@ -166,6 +180,7 @@ var posts = {
             description: 'El mejor postre que comí en toda mi vida',
             comments: comments.findByPost(15),
             date: '2021-08-01',
+            profileImage: 'images/tatiana.jpg'
         },
         {
             name: 'PUDDING TIBIO DE CAFÉ, CARAMELO Y NUECES PECAN',
@@ -177,6 +192,7 @@ var posts = {
             description: 'Ideal para la hora del té',
             comments: comments.findByPost(16),
             date: '2021-06-27',
+            profileImage: 'images/tatiana.jpg'
         },
         {
             name: 'BUDÍN AUSTRÍACO DE LICOR DE HUEVOS',
@@ -188,6 +204,7 @@ var posts = {
             description: 'El postre más rico que vas a probar!',
             comments: comments.findByPost(17),
             date: '2021-06-20',
+            profileImage: 'images/tatiana.jpg'
         },
         {
             name: 'CAKE INGLESA DE PASAS DE UVA Y ALMENDRAS',
@@ -199,6 +216,7 @@ var posts = {
             description: 'Ideal para compartir con amigos',
             comments: comments.findByPost(18),
             date: '2021-06-17',
+            profileImage: 'images/tatiana.jpg'
         },
         {
             name: 'BUDÍN DE CAFÉ, NUECES Y PISTACHOS',
@@ -210,6 +228,7 @@ var posts = {
             description: 'Mi receta favorita',
             comments: comments.findByPost(19),
             date: '2021-06-13',
+            profileImage: 'images/tatiana.jpg'
         },
         {
             name: 'CAKE DE MAÍZ Y FRUTOS ROJOS (SIN TACC)',
@@ -221,6 +240,7 @@ var posts = {
             description: 'La mejor opción para una torta de cumpleaños',
             comments: comments.findByPost(20),
             date: '2021-05-08',
+            profileImage: 'images/tatiana.jpg'
         },
         {
             name: 'BUDÍN HÚMEDO DE BANANA Y NUECES',
@@ -232,6 +252,7 @@ var posts = {
             description: 'Les recomiendo que prueben esta receta!!!',
             comments: comments.findByPost(21),
             date: '2021-04-29',
+            profileImage: 'images/carolina.jpg'
         },
         {
             name: 'TORTA DE DURAZNOS Y ALMENDRAS',
@@ -243,6 +264,7 @@ var posts = {
             description: 'Buenísima esta torta para compartir con familia y amigos',
             comments: comments.findByPost(22),
             date: '2021-04-24',
+            profileImage: 'images/carolina.jpg'
         },
         {
             name: 'TORTA DE ZANAHORIAS Y ALMENDRAS',
@@ -254,6 +276,7 @@ var posts = {
             description: 'Super recomendada esta receta',
             comments: comments.findByPost(23),
             date: '2021-03-10',
+            profileImage: 'images/carolina.jpg'
         },
         {
             name: 'TORTA GRUMOSA DE CEREZAS',
@@ -265,6 +288,7 @@ var posts = {
             description: 'No se pierdan de probar esta delicia',
             comments: comments.findByPost(24),
             date: '2021-02-02',
+            profileImage: 'images/carolina.jpg'
         },
         {
             name: 'PASTEL VIENÉS DE QUESO Y CIRUELAS',
@@ -276,6 +300,7 @@ var posts = {
             description: 'Recomendada para personas que recién empiezan en la cocina!',
             comments: comments.findByPost(25),
             date: '2021-01-21',
+            profileImage: 'images/carolina.jpg'
         },
         {
             name: 'TORTA MERENGADA DE FRUTAS DE VERANO',
@@ -287,6 +312,7 @@ var posts = {
             description: 'A mi famila le encantó!',
             comments: comments.findByPost(26),
             date: '2020-09-08',
+            profileImage: 'images/carolina.jpg'
         },
         {
             name: 'TORTA INVERTIDA DE ANANÁ, ESTILO TATIN',
@@ -298,6 +324,7 @@ var posts = {
             description: 'Muy buena esta receta.',
             comments: comments.findByPost(27),
             date: '2020-12-08',
+            profileImage: 'images/carolina.jpg'
         },
         {
             name: 'GÂTEAU FRAISIER DE FRUTILLAS Y PISTACHOS',
@@ -309,6 +336,7 @@ var posts = {
             description: 'Riquísimooooo, no se lo pueden perder',
             comments: comments.findByPost(28),
             date: '2020-11-18',
+            profileImage: 'images/carolina.jpg'
         },
         {
             name: 'CAKE DE COCO',
@@ -320,6 +348,7 @@ var posts = {
             description: 'El postre perfecto para una tarde con amgios',
             comments: comments.findByPost(29),
             date: '2020-11-18',
+            profileImage: 'images/carolina.jpg'
         },
         {
             name: 'QUEEN OF SHEBA CAKE - REINA DE SABA CAKE',
@@ -331,6 +360,7 @@ var posts = {
             description: 'Riquísima esta recetaaaaaa',
             comments: comments.findByPost(30),
             date: '2020-11-18',
+            profileImage: 'images/carolina.jpg'
         },
         {
             name: 'LINGOTE DE CHOCOLATE BLANCO Y GROSELLAS',
@@ -342,6 +372,7 @@ var posts = {
             description: 'Muy rico y, además, muy fácil!!',
             comments: comments.findByPost(31),
             date: '2020-10-31',
+            profileImage: 'images/julian.jpeg',
         },
         {
             name: 'CAKE AUSTRALIA DE CHOCOLATE',
@@ -353,6 +384,7 @@ var posts = {
             description: 'El postre más rico que vas a probar!',
             comments: comments.findByPost(32),
             date: '2020-9-11',
+            profileImage: 'images/julian.jpeg',
         },
         {
             name: 'TORTA OSCURA DE CHOCOLATE Y CARAMELO',
@@ -364,6 +396,7 @@ var posts = {
             description: 'La torta más rica de todo el mundo',
             comments: comments.findByPost(33),
             date: '2020-09-08',
+            profileImage: 'images/julian.jpeg',
         },
         {
             name: 'TORTA MERENGADA DE CHOCOLATE Y AVELLANAS',
@@ -375,6 +408,7 @@ var posts = {
             description: 'Me encantoooo!!',
             comments: comments.findByPost(34),
             date: '2020-08-19',
+            profileImage: 'images/julian.jpeg',
         },
         {
             name: 'TORTA CONCORDE',
@@ -386,6 +420,7 @@ var posts = {
             description: 'El postre favorito de mi hermana',
             comments: comments.findByPost(35),
             date: '2020-04-28',
+            profileImage: 'images/julian.jpeg',
         },
         {
             name: 'TORTA HÚMEDA DE CHOCOLATE Y DULCE DE LECHE',
@@ -397,6 +432,7 @@ var posts = {
             description: 'De otro mundo',
             comments: comments.findByPost(36),
             date: '2020-03-11',
+            profileImage: 'images/julian.jpeg',
         },
         {
             name: 'ALIANZA DE CHOCOLATE Y NARANJAS',
@@ -408,6 +444,7 @@ var posts = {
             description: 'Muuy muy muuuy ricoo',
             comments: comments.findByPost(37),
             date: '2020-03-05',
+            profileImage: 'images/julian.jpeg',
         },
         {
             name: 'CHEESECAKE TODO CHOCOLATE',
@@ -419,6 +456,7 @@ var posts = {
             description: 'El postre más rico que vas a probar!',
             comments: comments.findByPost(38),
             date: '2020-02-29',
+            profileImage: 'images/julian.jpeg',
         },
         {
             name: 'CHEESECAKE BIANCO-NERO',
@@ -430,6 +468,7 @@ var posts = {
             description: 'Mi receta favorita :)',
             comments: comments.findByPost(39),
             date: '2020-02-22',
+            profileImage: 'images/julian.jpeg',
         },
         {
             name: 'CHEESECAKE CON FRAMBUESAS Y ARÁNDANOS',
@@ -441,6 +480,7 @@ var posts = {
             description: 'Tremenda cheesecake',
             comments: comments.findByPost(40),
             date: '2020-02-11',
+            profileImage: 'images/julian.jpeg',
         },
         {
             name: 'DAIQUIRI CHEESECAKE',
@@ -452,6 +492,7 @@ var posts = {
             description: 'Una cheescake diferente',
             comments: comments.findByPost(41),
             date: '2020-02-05',
+            profileImage: 'images/nicolas.jpeg',
         },
         {
             name: 'CHEESECAKE DE LIMÓN',
@@ -463,6 +504,7 @@ var posts = {
             description: 'Me encanto esta recetaaa!!',
             comments: comments.findByPost(42),
             date: '2020-02-25',
+            profileImage: 'images/nicolas.jpeg',
         },
         {
             name: 'TORTA RUSA ZUPFKUCHEN',
@@ -474,6 +516,7 @@ var posts = {
             description: 'Muy buena',
             comments: comments.findByPost(43),
             date: '2020-01-30',
+            profileImage: 'images/nicolas.jpeg',
         },
         {
             name: 'BROWNIE CHEESECAKE',
@@ -485,6 +528,7 @@ var posts = {
             description: 'El postre más rico que vas a probar!',
             comments: comments.findByPost(44),
             date: '2020-01-28',
+            profileImage: 'images/nicolas.jpeg',
         },
         {
             name: 'ARROLLADO DE CHOCOLATE Y PRALINÉ',
@@ -496,6 +540,7 @@ var posts = {
             description: 'El postre más rico que vas a probar!',
             comments: comments.findByPost(45),
             date: '2020-01-27',
+            profileImage: 'images/nicolas.jpeg',
         },
         {
             name: 'BÛCHE DE LAS ANTILLAS',
@@ -507,6 +552,7 @@ var posts = {
             description: 'El postre más rico que vas a probar!',
             comments: comments.findByPost(46),
             date: '2020-01-26',
+            profileImage: 'images/nicolas.jpeg',
         },
         {
             name: 'ROLLO DE FRUTILLAS Y CREMA DIPLOMATA',
@@ -518,6 +564,7 @@ var posts = {
             description: 'El postre más rico que vas a probar!',
             comments: comments.findByPost(47),
             date: '2020-01-23',
+            profileImage: 'images/nicolas.jpeg',
         },
         {
             name: 'TORTA DE CHOCOLATE Y NARANJAS',
@@ -529,6 +576,7 @@ var posts = {
             description: 'El postre más rico que vas a probar!',
             comments: comments.findByPost(48),
             date: '2020-01-22',
+            profileImage: 'images/nicolas.jpeg',
         },
         {
             name: 'TORTA DE QUESO Y MANGOS',
@@ -540,6 +588,7 @@ var posts = {
             description: 'El postre más rico que vas a probar!',
             comments: comments.findByPost(49),
             date: '2020-01-09',
+            profileImage: 'images/nicolas.jpeg',
         },
         {
             name: 'TORTA DE PERAS Y CHOCOLATE',
@@ -551,6 +600,7 @@ var posts = {
             description: 'El postre más rico que vas a probar!',
             comments: comments.findByPost(50),
             date: '2020-01-01',
+            profileImage: 'images/nicolas.jpeg',
         },
     ],
     findByUsername: function (username) {
