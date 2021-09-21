@@ -8,41 +8,11 @@
   </head>
   
   <body>
-    <%- include('partials/headerLoggedOn')%>  <%# incluimos el header de cuando estamos logeados %>
-    <h4 class="title"> Showing results for ""</h4>
+    <%- include('partials/headerLoggedOn')%> 
+    <h4 class="title"> Showing results for "<%= search %> "</h4>
 
-    <main> <%# incluimos un resultado general para las busquedas %>
-      <div class="card" style="width: 18rem;">
-        <a class="streched-link" href="posts/postDetail">
-        <img src="https://www.cookforyourlife.org/wp-content/uploads/2020/06/Dark-Chocolate-Brownies-shutterstock_112430981.jpg" class="card-img-top" alt="...">
-        </a>
-        <div class="card-body">
-          <a class="streched-link" href="posts/postdetail">
-            <h4 class="post-title">Brownies</h4>
-          </a>
-          <a class="streched-link" href="users/userDetail">
-            <img class="card-post-profile-picture" src="/images/logo.png" alt="">
-            <p class="post-username"> nicolelapidus </p>
-          </a>
-          <a class="streched-link" href="posts/postdetail">
-            <p class="post-description card-text">Los brownies más ricos que vas a probar. Rápidos y fáciles!</p>
-          </a>
-          <p class="post-like">Like</p>
-          <p class="post-comment">Comment</p>
-          <hr>
-          <a href="/users/userdetail/username/juligomez_"><p class="post-username-comment">@juligomez_</p></a>
-          <p class="post-comment-content">Muy buenooo!!</p>
-          <br>
-          <a href="/users/userdetail/username/tatianakatz"><p class="post-username-comment">@tatianakatz</p></a>
-          <p class="post-comment-content">Mi mama hace la misma</p>
-          <br>
-          <a href="/users/userdetail/username/carolinacamblor"><p class="post-username-comment">@carolinacamblor</p></a>
-          <p class="post-comment-content">GENIAAL</p>
-          <br>
-          <a href="/users/userdetail/username/nicorodri"><p class="post-username-comment">@nicorodri</p></a>
-          <p class="post-comment-content">Me volvio LOCA</p>
-        </div>
-      </div>   
+    <main> 
+      <p>Lo sentimos! No encontramos resultados para tu búsqueda.</p>
     </main>
 
     <%- include('partials/footer') %> 

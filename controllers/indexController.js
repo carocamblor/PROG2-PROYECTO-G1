@@ -14,7 +14,7 @@ var indexController = { //creamos objeto literal que va a tener la logica
         res.render('register', {})
     },
     results: function (req, res) { //la propiedad results hace que cuando haya un requerimiento responda en la pagina searchResults
-        res.render('searchResults', {})
+        res.render('searchResults', {search: req.query.search})
     },
 };
 
