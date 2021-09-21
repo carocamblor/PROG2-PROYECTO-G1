@@ -61,7 +61,7 @@ CREATE TABLE `posts` (
   `instructions` text NOT NULL,
   `name` varchar(25) NOT NULL,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (`id_user`) REFERENCES users(`id`) /* la clave foreign tiene la propiedad que traimos de la otra tabla, en referencias el nombre de la otra tabla y como esta nombrado el id en la otra tabla */
+  FOREIGN KEY (`id_user`) REFERENCES users(`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
