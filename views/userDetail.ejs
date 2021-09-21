@@ -23,21 +23,21 @@
 
     <main>
       <% for( let i = 0; i < userPosts.length; i++ ) { %> 
-        <% const element = userPosts[i]%> 
+        <% const post = userPosts[i]%> 
         <div class="card" style="width: 18rem;">
-          <a class="streched-link" href="/posts/detail/<%= element.postId %> ">
-          <img src="/<%= element.image %> " class="card-img-top" alt="...">
+          <a class="streched-link" href="/posts/<%= post.postId %>">
+          <img src="/<%= post.image %> " class="card-img-top" alt="...">
           </a>
           
           <div class="card-body">
-            <a class="streched-link" href="/posts/detail/<%= element.postId %> ">
-              <h4 class="post-title"> <%= element.name %> </h4>
+            <a class="streched-link" href="/posts/<%= post.postId %>">
+              <h4 class="post-title"> <%= post.name %> </h4>
             </a>
-            <a class="streched-link" href="posts/postdetail">
-              <p class="post-description card-text"><%= element.description %></p>
+            <a class="streched-link" href="posts/<%= post.postId %>">
+              <p class="post-description card-text"><%= post.description %></p>
             </a>
             <hr> <%# comentarios %>
-            <% for (let comment of element.comments) { %>
+            <% for (let comment of post.comments) { %>
               <a class="streched-link" href="/users/<%=comment.user.username%>"><p class="post-username-comment">@<%=comment.user.username%></p></a>
               <p class="post-comment-content"><%=comment.text%></p>
               <br>

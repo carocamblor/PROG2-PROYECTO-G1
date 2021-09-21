@@ -8,8 +8,8 @@ var postsController = { //creamos objeto literal que va a tener la logica
     detail: function (req, res) {
         var post = posts.findByID(req.params.postid);
         if (post) {
-            var postComments = comments.findByPost(post.postId)
-            res.render('postDetail', {post, postComments})
+            // var postComments = comments.findByPost(post.postId)
+            res.render('postDetail', {post})
         };
         res.render('error', {error: 'Lo sentimos! No encontramos la receta buscada.'}) 
     },

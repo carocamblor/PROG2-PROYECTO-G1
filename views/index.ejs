@@ -14,17 +14,17 @@
     <main>
       <% for (let post of posts) { %>  <%# hacemos un for del modulo de los posteos %>
         <div class="card" style="width: 18rem;">
-          <a class="streched-link" href="posts/detail/<%=post.postId%>">
+          <a class="streched-link" href="posts/<%= post.postId %>">
           <img src="/<%= post.image %>" class="card-img-top" alt="..."></a> <%# ponemos la imagen de la torta y el id para cuando lo toque que lleve al detalle %>
           <div class="card-body">
-            <a class="streched-link" href="posts/detail/<%= post.postId%>">
+            <a class="streched-link" href="posts/<%= post.postId %>">
               <h4 class="post-title"><%= post.name %></h4> <%# ponemos el nombre de la torta y el id para cuando lo toque que lleve al detalle %>
             </a>
-            <a class="streched-link" href="users/<%= post.username%>">
-              <img class="card-post-profile-picture" src="/images/logo.png" alt="">
+            <a class="streched-link" href="users/<%= post.username %>">
+              <img class="card-post-profile-picture" src="/images/logo.png" alt=""> <%# ACA VA LA FOTO DE PERFIL!! %> 
               <p class="post-username"> <%= post.username %> </p> <%# ponemos el nombre del que publico de la torta y el id para cuando lo toque que lleve al perfil %>
             </a>
-            <a class="streched-link" href="posts/detail/<%= post.postId%>">
+            <a class="streched-link" href="posts/<%= post.postId %>">
               <p class="post-description card-text"><%= post.description %></p> <%# ponemos la descripcion de la torta y el id para cuando lo toque que lleve al detalle %>
             </a>
             <p class="card-text post-date">Date: <%= post.date %></p> <%# ponemos fecha que se publico %>

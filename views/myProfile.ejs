@@ -26,14 +26,14 @@
     <main>
       <% for(post of userPosts) { %>  <%# for que recorre los posts del usuario %>
         <div class="card" style="width: 18rem;">
-          <a class="streched-link" href="/posts/detail/<%= post.postId %>"> <%# incluimos el link para el detalle %>
+          <a class="streched-link" href="/posts/<%= post.postId %>"> <%# incluimos el link para el detalle %>
           <img src="/<%= post.image %>" class="card-img-top" alt="...">
           </a> <%# incluimos la imagen de la torta %>
           <div class="card-body">
-            <a class="streched-link" href="/posts/detail/<%= post.postId %>"> <%# incluimos link para ir al detalle %>
+            <a class="streched-link" href="/posts/<%= post.postId %>"> <%# incluimos link para ir al detalle %>
             <h4 class="post-title"><%= post.name %></h4> <%# incluimos el nombre de la torta %>
             </a>
-            <a class="streched-link" href="/posts/detail/<%= post.postId %>"> <%# incluimos link para ir al detalle %>
+            <a class="streched-link" href="/posts/<%= post.postId %>"> <%# incluimos link para ir al detalle %>
             <p class="post-description card-text"><%= post.description %></p>
             </a> <%# incluimos la descripcion del posteo %>
             <p class="card-text post-date">Date: <%= post.date %></p> <%# incluimos el dia del posteo %>

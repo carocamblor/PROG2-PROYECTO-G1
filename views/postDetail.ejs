@@ -31,7 +31,7 @@
         </section>
         <section> <%# seccion con comentarios %>
           <h5 class="card-title">Comments</h5>
-          <% for(let comment of postComments) { %>
+          <% for(let comment of post.comments) { %>
             <a class="streched-link" href="/users/<%= comment.user.username %>"><p class="post-username-comment">@<%= comment.user.username %></p></a>
             <p class="post-comment-content"><%= comment.text%></p>
             <br>
