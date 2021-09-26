@@ -3,7 +3,7 @@ var users = {
         {
             name: 'Nicole',
             surname: 'Lapidus',
-            biography: 'Mi nombre es Nicole Lapidus. Me apasiona cocinar y mucho mas comer. Hice varios cursos de cocina y participe en Masterchef.',
+            biography: 'Mi nombre es Nicole Lapidus. Me apasiona cocinar y mucho mas comer. Hice varios cursos de cocina y partícipe en Masterchef.',
             level: 'Experto',
             posts: '100',
             username: 'nicolelapidus',
@@ -14,7 +14,7 @@ var users = {
         {
             name: 'Tatiana',
             surname: 'Katz',
-            biography: 'Hola!! Mi nombre es Tatiana. Hace un tiempo empece a cocinar y me encata vender todas mis tortas. Es por eso que hice este perfil! Si te interesa alguna, no dudes en escribirme!',
+            biography: 'Hola!! Mi nombre es Tatiana. Hace un tiempo empece a cocinar y me encanta vender todas mis tortas. Es por eso que hice este perfil! Si te interesa alguna, no dudes en escribirme!',
             level: 'Avanzado',
             posts: '203',
             username: 'tatianakatz',
@@ -25,7 +25,7 @@ var users = {
         {
             name: 'Carolina',
             surname: 'Camblor',
-            biography: 'Me dicen Caro. Recien a partir de la cuarentena empece a cocinar y me super copa!',
+            biography: 'Me dicen Caro. Recien a partir de la cuarentena empece a cocinar y me súper copa!',
             level: 'Principiante',
             posts: '55',
             username: 'carolinacamblor',
@@ -67,4 +67,3 @@ var users = {
 };
 
 module.exports = users;
-//exportamos el modulo

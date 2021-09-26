@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('partials/head') %> <%# incluimos el head general %>
+  <%- include('partials/head') %> 
 
   <head>
     <title><%=post.name%> | Sweet Avenue</title>
-    <link rel="stylesheet" href="/css/postDetail.css"> <%# incluimos el css solo que sirve para el detalle de los posteos %>
+    <link rel="stylesheet" href="/css/postDetail.css"> 
   </head> 
 
   <body>
-    <%- include('partials/headerLoggedOn') %> <%# incluimos el header de cuando estamos logeados %>
+    <%- include('partials/headerLoggedOn') %> 
 
     <div class="card post-detail">
       <div class="card-header title">
-        <%= post.name %>  <%# traemos el nombre del posteo %>
+        <%= post.name %> 
       </div>
       <div class="card-header username">
-        <a class="streched-link" href="/users/<%= post.username %>"> <%= post.username %> </a> <%# pusimos el nombre de usuario de quien hiz el posteo %>
-      </div> <%# linkeamos para que nos lleve al perfil del usuario %>
+        <a class="streched-link" href="/users/<%= post.username %>"> <%= post.username %> </a> 
+      </div> 
       <div class="card-body">
         <section>
-          <img src="/<%= post.image %> " class="card-img-top" alt="..."> <%# imagen del posteo %>
-          <p class="card-text description"><%= post.description %></p> <%# descripcion del posteo %>
-          <p class="card-text post-date">Date: <%= post.date %></p> <%# dia que se hizo el posteo %>
+          <img src="/<%= post.image %> " class="card-img-top" alt="..."> 
+          <p class="card-text description"><%= post.description %></p> 
+          <p class="card-text post-date">Date: <%= post.date %></p> 
         </section>
         <section>
           <h5 class="card-title">Ingredientes</h5>
-          <p class="card-text"> <%= post.ingredients%> </p> <%# ingreditentes de la torta %>
+          <p class="card-text"> <%= post.ingredients%> </p> 
           <h5 class="card-title instructions-title">Instrucciones</h5>
-          <p class="card-text"><%= post.preparation %> </p> <%# como hacer la torta%>
+          <p class="card-text"><%= post.preparation %> </p> 
         </section>
-        <section> <%# seccion con comentarios %>
+        <section> 
           <h5 class="card-title">Comments</h5>
           <% for(let comment of post.comments) { %>
             <a class="streched-link" href="/users/<%= comment.user.username %>"><p class="post-username-comment">@<%= comment.user.username %></p></a>
@@ -46,6 +46,6 @@
         </section>
       </div>
     </div>
-    <%- include('partials/footer') %> <%# incluimos el footer comun %>
+    <%- include('partials/footer') %> 
   </body>
 </html>

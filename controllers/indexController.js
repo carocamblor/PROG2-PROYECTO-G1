@@ -1,7 +1,6 @@
 const posts = require ('../data/posts');
 
-
-var indexController = { //creamos objeto literal que va a tener la logica
+var indexController = { 
     feed: function (req, res) { 
         res.render('index', {posts: posts.list})
     },
@@ -11,10 +10,9 @@ var indexController = { //creamos objeto literal que va a tener la logica
     register: function (req, res) {
         res.render('register', {})
     },
-    results: function (req, res) { //la propiedad results hace que cuando haya un requerimiento responda en la pagina searchResults
+    results: function (req, res) {
         res.render('searchResults', {search: req.query.search})
     },
 };
 
 module.exports = indexController;
-//exportamos el controlador para poder usarlo en las rutas

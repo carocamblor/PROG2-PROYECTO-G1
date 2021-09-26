@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('partials/head') %> <%# incluimos el head normal %>
-
+  <%- include('partials/head') %> 
+  
   <head>
     <title>Edit Profile</title>
-    <link rel="stylesheet" href="/css/editProfile.css"> <%# incluimos el css solo que sirve para la edicion del perfil %>
+    <link rel="stylesheet" href="/css/editProfile.css"> 
   </head>
 
   <body>
-    <%- include('partials/headerLoggedOn') %> <%# incluimos el header de cuando estamos logeados %>
+    <%- include('partials/headerLoggedOn') %> 
 
     <h4 class="title">Edit Profile</h4>
 
-    <%# formulario para editar el perfil %>
     <form action="/users/myprofile/nicolelapidus" class="edit-profile">
       <div class="input-group">
         <span class="input-group-text">First and last name</span>
@@ -34,7 +33,7 @@
     
     </form>
 
-    <%- include('partials/footer') %> <%# incluimos el footer comun %>
+    <%- include('partials/footer') %> 
 
   </body>
 </html>

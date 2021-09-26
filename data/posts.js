@@ -608,7 +608,7 @@ var posts = {
         for (let i = 0; i < posts.list.length; i++) {
             const element = posts.list[i];
             if (element.username == username) {
-                results.push(element)
+                results.push(element);
             };
         };
         return results;
@@ -623,4 +623,3 @@ var posts = {
     },
 }
 module.exports = posts;
-//exportamos el modulo
