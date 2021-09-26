@@ -178,7 +178,7 @@ var comments = {
         { id: 174, id_post: 25, id_user: 4, user: users.findByUsername('juligomez_'), text: 'gracias por compartir!! <3', date_creation: '2021-09-16' },
         { id: 175, id_post: 45, id_user: 4, user: users.findByUsername('juligomez_'), text: 'Muy bueno', date_creation: '2021-09-16' },
         { id: 176, id_post: 46, id_user: 4, user: users.findByUsername('juligomez_'), text: 'ni se gasten, malísima', date_creation: '2021-09-16' },
-        { id: 177, id_post: 48, id_user: 4, user: users.findByUsername('juligomez_'), text: 'Se me quemó :/', date_creation: '2021-09-16' },
+        { id: 177, id_post: 11, id_user: 4, user: users.findByUsername('juligomez_'), text: 'Se me quemó :/', date_creation: '2021-09-16' },
         { id: 178, id_post: 14, id_user: 4, user: users.findByUsername('juligomez_'), text: 'Paupérrimo', date_creation: '2021-09-16' },
         { id: 179, id_post: 1, id_user: 4, user: users.findByUsername('juligomez_'), text: 'la receta de mi abuela es más rica', date_creation: '2021-09-16' },
         { id: 180, id_post: 2, id_user: 4, user: users.findByUsername('juligomez_'), text: 'a mis amigos les facinó', date_creation: '2021-09-16' },
