@@ -1,7 +1,5 @@
 const posts = require ('../data/posts');
-const users = require ('../data/users');
-const comments = require('../data/comments')
-//requerimos los modulos para usar la data de ahi
+
 
 var postsController = { //creamos objeto literal que va a tener la logica
 
