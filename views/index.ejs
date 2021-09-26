@@ -21,7 +21,7 @@
               <h4 class="post-title"><%= post.name %></h4> <%# ponemos el nombre de la torta y el id para cuando lo toque que lleve al detalle %>
             </a>
             <a class="streched-link" href="users/<%= post.username %>">
-              <img class="card-post-profile-picture" src="/<%= post.profileImage %>>" alt=""> <%# ACA VA LA FOTO DE PERFIL!! %> 
+              <img src="<%= post.profileImage %>" class="card-post-profile-picture"> <%# ACA VA LA FOTO DE PERFIL!! %> 
               <p class="post-username"> <%= post.username %> </p> <%# ponemos el nombre del que publico de la torta y el id para cuando lo toque que lleve al perfil %>
             </a>
             <a class="streched-link" href="posts/<%= post.postId %>">

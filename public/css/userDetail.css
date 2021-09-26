@@ -8,6 +8,7 @@ div.user-card img {
   height: 160px;
   width: 160px;
   place-self: center;
+  border-radius: 50%;
 }
 
 div.user-card p {
