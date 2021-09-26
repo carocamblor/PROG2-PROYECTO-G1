@@ -5,10 +5,10 @@ var indexController = {
         res.render('index', {posts: posts.list})
     },
     login: function (req, res) {
-        res.render('login', {})
+        res.render('login')
     },
     register: function (req, res) {
-        res.render('register', {})
+        res.render('register')
     },
     results: function (req, res) {
         res.render('searchResults', {search: req.query.search})

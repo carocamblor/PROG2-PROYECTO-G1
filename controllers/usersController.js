@@ -23,7 +23,7 @@ var usersController = {
         };
     },
     editProfile: function (req, res) {
-        res.render('editProfile', {});
+        res.render('editProfile');
     },
 };
 

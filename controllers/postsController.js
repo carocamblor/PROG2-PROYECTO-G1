@@ -9,7 +9,7 @@ var postsController = {
         res.render('error', {error: 'Lo sentimos! No encontramos la receta buscada.'}) 
     },
     newPost: function (req, res) {
-        res.render('newPost', {})
+        res.render('newPost')
     },
 };
 
