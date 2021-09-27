@@ -1,3 +1,7 @@
+.imgMy {
+  border-radius: 50%;
+}
+
 div.user-card {
   display: grid;
   width: 100;
