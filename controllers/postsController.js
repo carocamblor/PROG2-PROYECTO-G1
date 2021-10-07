@@ -1,6 +1,16 @@
 const posts = require ('../data/posts');
 
+const db = require ('../database/models');
+
 var postsController = { 
+    lista: function (req, res) {
+        const post = db.post.findByPk(req.params.postId)
+        if (!post) {
+            return res.render('error')
+        }
+        const comments = db.Post.findAll({where: {post_id: req.params.postId}});
+        res.render('posts/detalle', {post, comments});
+    },
     detail: function (req, res) {
         var post = posts.findByID(req.params.postid);
         if (post) {

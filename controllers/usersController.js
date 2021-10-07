@@ -1,7 +1,15 @@
 const posts = require ('../data/posts');
 const users = require ('../data/users');
 
+const db = require ('../database/models');
+
 var usersController = {
+    lista: async function (req, res) {
+        const user = await db.User.findByPk(req.params.username);
+        const posts = await db.posts.findAll({where: {user_id: req.params.username}});
+        
+        res.render ('users/detalle', {user, posts});
+    },
     userDetail: function (req, res) {
         var username = req.params.username;
         var user = users.findByUsername(username);

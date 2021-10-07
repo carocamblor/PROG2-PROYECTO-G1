@@ -1,6 +1,17 @@
 const posts = require ('../data/posts');
 
+const db = require ('../database/models');
+
 var indexController = { 
+    list: function (req, res) {
+        db.posts.findAll()
+        .then((posts) => {
+            res.render ('index', {posts});
+        })
+        .catch((error) => {
+            res.send(error);
+        })
+    },
     feed: function (req, res) { 
         res.render('index', {posts: posts.list})
     },
