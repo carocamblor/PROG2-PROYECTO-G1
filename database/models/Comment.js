@@ -4,22 +4,25 @@ module.exports = (sequelize, dataTypes) => {
     const cols = {
         id: {
             autoIncrement: true,
-            primaryKey: ture,
-            type: dataTypes.INTEGRER
+            primaryKey: true,
+            type: dataTypes.INTEGER
         },
-        user_id: {
-            type: dataTypes.INTEGRER
+        id_user: {
+            type: dataTypes.INTEGER
         },
-        post_id: {
+        id_post: {
+            type: dataTypes.INTEGER
+        },
+        text: {
             type: dataTypes.STRING
         },
-        content: {
-            type: dataTypes.STRING
+        date_creation: {
+            type: dataTypes.DATE
         }
     }
 
     const config = {
-        tableName: 'comment',
+        tableName: 'comments',
         timestamps: false,
         underscorder: true
     }

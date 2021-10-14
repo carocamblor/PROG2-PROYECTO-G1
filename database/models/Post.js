@@ -4,15 +4,30 @@ module.exports = (sequelize, dataTypes) => {
     const cols = {
         id: {
             autoIncrement: true,
-            primaryKey: ture,
-            type: dataTypes.INTEGRER
+            primaryKey: true,
+            type: dataTypes.INTEGER
         },
-        user_id: {
-            type: dataTypes.INTEGRER
+        id_user: {
+            type: dataTypes.INTEGER
         },
-        contenido: {
+        picture: {
             type: dataTypes.STRING
-        }
+        },
+        description: {
+            type: dataTypes.STRING
+        },
+        date_creation: {
+            type: dataTypes.DATE
+        },
+        ingredients: {
+            type: dataTypes.STRING
+        },
+        instructions: {
+            type: dataTypes.STRING
+        },
+        name: {
+            type: dataTypes.STRING
+        },
     }
 
     const config = {

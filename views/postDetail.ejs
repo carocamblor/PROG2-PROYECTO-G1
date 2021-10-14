@@ -19,20 +19,20 @@
       </div> 
       <div class="card-body">
         <section>
-          <img src="/<%= post.image %> " class="card-img-top" alt="..."> 
+          <img src="/images/<%= post.picture %> " class="card-img-top" alt="..."> 
           <p class="card-text description"><%= post.description %></p> 
-          <p class="card-text post-date">Date: <%= post.date %></p> 
+          <p class="card-text post-date">Date: <%= post.date_creation %></p> 
         </section>
         <section>
           <h5 class="card-title">Ingredientes</h5>
           <p class="card-text"> <%= post.ingredients%> </p> 
           <h5 class="card-title instructions-title">Instrucciones</h5>
-          <p class="card-text"><%= post.preparation %> </p> 
+          <p class="card-text"><%= post.instructions %> </p> 
         </section>
         <section> 
           <h5 class="card-title">Comments</h5>
-          <% for(let comment of post.comments) { %>
-            <a class="streched-link" href="/users/<%= comment.user.username %>"><p class="post-username-comment">@<%= comment.user.username %></p></a>
+          <% for(let comment of comments) { %>
+            <a class="streched-link" href="/users/<%= comment.id_user %>"><p class="post-username-comment">@<%= comment.id_user %></p></a>
             <p class="post-comment-content"><%= comment.text%></p>
             <br>
           <% } %> 

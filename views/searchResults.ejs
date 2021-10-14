@@ -12,7 +12,32 @@
     <h4 class="title"> Showing results for "<%= search %>"</h4>
 
     <main> 
+      <% if(posts.length === 0) { %> 
       <p>No results match your search.</p>
+      <% } else { %> 
+        <% for (let post of posts) { %>  
+          <div class="card" style="width: 18rem;">
+            <a class="streched-link" href="posts/<%= post.id %>">
+            <img src="/images/<%= post.picture %>" class="card-img-top" alt="..."></a> 
+            <div class="card-body">
+              <a class="streched-link" href="posts/<%= post.id %>">
+                <h4 class="post-title"><%= post.name %></h4> 
+              </a>
+              <a class="streched-link" href="users/ACA_VA_EL_USERNAME">
+                <img src="PROFILE_PICTURE" class="card-post-profile-picture"> 
+                <p class="post-username"> ACA VA EL USERNAME </p> 
+              </a>
+              <a class="streched-link" href="posts/<%= post.id %>">
+                <p class="post-description card-text"><%= post.description %></p> 
+              </a>
+              <p class="card-text post-date">Date: <%= post.date_creation %></p> 
+              <p class="post-like">Like</p>
+              <p class="post-comment">Comment</p> 
+              <hr>
+              </div>
+          </div>
+        <% } %>   
+      <% } %> 
     </main>
 
     <%- include('partials/footer') %> 

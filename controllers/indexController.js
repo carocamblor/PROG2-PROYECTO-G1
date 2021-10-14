@@ -1,10 +1,10 @@
 const posts = require ('../data/posts');
-
 const db = require ('../database/models');
+const op = db.Sequelize.Op;
 
 var indexController = { 
     list: function (req, res) {
-        db.posts.findAll()
+        db.Post.findAll()
         .then((posts) => {
             res.render ('index', {posts});
         })
@@ -12,17 +12,21 @@ var indexController = {
             res.send(error);
         })
     },
-    feed: function (req, res) { 
-        res.render('index', {posts: posts.list})
-    },
     login: function (req, res) {
         res.render('login')
     },
     register: function (req, res) {
         res.render('register')
     },
-    results: function (req, res) {
-        res.render('searchResults', {search: req.query.search})
+    results: async function (req, res, next) {
+        const posts = await db.Post.findAll({
+            where: [
+                {
+                    name: {[op.like]: `%${req.query.search}%`}
+                }
+            ]
+        })
+        res.render('searchResults', {posts, search: req.query.search})
     },
 };
 
