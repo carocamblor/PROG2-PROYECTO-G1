@@ -47,7 +47,7 @@ var postsController = {
         }).then(post => {
             res.redirect('/');
         }).catch(error => {
-            return res.render(error);
+            return res.send(error);
         })
     },
     edit: async function (req, res) {
