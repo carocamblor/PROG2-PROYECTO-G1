@@ -4,7 +4,7 @@ const op = db.Sequelize.Op;
 
 var indexController = { 
     list: function (req, res) {
-        db.Post.findAll()
+        db.Post.findAll({order:[['id','DESC']]})
         .then((posts) => {
             res.render ('index', {posts});
         })
