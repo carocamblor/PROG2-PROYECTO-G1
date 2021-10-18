@@ -12,11 +12,32 @@ var indexController = {
             res.send(error);
         })
     },
-    login: function (req, res) {
-        res.render('login')
+    login: async function (req, res, next) {
+        if (req.method == 'POST') {
+            const user = await db.User.findOne({ where: { username: req.body.username } });
+            if (!user) {
+                res.send('NO EXISTE EL USUARIO')
+            }
+            if (bcrypt.compareSync(req.body.password, user.password)) {
+                res.redirect('/');
+            } else {
+                res.send('LA CONSTRASEÑA ES INCORRECTA')
+            }
+        } else {
+            res.render('login');
+        }
     },
-    register: function (req, res) {
-        res.render('register')
+    register: function (req, res, next) {
+        res.render('register');
+    },
+    store: async function (req, res) {
+        req.body.password = bcrypt.hashSync(req.body.password, 10);
+        db.User.create(req.body)
+            .then(post => {
+                res.redirect('/login');
+            }).catch(error => {
+                return res.render(error);
+            })
     },
     results: async function (req, res, next) {
         const posts = await db.Post.findAll({
