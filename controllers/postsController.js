@@ -40,7 +40,7 @@ var postsController = {
     },
     store: function (req, res) {
         db.Post.create({
-            title: req.body.title,
+            name: req.body.name,
             description: req.body.description,
             ingredients: req.body.ingredients,
             instructions: req.body.instructions,
@@ -51,18 +51,24 @@ var postsController = {
         })
     },
     edit: async function (req, res) {
-        const post = await db.Post.findByPk(req.params.id)
+        const post = await db.Post.findByPk(req.params.postid)
+        console.log(post)
         if (!post) {
-            return res.render('error');
+            return res.render('error', {error: 'uiashiud'});
+        } else {
+        res.render('editPost', { post });
         }
-
-        res.render('posts/edit', { post });
     },
     update: function (req, res) {
-        db.Post.update(req.body, { where: { id: req.params.id } }).then(post => {
+        db.Post.update({
+            name: req.body.name
+            // description: req.body.description,
+            // ingredients: req.body.ingredients,
+            // instructions: req.body.instructions,
+        }, { where: { id: req.params.postid } }).then(post => {
             res.redirect('/');
         }).catch(error => {
-            return res.render(error);
+            return res.send(error);
         })
     },
     delete: function (req, res) {

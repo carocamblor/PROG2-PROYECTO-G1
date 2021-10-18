@@ -3,16 +3,16 @@
   <%- include('partials/head') %>  
   
   <head>
-    <title>New Post | Sweet Avenue</title>
+    <title>Edit Post | Sweet Avenue</title>
     <link rel="stylesheet" href="/css/newPost.css"> 
   </head>
 
   <body>
     <%- include('partials/headerLoggedOn') %> 
 
-    <h4 class="title">Share a new recepie</h4>
+    <h4 class="title">Edit your recepie</h4>
 
-    <form action="/posts/publish" class="new-post" method="POST"> 
+    <form action="/posts/<%= post.id %>/edit" class="new-post" method="POST"> 
       <div class="input-group">
         <span class="input-group-text">Title</span>
         <input type="text" aria-label="Title" name="name" class="form-control">
@@ -20,17 +20,17 @@
       
       <div class="input-group">
         <span class="input-group-text">Description</span>
-        <textarea class="form-control" aria-label="With textarea" name="description"></textarea>
+        <textarea class="form-control" aria-label="With textarea" name="description"><%=post.description%></textarea>
       </div>
       
       <div class="input-group">
           <span class="input-group-text">Ingredients</span>
-          <textarea class="form-control" aria-label="With textarea" name="ingredients"></textarea>
+          <textarea class="form-control" aria-label="With textarea" name="ingredients"><%=post.ingredients%></textarea>
       </div>
       
       <div class="input-group">
           <span class="input-group-text">Instructions</span>
-          <textarea class="form-control" aria-label="With textarea" name="instructions"></textarea>
+          <textarea class="form-control" aria-label="With textarea" name="instructions"><%=post.instructions%></textarea>
       </div>
       
       <div class="input-group mb-3">
