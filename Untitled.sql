@@ -24,10 +24,10 @@ DROP TABLE IF EXISTS `comments`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `comments` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `id_post` int(11) NOT NULL,
-  `id_user` int(11) NOT NULL,
-  `text` text NOT NULL,
-  `date_creation` date NOT NULL,
+  `id_post` int(11) DEFAULT NULL,
+  `id_user` int(11) DEFAULT NULL,
+  `text` text,
+  `date_creation` date DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -81,15 +81,15 @@ DROP TABLE IF EXISTS `users`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `username` varchar(25) NOT NULL,
+  `username` varchar(25) DEFAULT NULL,
   `name` varchar(25) DEFAULT NULL,
   `surname` varchar(25) DEFAULT NULL,
   `profile_picture` varchar(155) DEFAULT NULL,
-  `password` varchar(25) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `date_birth` date NOT NULL,
+  `password` varchar(25) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `date_birth` date DEFAULT NULL,
   `biography` text,
-  `level` int(10) unsigned NOT NULL,
+  `level` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
@@ -114,4 +114,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-18 17:33:29
+-- Dump completed on 2021-10-21 17:21:12
