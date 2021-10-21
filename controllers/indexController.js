@@ -1,6 +1,7 @@
 const posts = require ('../data/posts');
 const db = require ('../database/models');
 const op = db.Sequelize.Op;
+const bcrypt = require('bcryptjs');
 
 var indexController = { 
     list: function (req, res) {
@@ -18,7 +19,7 @@ var indexController = {
             if (!user) {
                 res.send('NO EXISTE EL USUARIO')
             }
-            if (bcrypt.compareSync(req.body.password, user.password)) {
+            if (req.body.password == user.password) {
                 res.redirect('/');
             } else {
                 res.send('LA CONSTRASEÑA ES INCORRECTA')
