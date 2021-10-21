@@ -29,7 +29,7 @@ CREATE TABLE `comments` (
   `text` text,
   `date_creation` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `comments` (
 
 LOCK TABLES `comments` WRITE;
 /*!40000 ALTER TABLE `comments` DISABLE KEYS */;
-INSERT INTO `comments` VALUES (1,1,4,'Muy bueno!','2021-09-09'),(2,2,2,'Muy malo','2021-09-09'),(3,3,4,'Medio pelo','2021-09-09'),(4,4,4,'Epico','2021-09-09'),(5,5,2,'Muy bueno!','2021-09-09'),(6,6,4,'Muy malo','2021-09-09'),(7,7,3,'Medio pelo','2021-09-09'),(8,8,4,'Epico','2021-09-09'),(11,9,4,'Muy bueno!','2021-09-09'),(12,10,2,'Muy malo','2021-09-09'),(13,11,4,'Medio pelo','2021-09-09'),(14,12,4,'Epico','2021-09-09'),(15,13,4,'Muy bueno!','2021-09-09'),(16,14,2,'Muy malo','2021-09-09'),(17,15,4,'Medio pelo','2021-09-09'),(18,16,3,'Epico','2021-09-09'),(19,17,4,'Muy bueno!','2021-09-09'),(20,18,4,'Muy malo','2021-09-09'),(22,19,3,'Medio pelo','2021-09-09'),(23,20,4,'Epico','2021-09-09'),(24,21,3,'Muy bueno!','2021-09-09'),(25,22,4,'Muy malo','2021-09-09'),(26,23,4,'Medio pelo','2021-09-09'),(27,24,3,'Epico','2021-09-09'),(28,25,4,'Muy bueno!','2021-09-09'),(29,26,3,'Muy malo','2021-09-09'),(30,27,4,'Medio pelo','2021-09-09'),(31,28,4,'Epico','2021-09-09'),(32,29,1,'Muy bueno!','2021-09-09'),(33,30,1,'Muy malo','2021-09-09'),(34,31,1,'Medio pelo','2021-09-09'),(35,32,2,'Epico','2021-09-09'),(36,33,1,'Muy bueno!','2021-09-09'),(37,34,1,'Muy malo','2021-09-09'),(38,35,2,'Medio pelo','2021-09-09'),(39,36,1,'Epico','2021-09-09'),(40,37,1,'Muy bueno!','2021-09-09'),(41,38,1,'Muy malo','2021-09-09'),(42,39,2,'Medio pelo','2021-09-09'),(43,40,1,'Epico','2021-09-09');
+INSERT INTO `comments` VALUES (1,1,4,'Muy bueno!','2021-09-09'),(2,2,2,'Muy malo','2021-09-09'),(3,3,4,'Medio pelo','2021-09-09'),(4,4,4,'Epico','2021-09-09'),(5,5,2,'Muy bueno!','2021-09-09'),(6,6,4,'Muy malo','2021-09-09'),(7,7,3,'Medio pelo','2021-09-09'),(8,8,4,'Epico','2021-09-09'),(11,9,4,'Muy bueno!','2021-09-09'),(12,10,2,'Muy malo','2021-09-09'),(13,11,4,'Medio pelo','2021-09-09'),(14,12,4,'Epico','2021-09-09'),(15,13,4,'Muy bueno!','2021-09-09'),(16,14,2,'Muy malo','2021-09-09'),(17,15,4,'Medio pelo','2021-09-09'),(18,16,3,'Epico','2021-09-09'),(19,17,4,'Muy bueno!','2021-09-09'),(20,18,4,'Muy malo','2021-09-09'),(22,19,3,'Medio pelo','2021-09-09'),(23,20,4,'Epico','2021-09-09'),(24,21,3,'Muy bueno!','2021-09-09'),(25,22,4,'Muy malo','2021-09-09'),(26,23,4,'Medio pelo','2021-09-09'),(27,24,3,'Epico','2021-09-09'),(28,25,4,'Muy bueno!','2021-09-09'),(29,26,3,'Muy malo','2021-09-09'),(30,27,4,'Medio pelo','2021-09-09'),(31,28,4,'Epico','2021-09-09'),(32,29,1,'Muy bueno!','2021-09-09'),(33,30,1,'Muy malo','2021-09-09'),(34,31,1,'Medio pelo','2021-09-09'),(35,32,2,'Epico','2021-09-09'),(36,33,1,'Muy bueno!','2021-09-09'),(37,34,1,'Muy malo','2021-09-09'),(38,35,2,'Medio pelo','2021-09-09'),(39,36,1,'Epico','2021-09-09'),(40,37,1,'Muy bueno!','2021-09-09'),(41,38,1,'Muy malo','2021-09-09'),(42,39,2,'Medio pelo','2021-09-09'),(43,40,1,'Epico','2021-09-09'),(44,10,2,'a',NULL),(45,1,2,'A',NULL),(46,10,2,',m\r\n',NULL);
 /*!40000 ALTER TABLE `comments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -85,14 +85,14 @@ CREATE TABLE `users` (
   `name` varchar(25) DEFAULT NULL,
   `surname` varchar(25) DEFAULT NULL,
   `profile_picture` varchar(155) DEFAULT NULL,
-  `password` varchar(25) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `date_birth` date DEFAULT NULL,
   `biography` text,
   `level` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -101,7 +101,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'nicolelapidus','Nicole','Lapidus','nicole.jpg','holaaa','nicolelapidus@hotmail.com','2001-09-18','Mi nombre es Nicole Lapidus. Me apasiona cocinar y mucho mas comer. Hice varios cursos de cocina y partícipe en Masterchef.',3),(2,'carolinacamblor','Carolina','Camblor','carolina.jpg','holaaa123','caroc@hotmail.com','2002-04-09','Me dicen Caro. Recien a partir de la cuarentena empece a cocinar y me súper copa!',2),(3,'tatianakatz','Tatiana','Katz','tatiana.jpg','contrasena','katz.tati@hotmail.com','2002-03-19','Hola!! Mi nombre es Tatiana. Hace un tiempo empece a cocinar y me encanta vender todas mis tortas. Es por eso que hice este perfil! Si te interesa alguna, no dudes en escribirme!',1),(4,'nicorodri','Nicolas','Rodriguez','nicolas.jpeg','nico123','nicorodri@hotmail.com','1960-12-02','Mi nombre es Nico y son fan n1 de la cocina! Me re copa hacer cosas locas!',2),(5,'juligomez_','Julian','Gomez','julian.jpeg','juliangomez','gomezjulian@hotmail.com','1990-08-08','Mi nombre es Julian. Desde chico cocino junto a mis hermanos.',3);
+INSERT INTO `users` VALUES (1,'nicolelapidus','Nicole','Lapidus','nicole.jpg','holaaa','nicolelapidus@hotmail.com','2001-09-18','Mi nombre es Nicole Lapidus. Me apasiona cocinar y mucho mas comer. Hice varios cursos de cocina y partícipe en Masterchef.',3),(2,'carolinacamblor','Carolina','Camblor','carolina.jpg','holaaa123','caroc@hotmail.com','2002-04-09','Me dicen Caro. Recien a partir de la cuarentena empece a cocinar y me súper copa!',2),(3,'tatianakatz','Tatiana','Katz','tatiana.jpg','contrasena','katz.tati@hotmail.com','2002-03-19','Hola!! Mi nombre es Tatiana. Hace un tiempo empece a cocinar y me encanta vender todas mis tortas. Es por eso que hice este perfil! Si te interesa alguna, no dudes en escribirme!',1),(4,'nicorodri','Nicolas','Rodriguez','nicolas.jpeg','nico123','nicorodri@hotmail.com','1960-12-02','Mi nombre es Nico y son fan n1 de la cocina! Me re copa hacer cosas locas!',2),(5,'juligomez_','Julian','Gomez','julian.jpeg','juliangomez','gomezjulian@hotmail.com','1990-08-08','Mi nombre es Julian. Desde chico cocino junto a mis hermanos.',3),(6,'allo',NULL,NULL,NULL,'$2a$10$D6Uyrl6823FvVcfCLYMboe9gyqdbdTe0qDEk8Iv5FBUvAtjd7mecW','nicolelapidus@hotmail.com','2001-01-01',NULL,1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -114,4 +114,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-21 17:21:12
+-- Dump completed on 2021-10-21 18:04:11

@@ -11,13 +11,13 @@
     <%- include('partials/headerLoggedOff') %>  
       
       <main class="form-signin"> 
-        <form action="/" style="padding: 30px 500px 0px 500px;">
+        <form method="POST" style="padding: 30px 500px 0px 500px;">
           <img class="mb-4" src="/images/logo.png" alt="" width="110" height="110">
           <h1 class="h3 mb-3 fw-normal">Inicia sesion</h1>
       
           <div class="form-floating">
-            <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Mail</label>
+            <input class="form-control" name="username" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Nombre de usuario</label>
           </div>
           <div class="form-floating">
             <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">

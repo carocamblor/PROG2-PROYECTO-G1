@@ -2,6 +2,7 @@ const posts = require ('../data/posts');
 const db = require ('../database/models');
 const op = db.Sequelize.Op;
 
+
 var postsController = { 
     // lista: function (req, res) {
     //     const post = db.post.findByPk(req.params.postId)

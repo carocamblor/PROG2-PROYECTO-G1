@@ -11,6 +11,4 @@ router.post('/:postid/edit', postsController.update); //manda a base de datos
 router.get('/:postid/edit', postsController.edit); //muestra vista edit post
 router.post('/:postid/delete', postsController.delete);
 
-
-
 module.exports = router;
