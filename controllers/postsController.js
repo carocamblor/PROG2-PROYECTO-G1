@@ -80,6 +80,17 @@ var postsController = {
                 return res.render(error);
             })
     },
+    comment: function (req, res) {
+        db.Comment.create({
+            id_post: req.params.postid,
+            id_user: '2',
+            text: req.body.text,
+        }).then(post => {
+            res.redirect('/posts/' + req.params.postid);
+        }).catch(error => {
+            return res.render(error);
+        })
+    },
 };
 
 module.exports = postsController;
