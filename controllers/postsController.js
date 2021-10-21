@@ -77,18 +77,19 @@ var postsController = {
             .then(() => {
                 res.redirect('/');
             }).catch(error => {
-                return res.render(error);
+                return res.send(error);
             })
     },
     comment: function (req, res) {
         db.Comment.create({
             id_post: req.params.postid,
             id_user: '2',
+            date_creation: '2021-10-09',
             text: req.body.text,
         }).then(post => {
             res.redirect('/posts/' + req.params.postid);
         }).catch(error => {
-            return res.render(error);
+            return res.send(error);
         })
     },
 };
