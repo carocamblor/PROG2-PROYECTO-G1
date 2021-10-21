@@ -4,37 +4,15 @@ const op = db.Sequelize.Op;
 
 
 var postsController = { 
-    // lista: function (req, res) {
-    //     const post = db.post.findByPk(req.params.postId)
-    //     if (!post) {
-    //         return res.render('error')
-    //     }
-    //     const comments = db.Post.findAll({where: {post_id: req.params.postId}});
-    //     res.render('posts/detalle', {post, comments});
-    // },
-    detail: function (req, res) {
-        db.Post.findByPk(req.params.postid)
-            .then(function (post) {
-                if (post) {
-                    db.Comment.findAll({
-                        where: [
-                            {
-                                id_post: req.params.postid
-                            }
-                        ]
-                    })
-                        .then((comments) => {
-                            res.render('postDetail', {post, comments})
-                        })
-                    
-                } else {
-                res.render('error', {error: 'Lo sentimos! No encontramos la receta buscada.'})
-                }
-            })
-            .catch((error) => {
-                console.log(error)
-            })
-         
+    detail: async function (req, res) {
+        const post = await db.Post.findByPk(req.params.postid);
+        if (!post) {
+            res.render('error', {error: 'Lo sentimos! No encontramos la receta que estás buscando.'});
+        } else {
+            const comments = await db.Comment.findAll({where: {id_post: req.params.postid}});
+            const user = await db.User.findByPk(post.id_user);
+            res.render('postDetail', {post, comments, user});
+        }
     },
     newPost: function (req, res) {
         res.render('newPost');
@@ -45,6 +23,7 @@ var postsController = {
             description: req.body.description,
             ingredients: req.body.ingredients,
             instructions: req.body.instructions,
+            id_user: '1'
         }).then(post => {
             res.redirect('/');
         }).catch(error => {
@@ -55,17 +34,17 @@ var postsController = {
         const post = await db.Post.findByPk(req.params.postid)
         console.log(post)
         if (!post) {
-            return res.render('error', {error: 'uiashiud'});
+            return res.render('error', {error: 'No encontramos la receta que queres editar!'});
         } else {
-        res.render('editPost', { post });
+            res.render('editPost', { post });
         }
     },
     update: function (req, res) {
         db.Post.update({
-            name: req.body.name
-            // description: req.body.description,
-            // ingredients: req.body.ingredients,
-            // instructions: req.body.instructions,
+            name: req.body.name,
+            description: req.body.description,
+            ingredients: req.body.ingredients,
+            instructions: req.body.instructions,
         }, { where: { id: req.params.postid } }).then(post => {
             res.redirect('/');
         }).catch(error => {
@@ -74,7 +53,7 @@ var postsController = {
     },
     delete: function (req, res) {
         // Chequear que sea el owner
-        db.Post.destroy({ where: { id: req.params.id } })
+        db.Post.destroy({ where: { id: req.params.postid } })
             .then(() => {
                 res.redirect('/');
             }).catch(error => {
@@ -88,7 +67,7 @@ var postsController = {
             date_creation: '2021-10-09',
             text: req.body.text,
         }).then(post => {
-            res.redirect('/posts/' + req.params.postid);
+            res.redirect(`/posts/${req.params.postid}`);
         }).catch(error => {
             return res.send(error);
         })

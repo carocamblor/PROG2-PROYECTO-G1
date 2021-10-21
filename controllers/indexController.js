@@ -17,12 +17,12 @@ var indexController = {
         if (req.method == 'POST') {
             const user = await db.User.findOne({ where: { username: req.body.username } });
             if (!user) {
-                res.send('NO EXISTE EL USUARIO')
+                res.render('error', {error: 'No encontramos un usuario con ese nombre!'})
             }
             if (req.body.password == user.password) {
                 res.redirect('/');
             } else {
-                res.send('LA CONSTRASEÑA ES INCORRECTA')
+                res.render('error', {error: 'La contraseña ingresada es incorrecta.'})
             }
         } else {
             res.render('login');
@@ -47,7 +47,7 @@ var indexController = {
                     name: {[op.like]: `%${req.query.search}%`}
                 }
             ]
-        })
+        });
         res.render('searchResults', {posts, search: req.query.search})
     },
 };
