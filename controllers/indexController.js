@@ -35,9 +35,9 @@ var indexController = {
         req.body.password = bcrypt.hashSync(req.body.password, 10);
         db.User.create(req.body)
             .then(post => {
-                res.redirect('/login');
+                res.redirect('/');
             }).catch(error => {
-                return res.render(error);
+                return res.render('error', {error});
             })
     },
     results: async function (req, res, next) {
