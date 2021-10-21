@@ -8,5 +8,4 @@ router.get('/register', indexController.register);
 router.get('/results', indexController.results);
 router.post('/register', indexController.store);
 
-
 module.exports = router; 
