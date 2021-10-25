@@ -33,6 +33,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Middleaware cookies
+app.use(async (req, res, next) => { 
+  if (req.cookies.user !== undefined && req.session.user === undefined) {
+    res.session.user = req.cookies.user; 
+  }
+  next();
+});
+
+
 app.use(async (req, res, next) => { //Middleware de Session. Poner en vistas
   if (req.session.user !== undefined) {
     res.locals.user = req.session.user; //res.locals es varible que se comparte con las vistas 
