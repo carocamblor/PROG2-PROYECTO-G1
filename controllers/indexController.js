@@ -41,6 +41,11 @@ var indexController = {
             })
         } 
     },
+    logout: function (req, res, next) {
+        res.clearCookie('user');
+        req.session.user = null;
+        res.redirect('/');
+    },
     list: function (req, res) {
         db.Post.findAll({order:[['id','DESC']]})
         .then((posts) => {
