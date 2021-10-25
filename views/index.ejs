@@ -11,7 +11,9 @@
   <body>
     <%- include('partials/header')%>
     <main>
-      <h1>¡Bienvenido <%= user.name %>!</h1>
+      <% if (user) { %> 
+      <h1>¡Hola <%= user.name %>!</h1>
+      <% } %>
       <% for (let post of posts) { %>  
         <div class="card" style="width: 18rem;">
           <a class="streched-link" href="posts/<%= post.id %>">
