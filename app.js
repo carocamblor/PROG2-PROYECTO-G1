@@ -33,12 +33,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(async (req, res, next) => { //Middleware. Poner en vistas
+app.use(async (req, res, next) => { //Middleware de Session. Poner en vistas
   if (req.session.user !== undefined) {
     res.locals.user = req.session.user; //res.locals es varible que se comparte con las vistas 
   }
   next();
 }); //se ejecuta siempre a menos que uno de una respuesta
+//en el login lo implementamos
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
