@@ -1,0 +1,63 @@
+<% if (user) { %>
+    <header style="margin: 0!important" class="fixed-top p-3 mb-3 border-bottom">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+              <img style="height: 55px; width: 55px; margin-right: 20px;" src="/images/logo.png" alt="">
+            </a>
+            <h1>Sweet Avenue</h1>
+      
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="/" class="nav-link px-2 link-dark">Home</a></li>
+              <li><a href="/posts/newpost" class="nav-link px-2 link-dark">New Post</a></li>
+              <li><a href="/users/myprofile/nicolelapidus" class="nav-link px-2 link-dark">My Profile</a></li>
+              <li><a href="/logout" class="nav-link px-2 link-dark">Logout</a></li>
+            </ul>
+      
+            <form action="/results" method="GET" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+              <input type="search" name="search" class="form-control" placeholder="Search..." aria-label="Search">
+            </form>
+      
+            <div class="dropdown text-end">
+              <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="/images/<%= user.profile_picture %>" alt="mdo" width="32" height="32" class="rounded-circle">
+              </a>
+              <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                <li><a class="dropdown-item" href="/posts/newpost">New Post</a></li>
+                <li><a class="dropdown-item" href="/users/editprofile">Edit profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/logout">Sign Out</a></li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </header>
+<% } else { %>
+    <header style="margin: 0!important" class="fixed-top p-3 mb-3 border-bottom">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+              <img style="height: 55px; width: 55px; margin-right: 20px;" src="/images/logo.png" alt="">
+            </a>
+            <h1>Sweet Avenue</h1>
+      
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="/" class="nav-link px-2 link-dark">Home</a></li>
+              <li><a href="/posts/newpost" class="nav-link px-2 link-dark">New Post</a></li>
+            </ul>
+      
+            <form action="/results" method="get" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+              <input type="search" name="search" class="form-control" placeholder="Search..." aria-label="Search">
+            </form>
+      
+            <div class="col-md-3 text-end">
+              <button style="color: #48b9a8ff; border-color: #48b9a8ff;" type="button" class="login-button btn btn-outline-primary me-2">Login</button>
+              <button style="background-color: #48b9a8ff; border-color: #48b9a8ff;" type="button" class="singin-button btn btn-primary">Sign-up</button>
+            </div>
+          </div>
+        </div>
+      </header>
+<% } %> 

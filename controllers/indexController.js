@@ -16,7 +16,10 @@ var indexController = {
             if (!user) {
                 res.send('No existe un usuario con esa dirección de mail');
             } else {
+                
                 if (bcrypt.compareSync(req.body.password, user.password)) {
+                    req.session.user = user;
+                    res.cookie(user, user, { maxAge: 1000 * 60 * 60 * 24 * 30 })
                     res.redirect('/');
                 } else {
                     res.send('la contraseña está mal')
@@ -44,7 +47,7 @@ var indexController = {
     logout: function (req, res, next) {
         res.clearCookie('user');
         req.session.user = null;
-        res.redirect('/');
+        res.redirect('/login');
     },
     list: function (req, res) {
         db.Post.findAll({order:[['id','DESC']]})
