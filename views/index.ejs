@@ -11,7 +11,7 @@
   <body>
     <%- include('partials/header')%>
     <main>
-      <% if (user) { %> 
+      <% if (locals.user && user) { %> 
       <h1>¡Hola <%= user.name %>!</h1>
       <% } %>
       <% for (let post of posts) { %>  
