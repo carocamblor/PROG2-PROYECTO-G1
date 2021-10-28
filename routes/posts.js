@@ -6,7 +6,7 @@ var postsController = require('../controllers/postsController');
 
 //router.get ('/publish', postsController.publish); no esta en controlador
 
-router.post('/publish', upload.single('image') , postsController.store);
+router.post('/publish', upload.single('picture') , postsController.store);
 
 router.get('/newpost', postsController.newPost);
 

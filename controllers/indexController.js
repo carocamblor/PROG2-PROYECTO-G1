@@ -18,7 +18,7 @@ var indexController = {
             } else {
                 
                 if (bcrypt.compareSync(req.body.password, user.password)) {
-                    req.session.user = user;
+                    req.session.userLoggedOn = user;
                     res.cookie(user, user, { maxAge: 1000 * 60 * 60 * 24 * 30 })
                     res.redirect('/');
                 } else {
@@ -46,7 +46,7 @@ var indexController = {
     },
     logout: function (req, res, next) {
         res.clearCookie('user');
-        req.session.user = null;
+        req.session.userLoggedOn = null;
         res.redirect('/login');
     },
     list: function (req, res) {

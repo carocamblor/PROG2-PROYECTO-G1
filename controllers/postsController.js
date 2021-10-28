@@ -18,12 +18,16 @@ var postsController = {
         res.render('newPost');
     },
     store: function (req, res) {
+        // if (req.file) req.body.picture = (req.file.destination + req.file.filename).replace('public', '');
+        console.log(req.file)
+        console.log(req.body.picture)
         db.Post.create({
             name: req.body.name,
             description: req.body.description,
             ingredients: req.body.ingredients,
             instructions: req.body.instructions,
-            id_user: '1'
+            id_user: '1',
+            picture: req.file.filename
         }).then(post => {
             res.redirect('/');
         }).catch(error => {

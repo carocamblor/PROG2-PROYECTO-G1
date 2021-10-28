@@ -1,4 +1,4 @@
-<% if (locals.user && user) { %>
+<% if (locals.userLoggedOn && userLoggedOn) { %>
     <header style="margin: 0!important" class="fixed-top p-3 mb-3 border-bottom">
         <div class="container">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -21,7 +21,7 @@
       
             <div class="dropdown text-end">
               <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="/images/<%= user.profile_picture %>" alt="mdo" width="32" height="32" class="rounded-circle">
+                <img src="/images/<%= userLoggedOn.profile_picture %>" alt="mdo" width="32" height="32" class="rounded-circle">
               </a>
               <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
                 <li><a class="dropdown-item" href="/posts/newpost">New Post</a></li>
