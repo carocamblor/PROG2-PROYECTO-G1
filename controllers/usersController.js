@@ -25,6 +25,7 @@ var usersController = {
                 }
             })
     },
+    //hay que implementar relaciones con el include association
     myProfile: function (req, res) {
         db.User.findOne({
             where: {
