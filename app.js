@@ -9,8 +9,10 @@ const session = require('express-session');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var postsRouter = require('./routes/posts');
+const db = require('./database/models');
 
 var app = express();
+//db.sequelize.sync ({alter:true});
 
 app.use( //configuracion de session. Nos agreega la variable req.session
   session({
