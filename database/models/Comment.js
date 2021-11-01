@@ -32,14 +32,13 @@ module.exports = (sequelize, dataTypes) => {
     Comment.associate = function (models) { //lo hacemos porque esta bueno que este de ambos lados
         Comment.belongsTo(models.Post, {
             as: 'post',
-            foreignKey: 'post_id'
+            foreignKey: 'id_post'
         });
         Comment.belongsTo(models.User, {
             as: 'user',
-            foreignKey: 'user_id' //los nuestros son sin _?
+            foreignKey: 'id_user' 
         });
     };
-//entre coment y usuarios
 
 
     return Comment;

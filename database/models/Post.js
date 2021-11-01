@@ -41,11 +41,11 @@ module.exports = (sequelize, dataTypes) => {
     Post.associate = function (models) { //declare associaciones
         Post.hasMany(models.Comment, {
             as: 'comments',
-            foreignKey: 'post_id'
+            foreignKey: 'id_post'
         });
         Post.belongsTo(models.User, {
             as: 'user',
-            foreignKey: 'user_id'
+            foreignKey: 'id_user'
         });
     };
 

@@ -5,10 +5,9 @@ const op = db.Sequelize.Op;
 
 var postsController = { 
     detail: async function (req, res) {
-        const post = await db.Post.findByPk(req.params.postid); //busco posteo por id
         const post = await db.Post.findByPk(req.params.postid,
-            { include: [{ association: 'comments' }] });
-       
+            { include: [{ association: 'comments' },{association: 'user'}] });
+            
         if (!post) {
             res.render('error', {error: 'Lo sentimos! No encontramos la receta que estás buscando.'});
         } else {
@@ -18,8 +17,7 @@ var postsController = {
                 include: [{ association: 'user' }] 
                 }, //busco coment del posteo. la borro
             )
-            const user = await db.User.findByPk(post.id_user);
-            res.render('postDetail', {post, comments, user}); 
+            res.render('postDetail', {post, comments}); 
         }
     },
     newPost: function (req, res) {
@@ -75,7 +73,7 @@ var postsController = {
     comment: function (req, res) {
         db.Comment.create({
             id_post: req.params.postid,
-            id_user: '2',
+            id_user: req.session.userLoggedOn.id,
             date_creation: '2021-10-09',
             text: req.body.text,
         }).then(post => {
