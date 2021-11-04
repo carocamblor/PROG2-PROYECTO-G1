@@ -11,7 +11,7 @@
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
               <li><a href="/" class="nav-link px-2 link-dark">Home</a></li>
               <li><a href="/posts/newpost" class="nav-link px-2 link-dark">New Post</a></li>
-              <li><a href="/users/myprofile/nicolelapidus" class="nav-link px-2 link-dark">My Profile</a></li>
+              <li><a href="/users/myprofile/<%=userLoggedOn.username%>" class="nav-link px-2 link-dark">My Profile</a></li>
               <li><a href="/logout" class="nav-link px-2 link-dark">Logout</a></li>
             </ul>
       
@@ -54,8 +54,12 @@
             </form>
       
             <div class="col-md-3 text-end">
-              <button style="color: #48b9a8ff; border-color: #48b9a8ff;" type="button" class="login-button btn btn-outline-primary me-2">Login</button>
-              <button style="background-color: #48b9a8ff; border-color: #48b9a8ff;" type="button" class="singin-button btn btn-primary">Sign-up</button>
+              <form action="/login" method="GET">
+              <button style="color: #48b9a8ff; border-color: #48b9a8ff;" type="submit" class="login-button btn btn-outline-primary me-2">Login</button>
+              </form>
+              <form action="/register" method="GET">
+              <button style="background-color: #48b9a8ff; border-color: #48b9a8ff;" type="submit" class="singin-button btn btn-primary">Sign-up</button>
+              </form>
             </div>
           </div>
         </div>
