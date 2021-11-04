@@ -9,11 +9,11 @@
   
   <body>
     <%- include('partials/header')%>
-    <h4 class="title"> Showing results for "<%= search %>"</h4>
+    <h4 class="title"> Resultados de la busqueda: "<%= search %>"</h4>
 
     <main> 
       <% if(posts.length === 0) { %> 
-      <p>No results match your search.</p>
+      <p>Ningún resultado coincide con su búsqueda.</p>
       <% } else { %> 
         <% for (let post of posts) { %>  
           <div class="card" style="width: 18rem;">
@@ -30,7 +30,7 @@
               <a class="streched-link" href="posts/<%= post.id %>">
                 <p class="post-description card-text"><%= post.description %></p> 
               </a>
-              <p class="card-text post-date">Date: <%= post.date_creation %></p> 
+              <p class="card-text post-date">Fecha: <%= post.date_creation %></p> 
               <p class="post-like">Like</p>
               <p class="post-comment">Comment</p> 
               <hr>

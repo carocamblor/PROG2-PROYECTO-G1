@@ -10,16 +10,16 @@
   <body>
     <%- include('partials/header')%>
 
-    <h4 class="title">Edit your recepie</h4>
+    <h4 class="title">Edita tu receta</h4>
 
     <form action="/posts/<%= post.id %>/edit" class="new-post" method="POST"> 
       <div class="input-group">
-        <span class="input-group-text">Title</span>
+        <span class="input-group-text">Titulo</span>
         <input type="text" aria-label="Title" name="name" class="form-control">
       </div>
       
       <div class="input-group">
-        <span class="input-group-text">Descripcion</span>
+        <span class="input-group-text">Descripción</span>
         <textarea class="form-control" aria-label="With textarea" name="description"><%=post.description%></textarea>
       </div>
       

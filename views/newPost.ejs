@@ -16,31 +16,31 @@
 
     <form action="/posts/publish" class="new-post" method="POST" enctype="multipart/form-data"> 
       <div class="input-group">
-        <span class="input-group-text">Title</span>
+        <span class="input-group-text">Titulo</span>
         <input type="text" aria-label="Title" name="name" class="form-control">
       </div>
       
       <div class="input-group">
-        <span class="input-group-text">Description</span>
+        <span class="input-group-text">Descripción</span>
         <textarea class="form-control" aria-label="With textarea" name="description"></textarea>
       </div>
       
       <div class="input-group">
-          <span class="input-group-text">Ingredients</span>
+          <span class="input-group-text">Ingredientes</span>
           <textarea class="form-control" aria-label="With textarea" name="ingredients"></textarea>
       </div>
       
       <div class="input-group">
-          <span class="input-group-text">Instructions</span>
+          <span class="input-group-text">Instrucciones</span>
           <textarea class="form-control" aria-label="With textarea" name="instructions"></textarea>
       </div>
       
       <div class="input-group mb-3">
-        <label class="input-group-text" for="inputGroupFile01">Image</label>
+        <label class="input-group-text" for="inputGroupFile01">Imagen</label>
         <input type="file" accept=".jpg, .png, .jpeg" class="form-control" name="picture" id="inputGroupFile01">
       </div>
       
-      <button type="submit" class="btn btn-primary">Done</button>
+      <button type="submit" class="btn btn-primary">Hecho</button>
     </form>
     <% } else { %> 
       <h4>Debes loguearte para crear un nuevo posteo.</h4>

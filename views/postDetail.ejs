@@ -21,7 +21,7 @@
         <section>
           <img src="/images/<%= post.picture %> " class="card-img-top" alt="..."> 
           <p class="card-text description"><%= post.description %></p> 
-          <p class="card-text post-date">Date: <%= post.date_creation %></p> 
+          <p class="card-text post-date">Fecha: <%= post.date_creation %></p> 
         </section>
         <section>
           <h5 class="card-title">Ingredientes</h5>
@@ -37,19 +37,19 @@
             <button type="submit" class="btn btn-primary" >Eliminar</button>
           </form>
           <hr>
-          <h5 class="card-title">Comments</h5>
+          <h5 class="card-title">Comentarios</h5>
           <% for(let comment of comments) { %>
             <a class="streched-link" href="/users/<%= comment.user.username %>"><p class="post-username-comment">@<%= comment.user.username %></p></a>
             <p class="post-comment-content"><%= comment.text %></p>
             <br>
           <% } %> 
           <% if (locals.userLoggedOn && userLoggedOn) { %>
-              <h5 class="card-title leave-comment-title">Leave a comment</h5>
+              <h5 class="card-title leave-comment-title">Deje un comentario</h5>
               <form method="POST" class="form-comment">
                 <div class="input-group">
                   <textarea name="text" id= "text"class="form-control" aria-label="With textarea"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Comment</button>
+                <button type="submit" class="btn btn-primary">Commentar</button>
               </form>
           <% } else { %>
             <p>Logueate para poder comentar</p>

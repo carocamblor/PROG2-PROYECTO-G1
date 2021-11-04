@@ -9,10 +9,10 @@
             <h1>Sweet Avenue</h1>
       
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="/" class="nav-link px-2 link-dark">Home</a></li>
-              <li><a href="/posts/newpost" class="nav-link px-2 link-dark">New Post</a></li>
-              <li><a href="/users/myprofile/<%=userLoggedOn.username%>" class="nav-link px-2 link-dark">My Profile</a></li>
-              <li><a href="/logout" class="nav-link px-2 link-dark">Logout</a></li>
+              <li><a href="/" class="nav-link px-2 link-dark">Inicio</a></li>
+              <li><a href="/posts/newpost" class="nav-link px-2 link-dark">Nuevo Posteo</a></li>
+              <li><a href="/users/myprofile/<%=userLoggedOn.username%>" class="nav-link px-2 link-dark">Mi Perfil</a></li>
+              <li><a href="/logout" class="nav-link px-2 link-dark">Cerrar sesión</a></li>
             </ul>
       
             <form action="/results" method="GET" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
@@ -24,10 +24,10 @@
                 <img src="/images/<%= userLoggedOn.profile_picture %>" alt="mdo" width="32" height="32" class="rounded-circle">
               </a>
               <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                <li><a class="dropdown-item" href="/posts/newpost">New Post</a></li>
-                <li><a class="dropdown-item" href="/users/editprofile">Edit profile</a></li>
+                <li><a class="dropdown-item" href="/posts/newpost">Nuevo Posteo</a></li>
+                <li><a class="dropdown-item" href="/users/editprofile">Editar Perfil</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="/logout">Sign Out</a></li>
+                <li><a class="dropdown-item" href="/logout">Cerrar sesión</a></li>
               </ul>
             </div>
             
@@ -45,8 +45,8 @@
             <h1>Sweet Avenue</h1>
       
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="/" class="nav-link px-2 link-dark">Home</a></li>
-              <li><a href="/posts/newpost" class="nav-link px-2 link-dark">New Post</a></li>
+              <li><a href="/" class="nav-link px-2 link-dark">Inicio</a></li>
+              <li><a href="/posts/newpost" class="nav-link px-2 link-dark">Nuevo Posteo</a></li>
             </ul>
       
             <form action="/results" method="get" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
@@ -55,10 +55,10 @@
       
             <div class="col-md-3 text-end">
               <form action="/login" method="GET">
-              <button style="color: #48b9a8ff; border-color: #48b9a8ff;" type="submit" class="login-button btn btn-outline-primary me-2">Login</button>
+              <button style="color: #48b9a8ff; border-color: #48b9a8ff;" type="submit" class="login-button btn btn-outline-primary me-2">Iniciar Sesión</button>
               </form>
               <form action="/register" method="GET">
-              <button style="background-color: #48b9a8ff; border-color: #48b9a8ff;" type="submit" class="singin-button btn btn-primary">Sign-up</button>
+              <button style="background-color: #48b9a8ff; border-color: #48b9a8ff;" type="submit" class="singin-button btn btn-primary">Registrarse</button>
               </form>
             </div>
           </div>
