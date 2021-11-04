@@ -32,8 +32,9 @@ var postsController = {
             description: req.body.description,
             ingredients: req.body.ingredients,
             instructions: req.body.instructions,
-            id_user: '1',
-            picture: req.file.filename
+            id_user: req.session.userLoggedOn.id,
+            picture: req.file.filename,
+            date_creation: new Date()
         }).then(post => {
             res.redirect('/');
         }).catch(error => {

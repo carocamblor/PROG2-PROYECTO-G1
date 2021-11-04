@@ -23,9 +23,9 @@
               <a class="streched-link" href="posts/<%= post.id %>">
                 <h4 class="post-title"><%= post.name %></h4> 
               </a>
-              <a class="streched-link" href="users/ACA_VA_EL_USERNAME">
-                <img src="PROFILE_PICTURE" class="card-post-profile-picture"> 
-                <p class="post-username"> ACA VA EL USERNAME </p> 
+              <a class="streched-link" href="users/<%= post.user.username %>">
+                <img src="/images/<%= post.user.profile_picture %>" class="card-post-profile-picture"> 
+                <p class="post-username">@<%= post.user.username %> </p> 
               </a>
               <a class="streched-link" href="posts/<%= post.id %>">
                 <p class="post-description card-text"><%= post.description %></p> 
@@ -34,9 +34,14 @@
               <p class="post-like">Like</p>
               <p class="post-comment">Comment</p> 
               <hr>
+                <% for (let comment of post.comments) { %>
+                  <a class="streched-link" href="/users/<%=comment.user.username%>"><p class="post-username-comment">@<%=comment.user.username%></p></a>
+                  <p class="post-comment-content"><%=comment.text%></p>
+                  <br>
+                <% } %> 
               </div>
           </div>
-        <% } %>   
+        <% } %>    
       <% } %> 
     </main>
 

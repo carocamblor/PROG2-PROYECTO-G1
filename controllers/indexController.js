@@ -19,7 +19,9 @@ var indexController = {
                 
                 if (bcrypt.compareSync(req.body.password, user.password)) {
                     req.session.userLoggedOn = user;
-                    res.cookie(user, user, { maxAge: 1000 * 60 * 60 * 24 * 30 })
+                    if (req.body.remember_me !== undefined) {
+                        res.cookie('user', user, { maxAge: 1000 * 60 * 60 * 24 * 30 })
+                    }
                     res.redirect('/');
                 } else {
                     res.send('la contraseña está mal')
@@ -38,6 +40,10 @@ var indexController = {
                 date_birth: req.body.date_birth,
                 password: bcrypt.hashSync(req.body.password, 10)
             }).then(user => {
+                req.session.userLoggedOn = user;
+                if (req.body.remember_me !== undefined) {
+                res.cookie('user', user, { maxAge: 1000 * 60 * 60 * 24 * 30 })
+                }
                 res.redirect('/');
             }).catch(error => {
                 return res.send(error);
@@ -50,9 +56,12 @@ var indexController = {
         res.redirect('/login');
     },
     list: function (req, res) {
-        db.Post.findAll({order:[['id','DESC']]})
+        db.Post.findAll({
+            order:[['id','DESC']],
+            include: [{association: 'comments', include: {association: 'user'}}, {association: 'user'}]
+        })
         .then((posts) => {
-            res.render ('index', {posts});
+            res.render ('index', { posts });
         })
         .catch((error) => {
             res.send(error);
@@ -60,11 +69,11 @@ var indexController = {
     },
     results: async function (req, res, next) {
         const posts = await db.Post.findAll({
-            where: [
-                {
+            where: {
                     name: {[op.like]: `%${req.query.search}%`}
-                }
-            ]
+            },
+            order:[['id','DESC']],
+            include: [{association: 'comments', include: {association: 'user'}}, {association: 'user'}]
         });
         res.render('searchResults', {posts, search: req.query.search})
     },

@@ -10,7 +10,9 @@
   <body>
     <%- include('partials/header')%>
 
-    <h4 class="title">Share a new recepie</h4>
+    <% if (locals.userLoggedOn && userLoggedOn) { %> 
+
+    <h4 class="title">Nueva receta</h4>
 
     <form action="/posts/publish" class="new-post" method="POST" enctype="multipart/form-data"> 
       <div class="input-group">
@@ -40,6 +42,10 @@
       
       <button type="submit" class="btn btn-primary">Done</button>
     </form>
+    <% } else { %> 
+      <h4>Debes loguearte para crear un nuevo posteo.</h4>
+      <p>¿No tenes una cuenta? <a href="/register">Registrate acá</a></p>
+    <% } %> 
 
     <%- include('partials/footer') %> 
   </body>
