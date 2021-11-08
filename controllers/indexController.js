@@ -13,19 +13,14 @@ var indexController = {
                     email: req.body.email
                 }
             });
-            if (!user) {
-                res.send('No existe un usuario con esa dirección de mail');
-            } else {
-                
-                if (bcrypt.compareSync(req.body.password, user.password)) {
-                    req.session.userLoggedOn = user;
+            if (user && bcrypt.compareSync(req.body.password, user.password)) {
+                req.session.userLoggedOn = user;
                     if (req.body.remember_me !== undefined) {
                         res.cookie('user', user, { maxAge: 1000 * 60 * 60 * 24 * 30 })
                     }
                     res.redirect('/');
-                } else {
-                    res.send('la contraseña está mal')
-                }
+            } else {
+                res.render('login', {error: 'La dirección de mail o la contraseña ingresados son incorrectos.'});
             }
         }
     },

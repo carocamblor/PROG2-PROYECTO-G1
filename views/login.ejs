@@ -9,6 +9,12 @@
 
   <body class="text-center">
     <%- include('partials/header')%>
+
+    <% if (locals.error && error) { %>
+        <div class="alert alert-danger" role="alert">
+          <%= error %>
+        </div>
+    <% } %> 
       
       <main class="form-signin"> 
         <form method="POST" style="padding: 30px 500px 0px 500px;">
