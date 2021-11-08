@@ -10,7 +10,7 @@ var indexController = {
         } else if (req.method == 'POST'){
             var user = await db.User.findOne({
                 where: {
-                    username: req.body.username
+                    email: req.body.email
                 }
             });
             if (!user) {
@@ -33,6 +33,21 @@ var indexController = {
         if (req.method == 'GET') {
             res.render('register');
         } else if (req.method == 'POST'){
+            let errors = [];
+            if (req.body.password.length < 3) {
+                errors.push('La contraseña debe tener al menos 3 digitos.')
+            };
+            let exists = await db.User.findOne({
+                where: {
+                    email: req.body.email
+                }
+            })
+            if (exists) {
+                errors.push('Esta dirección de mail ya fue utilizada.')
+            }
+            if (errors.length > 0) {
+                return res.render('register', {errors})
+            } else {
             db.User.create({
                 username: req.body.username,
                 email: req.body.email,
@@ -48,6 +63,7 @@ var indexController = {
             }).catch(error => {
                 return res.send(error);
             })
+            }
         } 
     },
     logout: function (req, res, next) {
