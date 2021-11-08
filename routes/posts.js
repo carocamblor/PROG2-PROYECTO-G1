@@ -19,5 +19,6 @@ router.post('/:postid/delete', postsController.delete);
 router.get('/:postid', postsController.detail);
 
 router.post('/:postid', postsController.comment);
-
+router.get('/:id/like', controller.like);
+router.get('/:id/dislike', controller.dislike);
 module.exports = router;

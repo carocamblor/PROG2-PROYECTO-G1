@@ -84,6 +84,33 @@ var postsController = {
             return res.send(error);
         })
     },
+    like: function (req, res) {
+        if (!req.session.user) {
+            res.redirect('/posts/' + req.params.id);
+        }
+        db.Like.create({
+            user_id: req.session.user.id,
+            post_id: req.params.id
+        }).then(like => {
+            res.redirect('/posts/' + req.params.id);
+        }).catch(error => {
+            return res.send(error);
+        })
+    },
+    dislike: function (req, res) {
+        if (!req.session.user) {
+            res.redirect('/posts/' + req.params.id);
+        }
+        db.Like.destroy(
+            {
+                where: { user_id: req.session.user.id, post_id: req.params.id }
+            })
+            .then(() => {
+                res.redirect('/posts/' + req.params.id);
+            }).catch(error => {
+                return res.render(error);
+            })
+    },
 };
 
 module.exports = postsController;
