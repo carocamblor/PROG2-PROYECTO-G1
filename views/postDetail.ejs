@@ -30,13 +30,17 @@
           <p class="card-text"><%= post.instructions %></p> 
         </section>
         <section>
-          <form action="/posts/<%= post.id %>/edit" class="form-comment" style="display: inline;">
-            <button type="submit" class="btn btn-primary" >Editar</button>
-          </form>
-          <form action="/posts/<%= post.id %>/delete" method="POST" class="form-comment" style="display: inline;">
-            <button type="submit" class="btn btn-primary" >Eliminar</button>
-          </form>
-          <hr>
+          <% if (locals.userLoggedOn && userLoggedOn) { %>
+              <% if(userLoggedOn.id == post.user.id) { %> 
+                <form action="/posts/<%= post.id %>/edit" class="form-comment" style="display: inline;">
+                  <button type="submit" class="btn btn-primary" >Editar</button>
+                </form>
+                <form action="/posts/<%= post.id %>/delete" method="POST" class="form-comment" style="display: inline;">
+                  <button type="submit" class="btn btn-primary" >Eliminar</button>
+                </form>
+                <hr>
+              <% } %> 
+          <% } %>  
           <h5 class="card-title">Comentarios</h5>
           <% for(let comment of comments) { %>
             <a class="streched-link" href="/users/<%= comment.user.username %>"><p class="post-username-comment">@<%= comment.user.username %></p></a>
@@ -52,7 +56,8 @@
                 <button type="submit" class="btn btn-primary">Commentar</button>
               </form>
           <% } else { %>
-            <p>Logueate para poder comentar</p>
+            <p> <a href="/login">Debes loguearte para comentar un posteo.</a></p>
+            <p>¿No tenes una cuenta? <a href="/register">Registrate acá</a></p>
           <% } %>
         </section>
       </div>

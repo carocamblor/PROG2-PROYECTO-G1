@@ -83,7 +83,8 @@ var indexController = {
             where: {
                     name: {[op.like]: `%${req.query.search}%`}
             },
-            order:[['id','DESC']],
+            order:[['date_creation','DESC']],
+            limit: 10,
             include: [{association: 'comments', include: {association: 'user'}}, {association: 'user'}]
         });
         res.render('searchResults', {posts, search: req.query.search})

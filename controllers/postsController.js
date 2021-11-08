@@ -14,6 +14,7 @@ var postsController = {
             const comments = await db.Comment.findAll(
                 {
                 where: {id_post: req.params.postid},
+                order: [['date_creation','DESC']],
                 include: [{ association: 'user' }] 
                 }, //busco coment del posteo. la borro
             )
