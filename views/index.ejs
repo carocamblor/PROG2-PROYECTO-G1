@@ -15,7 +15,7 @@
       <h1>¡Hola <%= userLoggedOn.name %>!</h1>
       <% } %>
       <% for (let post of posts) { %>  
-        <div class="card" style="width: 18rem;">
+        <div class="card" id= <%=post.id %> style="width: 18rem;">
           <a class="streched-link" href="posts/<%= post.id %>">
           <img src="/images/<%= post.picture %>" class="card-img-top" alt="..."></a> 
           <div class="card-body">

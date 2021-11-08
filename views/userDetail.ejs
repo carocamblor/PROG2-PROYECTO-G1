@@ -19,6 +19,17 @@
         <p class="card-text follows">Seguidos: 100</p>
         <p class="card-text follows">Seguidores: 100</p>
         <button type="button" class="btn btn-secondary btn-sm">Seguir</button>
+
+        <% if (user.id !=locals.userLoggedOn.id) { %>
+          <div class="float-end">
+            <% if (user.followers.find(follow=> follow.follower_id == locals.userLoggedOn.id)) { %>
+              <a href="/users/<%= user.id %>/unfollow" class="btn btn-danger">Unfollow</a>
+              <% } else { %>
+                <a href="/users/<%= user.id %>/follow" class="btn btn-primary">Follow</a>
+                <% } %>
+          </div>
+          <% } %>
+
       </div>
     </div>
 
