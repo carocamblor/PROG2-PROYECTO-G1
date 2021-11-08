@@ -12,6 +12,8 @@
 
     <h4 class="title">Editar perfil</h4>
 
+    <% if (locals.userLoggedOn && userLoggedOn) { %> 
+
     <form method="POST" class="edit-profile">
       <div class="input-group">
         <span class="input-group-text">Nombre y apellido</span>
@@ -21,7 +23,11 @@
 
       <div class="input-group">
         <span class="input-group-text">Biografia</span>
-        <textarea class="form-control" aria-label="With textarea" name="biography"></textarea>
+        <textarea class="form-control" aria-label="With textarea" name="biography">
+          <% if(userLoggedOn.biography != null) { %>
+            <%=userLoggedOn.biography%>
+          <% } %> 
+        </textarea>
       </div>
 
       <div class="input-group mb-3">
@@ -32,6 +38,14 @@
       <button type="submit" class="btn btn-primary">Hecho</button>
     
     </form>
+
+    <form action="/users/myprofile/<%= userLoggedOn.username %>" method="get">
+      <button type="submit" class="btn btn-primary">Cancelar</button>
+    </form>
+
+    <% } else { %>
+      <p>Inicia sesión para editar tu perfil.</p>
+    <% } %> 
 
     <%- include('partials/footer') %> 
 
