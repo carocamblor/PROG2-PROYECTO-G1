@@ -15,4 +15,5 @@ router.get('/results', indexController.results);
 router.get('/feed/:id/like', indexController.like);
 
 router.get('/feed/:id/dislike', indexController.dislike);
+
 module.exports = router; 

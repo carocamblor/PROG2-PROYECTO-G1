@@ -76,7 +76,7 @@ var postsController = {
         db.Comment.create({
             id_post: req.params.postid,
             id_user: req.session.userLoggedOn.id,
-            date_creation: '2021-10-09',
+            date_creation: req.params.date_creation,
             text: req.body.text,
         }).then(post => {
             res.redirect(`/posts/${req.params.postid}`);
