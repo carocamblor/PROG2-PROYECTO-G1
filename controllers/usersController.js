@@ -8,7 +8,8 @@ var usersController = {
         db.User.findOne({
             where: {
                 username: req.params.username
-            }
+            },
+            include: [{association: 'followers'}]
         })
             .then((user) => {
                 if (user) {
