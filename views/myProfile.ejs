@@ -37,7 +37,7 @@
             <a class="streched-link" href="/posts/<%= post.id %>"> 
             <p class="post-description card-text"><%= post.description %></p>
             </a> 
-            <p class="card-text post-date">Date: <%= post.date_creation %></p> 
+            <p class="card-text post-date"><%= post.createdAt %></p> 
             <hr>
             <% for (let comment of post.comments) { %>
               <a class="streched-link" href="/users/<%=comment.user.username%>"><p class="post-username-comment">@<%=comment.user.username%></p></a>

@@ -14,7 +14,7 @@ var postsController = {
             const comments = await db.Comment.findAll(
                 {
                 where: {id_post: req.params.postid},
-                order: [['date_creation','DESC']],
+                order: [['createdAt','DESC']],
                 include: [{ association: 'user' }] 
                 }, //busco coment del posteo. la borro
             )
@@ -35,7 +35,6 @@ var postsController = {
             instructions: req.body.instructions,
             id_user: req.session.userLoggedOn.id,
             picture: req.file.filename,
-            date_creation: new Date()
         }).then(post => {
             res.redirect('/');
         }).catch(error => {
@@ -76,7 +75,6 @@ var postsController = {
         db.Comment.create({
             id_post: req.params.postid,
             id_user: req.session.userLoggedOn.id,
-            date_creation: req.params.date_creation,
             text: req.body.text,
         }).then(post => {
             res.redirect(`/posts/${req.params.postid}`);

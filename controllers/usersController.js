@@ -17,7 +17,7 @@ var usersController = {
                     where: {
                         id_user: user.id
                     },
-                    order:[['id','DESC']],
+                    order:[['createdAt','DESC']],
                     include: [{association: 'comments', include: {association: 'user'}}, {association: 'user'}]
                 })
                     .then((posts) => {
@@ -41,7 +41,7 @@ var usersController = {
                     where: {
                         id_user: user.id
                     },
-                    order:[['id','DESC']],
+                    order:[['createdAt','DESC']],
             include: [{association: 'comments', include: {association: 'user'}}, {association: 'user'}]
                 })
                     .then((posts) => {
