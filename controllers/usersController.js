@@ -57,7 +57,14 @@ var usersController = {
             res.render('editProfile');
         } else if (req.method == 'POST') {
             db.User.update({
-                
+                name: req.body.name,
+                surname: req.body.surname, 
+                biography: req.body.biography,
+                profile_picture: req.body.profile_picture
+            }, { where: { id: req.params.id } }).then(post => {
+                res.redirect('/myprofile/' + req.params.username);
+            }).catch(error => {
+                return res.send(error);
             })
         }
         

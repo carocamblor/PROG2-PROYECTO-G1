@@ -16,6 +16,7 @@
           <h5 class="card-title"><%= user.name %> <%= user.surname %></h5> 
           <h6 class="card-subtitle mb-2 text-muted">@<%= user.username %></h6> 
           <p class="card-text"><%= user.biography %></p> 
+          <p class="card-text follows">Recetas: <%= posts.length %> </p>
           <p class="card-text follows">Seguidos: 100</p>
           <p class="card-text follows">Seguidores: 100</p>
           <form action="/users/editprofile">

@@ -14,7 +14,7 @@
 
     <% if (locals.userLoggedOn && userLoggedOn) { %> 
 
-    <form method="POST" class="edit-profile">
+    <form method="POST" class="edit-profile" enctype="multipart/form-data">
       <div class="input-group">
         <span class="input-group-text">Nombre y apellido</span>
         <input type="text" aria-label="First name" name="name" class="form-control">
@@ -32,7 +32,7 @@
 
       <div class="input-group mb-3">
         <label class="input-group-text" for="inputGroupFile01">Foto de perfil</label>
-        <input type="file" accept=".jpg, .png, .jpeg" name="profile_picture" class="form-control" id="inputGroupFile01">
+        <input required type="file" accept=".jpg, .png, .jpeg" class="form-control" name="profile_picture" id="inputGroupFile01">
       </div>
 
       <button type="submit" class="btn btn-primary">Hecho</button>
