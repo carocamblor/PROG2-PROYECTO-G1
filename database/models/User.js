@@ -38,7 +38,7 @@ module.exports = (sequelize, dataTypes) => {
 
     const config = {
         tableName: 'users',
-        timestamps: false,
+        timestamps: true,
         underscorder: true
     }
 

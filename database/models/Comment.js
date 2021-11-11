@@ -16,14 +16,11 @@ module.exports = (sequelize, dataTypes) => {
         text: {
             type: dataTypes.STRING
         },
-        date_creation: {
-            type: dataTypes.DATE
-        }
     }
 
     const config = {
         tableName: 'comments',
-        timestamps: false,
+        timestamps: true,
         underscorder: true
     }
 

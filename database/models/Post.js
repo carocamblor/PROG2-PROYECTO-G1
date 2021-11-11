@@ -16,9 +16,6 @@ module.exports = (sequelize, dataTypes) => {
         description: {
             type: dataTypes.STRING
         },
-        date_creation: {
-            type: dataTypes.DATE
-        },
         ingredients: {
             type: dataTypes.STRING
         },
@@ -32,7 +29,7 @@ module.exports = (sequelize, dataTypes) => {
 
     const config = {
         tableName: 'posts',
-        timestamps: false,
+        timestamps: true,
         underscorder: true
     }
 

@@ -12,7 +12,7 @@ var postsRouter = require('./routes/posts');
 const db = require('./database/models');
 
 var app = express();
-//db.sequelize.sync ({alter:true});
+// db.sequelize.sync ({alter:true});
 
 app.use( //configuracion de session. Nos agreega la variable req.session
   session({
