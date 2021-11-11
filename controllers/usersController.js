@@ -56,13 +56,15 @@ var usersController = {
         if (req.method == 'GET') {
             res.render('editProfile');
         } else if (req.method == 'POST') {
+            console.log(req.body)
+            console.log(req.session.userLoggedOn)
             db.User.update({
                 name: req.body.name,
                 surname: req.body.surname, 
                 biography: req.body.biography,
                 profile_picture: req.body.profile_picture
-            }, { where: { id: req.params.id } }).then(post => {
-                res.redirect('/myprofile/' + req.params.username);
+            }, { where: { username: req.session.userLoggedOn.username } }).then(()=> {
+                res.redirect('/users/myprofile/' + req.session.userLoggedOn.username);
             }).catch(error => {
                 return res.send(error);
             })
