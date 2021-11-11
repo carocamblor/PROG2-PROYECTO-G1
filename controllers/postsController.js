@@ -6,7 +6,7 @@ const op = db.Sequelize.Op;
 var postsController = { 
     detail: async function (req, res) {
         const post = await db.Post.findByPk(req.params.postid,
-            { include: [{ association: 'comments' },{association: 'user'}] });
+            { include: [{ association: 'user' }, { association: 'likes' }, { association: 'comments', include: [{ association: 'user'}]}] });
             
         if (!post) {
             res.render('error', {error: 'Lo sentimos! No encontramos la receta que estás buscando.'});
