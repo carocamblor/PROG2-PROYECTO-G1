@@ -159,3 +159,17 @@ button.login-button:hover {
 li.hello {
   color: grey;
 }
+
+.card-alert-login {
+    margin: 3vw 5vw;
+}
+
+button.actions {
+  background-color: #65bbaa!important;
+  border-color: #65bbaa!important;
+}
+
+button.actions:hover {
+  background-color: #459787!important;
+  border-color: #459787!important;
+}

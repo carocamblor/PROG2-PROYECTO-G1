@@ -11,12 +11,16 @@
     <%- include('partials/header')%>
 
     <% if (locals.userLoggedOn && userLoggedOn) { %>
-      <div class="card">
+      <div class="card card-alert-login">
         <h5 class="card-header">Aviso</h5>
         <div class="card-body">
-          <p class="card-text">Actualmente ha iniciado sesión como @<%= userLoggedOn.username  %>, necesita salir antes de volver a entrar con un usuario diferente.</p>
-          <a href="/logout" class="btn btn-primary">Cerrar sesión</a>
-          <a href="/" class="btn btn-primary">Volver al inicio</a>
+          <p class="card-text" style="margin-bottom: 16px;">Actualmente ha iniciado sesión como @<%= userLoggedOn.username  %>, necesita salir antes de volver a entrar con un usuario diferente.</p>
+          <form action="/logout" method="GET" style="display: inline;">
+            <button type="submit" class="actions btn btn-primary">Cerrar sesión</button>
+          </form>
+          <form action="/" method="GET" style="display: inline;">
+            <button type="submit" class="actions btn btn-primary">Volver al inicio</button>
+          </form>
         </div>
       </div>
       <% } else { %> 
