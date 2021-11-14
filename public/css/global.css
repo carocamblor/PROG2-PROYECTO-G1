@@ -69,6 +69,13 @@ img.card-post-profile-picture {
   display: inline;
 }
 
+img.card-post-like {
+  display: inline;
+  height: 15px!important;
+  width: 17px!important;
+  border-radius: 0!important;
+}
+
 h4.post-title {
   font-family: georgia;
   font-weight: bold;
@@ -149,3 +156,6 @@ button.login-button:hover {
   border-color: #48b9a8ff;
 }
 
+li.hello {
+  color: grey;
+}

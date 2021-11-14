@@ -13,8 +13,9 @@
               <li><a href="/posts/newpost" class="nav-link px-2 link-dark">Nuevo Posteo</a></li>
               <li><a href="/users/myprofile/<%=userLoggedOn.username%>" class="nav-link px-2 link-dark">Mi Perfil</a></li>
               <li><a href="/logout" class="nav-link px-2 link-dark">Cerrar sesión</a></li>
+              <li class="hello nav-link px-2 link-dark ">¡Hola <%= userLoggedOn.name %>!</li>
             </ul>
-      
+
             <form action="/results" method="GET" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
               <input type="search" name="search" class="form-control" placeholder="Search..." aria-label="Search" style="background-color: white">
             </form>

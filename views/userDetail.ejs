@@ -18,17 +18,14 @@
         <p class="card-text follows">Recetas: <%= posts.length %> </p>
         <p class="card-text follows">Seguidos: 100</p>
         <p class="card-text follows">Seguidores: <%= user.followers.length %> </p>
-        <button type="button" class="btn btn-secondary btn-sm">Seguir</button>
 
         <% if (locals.userLoggedOn && userLoggedOn) { %>
         <% if (user.id !=locals.userLoggedOn.id) { %>
-          <div class="float-end">
             <% if (user.followers.find(follow=> follow.follower_id == locals.userLoggedOn.id)) { %>
-              <a href="/users/<%= user.id %>/unfollow" class="btn btn-danger">Unfollow</a>
+              <button type="button" class="btn btn-secondary btn-sm">Dejar de seguir</button>
               <% } else { %>
-                <a href="/users/<%= user.id %>/follow" class="btn btn-primary">Follow</a>
+                <button type="button" class="btn btn-secondary btn-sm">Seguir</button>
                 <% } %>
-          </div>
           <% } %>
           <% } %>
 
