@@ -33,10 +33,10 @@
           <% if (locals.userLoggedOn && userLoggedOn) { %>
               <% if(userLoggedOn.id == post.user.id) { %> 
                 <form action="/posts/<%= post.id %>/edit" class="form-comment" style="display: inline;">
-                  <button type="submit" class="btn btn-primary" >Editar</button>
+                  <button type="submit" class="actions btn btn-primary" >Editar</button>
                 </form>
                 <form action="/posts/<%= post.id %>/delete" method="POST" class="form-comment" style="display: inline;">
-                  <button type="submit" class="btn btn-primary" >Eliminar</button>
+                  <button type="submit" class="actions btn btn-primary" >Eliminar</button>
                 </form>
                 <hr>
               <% } %> 
@@ -56,8 +56,9 @@
                 <button type="submit" class="btn btn-primary">Commentar</button>
               </form>
           <% } else { %>
-            <p> <a href="/login">Debes loguearte para comentar un posteo.</a></p>
-            <p>¿No tenes una cuenta? <a href="/register">Registrate acá</a></p>
+            <hr>
+            <p style="font-size: 13px;">Debes iniciar sesión para dejar comentarios. <a href="/login">Iniciar sesión</a></p>
+            <p style="font-size: 13px;">¿No tenes una cuenta? <a href="/register">Registrate acá</a></p>
           <% } %>
         </section>
       </div>

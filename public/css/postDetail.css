@@ -50,12 +50,12 @@ div.input-group {
     margin: 5px 0px;
 }
 
-button {
+button.actions {
     background-color: #65bbaa!important;
     border-color: #65bbaa!important;
 }
 
-button:hover {
+button.actions:hover {
     background-color: #459787!important;
     border-color: #459787!important;
 }

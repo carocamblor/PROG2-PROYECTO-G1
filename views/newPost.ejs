@@ -40,11 +40,16 @@
         <input required type="file" accept=".jpg, .png, .jpeg" class="form-control" name="picture" id="inputGroupFile01">
       </div>
       
-      <button type="submit" class="btn btn-primary">Hecho</button>
+      <button type="submit" class="actions btn btn-primary">Hecho</button>
     </form>
-    <% } else { %> 
-      <h4>Debes loguearte para crear un nuevo posteo.</h4>
-      <p>¿No tenes una cuenta? <a href="/register">Registrate acá</a></p>
+    <% } else { %>
+      <div class="card">
+        <div class="card-body">
+          <h4>Debes loguearte para crear un nuevo posteo.</h4>
+          <p>¿No tenes una cuenta? <a href="/register">Registrate acá</a></p>
+        </div>
+      </div>
+      
     <% } %> 
 
     <%- include('partials/footer') %> 

@@ -11,14 +11,18 @@ div.input-group {
     margin: 16px;
 }
 
-button {
+button.actions {
     margin-left: 16px;
     background-color: #65bbaa!important;
     border-color: #65bbaa!important;
 }
 
-button:hover {
+button.actions:hover {
     margin-left: 16px;
     background-color: #459787!important;
     border-color: #459787!important;
+}
+
+.card {
+    margin: 3vw 5vw;
 }
