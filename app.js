@@ -46,9 +46,9 @@ app.use(async (req, res, next) => {
 
 app.use(async (req, res, next) => { //Middleware de Session. Poner en vistas
   if (req.session.userLoggedOn !== undefined) {
-    res.locals.userLoggedOn = await db.User.findByPk(req.session.userLoggedOn.id)
-    //res.locals.userLoggedOn = req.session.userLoggedOn; //res.locals es varible que se comparte con las vistas 
+   res.locals.userLoggedOn = req.session.userLoggedOn; //res.locals es varible que se comparte con las vistas 
   }
+  //res.locals.userLoggedOn = await db.User.findByPk(req.session.userLoggedOn.id);
   next();
 }); //se ejecuta siempre a menos que uno de una respuesta
 //en el login lo implementamos

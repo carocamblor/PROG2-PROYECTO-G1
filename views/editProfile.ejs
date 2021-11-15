@@ -17,8 +17,8 @@
     <form method="POST" class="edit-profile" enctype="multipart/form-data">
       <div class="input-group">
         <span class="input-group-text">Nombre y apellido</span>
-        <input type="text" aria-label="First name" name="name" class="form-control">
-        <input type="text" aria-label="Last name" name="surname" class="form-control">
+        <input type="text" value="<%= userLoggedOn.name %> " aria-label="First name" name="name" class="form-control">
+        <input type="text" value="<%= userLoggedOn.surname %> "aria-label="Last name" name="surname" class="form-control">
       </div>
 
       <div class="input-group">
