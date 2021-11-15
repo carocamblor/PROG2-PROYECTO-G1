@@ -27,9 +27,6 @@ var postsController = {
         res.render('newPost');
     },
     store: function (req, res) {
-        // if (req.file) req.body.picture = (req.file.destination + req.file.filename).replace('public', '');
-        console.log(req.file)
-        console.log(req.body.picture)
         db.Post.create({
             name: req.body.name,
             description: req.body.description,
@@ -45,7 +42,6 @@ var postsController = {
     },
     edit: async function (req, res) {
         const post = await db.Post.findByPk(req.params.postid)
-        console.log(post)
         if (!post) {
             return res.render('error', {error: 'No encontramos la receta que queres editar!'});
         } else {
@@ -69,7 +65,6 @@ var postsController = {
     },
    
     delete: function (req, res) {
-        // Chequear que sea el owner
         db.Post.destroy({ where: { id: req.params.postid } })
             .then(() => {
                 res.redirect('/');
