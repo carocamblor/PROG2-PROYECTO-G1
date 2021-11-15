@@ -173,3 +173,7 @@ button.actions:hover {
   background-color: #459787!important;
   border-color: #459787!important;
 }
+form.cancel, form.delete {
+    padding: 0px 300px;
+    margin-top: 16px;
+}

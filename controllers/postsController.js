@@ -53,18 +53,21 @@ var postsController = {
         }
     },
     update: function (req, res) {
+        if (req.file){
         db.Post.update({
             name: req.body.name,
             description: req.body.description,
             ingredients: req.body.ingredients,
             instructions: req.body.instructions,
-            picture: req.body.picture,
+            picture: req.file.filename,
         }, { where: { id: req.params.postid } }).then(post => {
             res.redirect('/');
         }).catch(error => {
             return res.send(error);
         })
+        }
     },
+   
     delete: function (req, res) {
         // Chequear que sea el owner
         db.Post.destroy({ where: { id: req.params.postid } })
