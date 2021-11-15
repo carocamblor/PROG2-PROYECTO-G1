@@ -2,6 +2,7 @@ const posts = require ('../data/posts');
 const db = require ('../database/models');
 const op = db.Sequelize.Op;
 const bcrypt = require('bcryptjs');
+const moment = require('moment');
 
 var indexController = {
     login: async function (req, res) {
@@ -73,6 +74,10 @@ var indexController = {
             include: [{association: 'comments', include: {association: 'user'}}, {association: 'user'}, {association: 'user'}, {association: 'likes'}]
         })
         .then((posts) => {
+            for (let i = 0; i < posts.length; i++) {
+                const element = posts[i];
+                
+            }
             res.render ('index', { posts });
         })
         .catch((error) => {
