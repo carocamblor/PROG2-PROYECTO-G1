@@ -12,6 +12,10 @@ router.all('/register', indexController.register);
 
 router.get('/results', indexController.results);
 
+router.get('/results/:id/like', indexController.likeR);
+
+router.get('/results/:id/dislike', indexController.dislikeR);
+
 router.get('/feed/:id/like', indexController.like);
 
 router.get('/feed/:id/dislike', indexController.dislike);

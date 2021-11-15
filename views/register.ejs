@@ -15,7 +15,7 @@
       <div class="card card-alert-login">
         <h5 class="card-header">Aviso</h5>
         <div class="card-body">
-          <p class="card-text" style="margin-bottom: 16px;">Actualmente ha iniciado sesión como @<%= userLoggedOn.username  %>, necesita salir antes de volver a entrar con un usuario diferente.</p>
+          <p class="card-text" style="margin-bottom: 16px;">Actualmente ha iniciado sesión como @<%= userLoggedOn.username  %>, necesita salir para registrar a un nuevo usuario.</p>
           <form action="/logout" method="GET" style="display: inline;">
             <button type="submit" class="actions btn btn-primary">Cerrar sesión</button>
           </form>
@@ -40,6 +40,14 @@
         <img class="mb-4" src="/images/logo.png" alt="" width="110" height="110">
         <h1 class="h3 mb-3 fw-normal">Registrate</h1>
     
+        <div class="form-floating">
+          <input required type="text" name="name" class="form-control" id="floatingInput" placeholder="name">
+          <label for="floatingInput">Nombre</label>
+        </div>
+        <div class="form-floating">
+          <input required type="text" name="surname" class="form-control" id="floatingInput" placeholder="surname">
+          <label for="floatingInput">Apellido</label>
+        </div>
         <div class="form-floating">
           <input required type="text" name="username" class="form-control" id="floatingInput" placeholder="username">
           <label for="floatingInput">Nombre de usuario</label>

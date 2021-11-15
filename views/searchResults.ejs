@@ -30,9 +30,17 @@
               <a class="streched-link" href="posts/<%= post.id %>">
                 <p class="post-description card-text"><%= post.description %></p> 
               </a>
-              <p class="card-text post-date">Fecha: <%= post.createdAt %></p> 
-              <p class="post-like">Like</p>
-              <p class="post-comment">Comment</p> 
+              <p class="card-text post-date"><%= post.date %></p> 
+              <% if (locals.userLoggedOn && userLoggedOn) { %> 
+                <% if (post.likes.find(like => like.user_id == locals.userLoggedOn.id)) { %>
+                  <a href="/results/<%= post.id %>/dislike"><img src="/images/like.png" class="card-post-like"></a>
+                <% } else { %>
+                  <a href="/results/<%= post.id %>/like"><img src="/images/no_like.png" class="card-post-like"></a>
+                <% } %>
+                <% } else { %>
+                  <img src="/images/like.png" class="card-post-like">
+                <% } %>
+                <p style="display: inline;"><%= post.likes.length %> </p>
               <hr>
                 <% for (let comment of post.comments) { %>
                   <a class="streched-link" href="/users/<%=comment.user.username%>"><p class="post-username-comment">@<%=comment.user.username%></p></a>

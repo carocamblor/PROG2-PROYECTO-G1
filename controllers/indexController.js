@@ -50,7 +50,9 @@ var indexController = {
                 level: req.body.level,
                 date_birth: req.body.date_birth,
                 profile_picture: 'profile.png',
-                password: bcrypt.hashSync(req.body.password, 10)
+                password: bcrypt.hashSync(req.body.password, 10),
+                name: req.body.name,
+                surname: req.body.name
             }).then(user => {
                 req.session.userLoggedOn = user;
                 if (req.body.remember_me !== undefined) {
@@ -76,7 +78,7 @@ var indexController = {
         .then((posts) => {
             for (let i = 0; i < posts.length; i++) {
                 const element = posts[i];
-                
+                element.date = moment(element.createdAt).format('LL');
             }
             res.render ('index', { posts });
         })
@@ -87,12 +89,19 @@ var indexController = {
     results: async function (req, res, next) {
         const posts = await db.Post.findAll({
             where: {
-                    name: {[op.like]: `%${req.query.search}%`}
+                [op.or]: {
+                name: {[op.like]: `%${req.query.search}%`},
+                description: {[op.like]: `%${req.query.search}%`},
+            }
             },
             order:[['createdAt','DESC']],
             limit: 10,
-            include: [{association: 'comments', include: {association: 'user'}}, {association: 'user'}]
+            include: [{association: 'comments', include: {association: 'user'}}, {association: 'user'}, {association: 'likes'}]
         });
+        for (let i = 0; i < posts.length; i++) {
+            const element = posts[i];
+            element.date = moment(element.createdAt).format('LL');
+        }
         res.render('searchResults', {posts, search: req.query.search})
     },
     like: function (req, res) {
@@ -118,6 +127,33 @@ var indexController = {
             })
             .then(() => {
                 res.redirect('/#post_' + req.params.id);
+            }).catch(error => {
+                return res.render(error);
+            })
+    },
+    likeR: function (req, res) {
+        if (!req.session.userLoggedOn) {
+            res.redirect(req.headers.referer);
+        }
+        db.Like.create({
+            user_id: req.session.userLoggedOn.id,
+            post_id: req.params.id
+        }).then(like => {
+            res.redirect(req.headers.referer);
+        }).catch(error => {
+            return res.send(error);
+        })
+    },
+    dislikeR: function (req, res) {
+        if (!req.session.userLoggedOn) {
+            res.redirect(req.headers.referer);
+        }
+        db.Like.destroy(
+            {
+                where: { user_id: req.session.userLoggedOn.id, post_id: req.params.id }
+            })
+            .then(() => {
+                res.redirect(req.headers.referer);
             }).catch(error => {
                 return res.render(error);
             })

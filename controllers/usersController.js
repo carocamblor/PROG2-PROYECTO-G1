@@ -2,6 +2,7 @@ const posts = require ('../data/posts');
 const users = require ('../data/users');
 const db = require ('../database/models');
 const op = db.Sequelize.Op;
+const moment = require('moment');
 
 var usersController = {
     userDetail: function (req, res) {
@@ -21,6 +22,10 @@ var usersController = {
                     include: [{association: 'comments', include: {association: 'user'}}, {association: 'user'}, {association: 'likes'}]
                 })
                     .then((posts) => {
+                        for (let i = 0; i < posts.length; i++) {
+                            const element = posts[i];
+                            element.date = moment(element.createdAt).format('LL');
+                        }
                         res.render('userDetail', {user, posts});
                     })
                 } else {
@@ -34,6 +39,7 @@ var usersController = {
             where: {
                 username: req.params.username
             },
+            include: [{association: 'followers'}, {association: 'following'}]
         })
             .then((user) => {
                 if (user) {
@@ -42,9 +48,13 @@ var usersController = {
                         id_user: user.id
                     },
                     order:[['createdAt','DESC']],
-            include: [{association: 'comments', include: {association: 'user'}}, {association: 'user'}]
+            include: [{association: 'comments', include: {association: 'user'}}, {association: 'user'}, {association: 'likes'}]
                 })
                     .then((posts) => {
+                        for (let i = 0; i < posts.length; i++) {
+                            const element = posts[i];
+                            element.date = moment(element.createdAt).format('LL');
+                        }
                         res.render('myProfile', {user, posts});
                     })
                 } else {
@@ -56,8 +66,7 @@ var usersController = {
         if (req.method == 'GET') {
             res.render('editProfile');
         } else if (req.method == 'POST') {
-            console.log(req.body)
-            console.log(req.session.userLoggedOn)
+            if (req.file) {
             db.User.update({
                 name: req.body.name,
                 surname: req.body.surname, 
@@ -68,6 +77,18 @@ var usersController = {
             }).catch(error => {
                 return res.send(error);
             })
+            } else {
+                db.User.update({
+                    name: req.body.name,
+                    surname: req.body.surname, 
+                    biography: req.body.biography,
+                }, { where: { username: req.session.userLoggedOn.username } }).then(()=> {
+                    res.redirect('/users/myprofile/' + req.session.userLoggedOn.username);
+                }).catch(error => {
+                    return res.send(error);
+                })
+            }
+
         }
         
     },

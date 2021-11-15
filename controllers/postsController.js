@@ -1,6 +1,7 @@
 const posts = require ('../data/posts');
 const db = require ('../database/models');
 const op = db.Sequelize.Op;
+const moment = require('moment');
 
 
 var postsController = { 
@@ -18,6 +19,7 @@ var postsController = {
                 include: [{ association: 'user' }] 
                 }, //busco coment del posteo. la borro
             )
+            post.date = moment(post.createdAt).format('LL');
             res.render('postDetail', {post, comments}); 
         }
     },
@@ -97,6 +99,33 @@ var postsController = {
         })
     },
     dislike: function (req, res) {
+        if (!req.session.userLoggedOn) {
+            res.redirect('/posts/' + req.params.id);
+        }
+        db.Like.destroy(
+            {
+                where: { user_id: req.session.userLoggedOn.id, post_id: req.params.id }
+            })
+            .then(() => {
+                res.redirect('/posts/' + req.params.id);
+            }).catch(error => {
+                return res.render(error);
+            })
+    },
+    likeDetail: function (req, res) {
+        if (!req.session.userLoggedOn) {
+            res.redirect('/posts/' + req.params.id);
+        }
+        db.Like.create({
+            user_id: req.session.userLoggedOn.id,
+            post_id: req.params.id
+        }).then(like => {
+            res.redirect('/posts/' + req.params.id);
+        }).catch(error => {
+            return res.send(error);
+        })
+    },
+    dislikeDetail: function (req, res) {
         if (!req.session.userLoggedOn) {
             res.redirect('/posts/' + req.params.id);
         }

@@ -20,8 +20,8 @@ router.get('/:postid', postsController.detail);
 
 router.post('/:postid', postsController.comment);
 
-router.get('/:id/like', postsController.like);
+router.get('/:id/like', postsController.likeDetail);
 
-router.get('/:id/dislike', postsController.dislike);
+router.get('/:id/dislike', postsController.dislikeDetail);
 
 module.exports = router;
