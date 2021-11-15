@@ -6,13 +6,13 @@ var postsController = require('../controllers/postsController');
 
 //router.get ('/publish', postsController.publish); no esta en controlador
 
-router.post('/publish', upload.single('picture') , postsController.store);
+router.post('/publish', upload.single('picture'), postsController.store);
 
 router.get('/newpost', postsController.newPost);
 
 router.get('/:postid/edit', postsController.edit); //muestra vista edit post
 
-router.post('/:postid/edit', postsController.update); //manda a base de datos
+router.post('/:postid/edit', upload.single('picture'), postsController.update); //manda a base de datos
 
 router.post('/:postid/delete', postsController.delete);
 
@@ -23,4 +23,5 @@ router.post('/:postid', postsController.comment);
 router.get('/:id/like', postsController.like);
 
 router.get('/:id/dislike', postsController.dislike);
+
 module.exports = router;

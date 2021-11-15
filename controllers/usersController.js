@@ -9,7 +9,7 @@ var usersController = {
             where: {
                 username: req.params.username
             },
-            include: [{association: 'followers'}]
+            include: [{association: 'followers'}, {association: 'following'}]
         })
             .then((user) => {
                 if (user) {
@@ -18,7 +18,7 @@ var usersController = {
                         id_user: user.id
                     },
                     order:[['createdAt','DESC']],
-                    include: [{association: 'comments', include: {association: 'user'}}, {association: 'user'}]
+                    include: [{association: 'comments', include: {association: 'user'}}, {association: 'user'}, {association: 'likes'}]
                 })
                     .then((posts) => {
                         res.render('userDetail', {user, posts});
@@ -62,7 +62,7 @@ var usersController = {
                 name: req.body.name,
                 surname: req.body.surname, 
                 biography: req.body.biography,
-                profile_picture: req.body.profile_picture
+                profile_picture: req.file.filename
             }, { where: { username: req.session.userLoggedOn.username } }).then(()=> {
                 res.redirect('/users/myprofile/' + req.session.userLoggedOn.username);
             }).catch(error => {
@@ -72,28 +72,61 @@ var usersController = {
         
     },
     follow: function (req, res) {
-        if (!req.session.user) {
-            res.redirect('/users/' + req.params.id);
-        }
         db.Follow.create({
-            follower_id: req.session.user.id,
+            follower_id: req.session.userLoggedOn.id,
             following_id: req.params.id
         }).then(follow => {
-            res.redirect('/users/' + req.params.id);
+            db.User.findByPk(req.params.id)
+            .then(user => {
+                res.redirect('/users/' + user.username);
+            })
         }).catch(error => {
             return res.send(error);
         })
     },
     unfollow: function (req, res) {
-        if (!req.session.user) {
-            res.redirect('/users/' + req.params.id);
-        }
         db.Follow.destroy(
             {
-                where: { follower_id: req.session.user.id, following_id: req.params.id }
+                where: { follower_id: req.session.userLoggedOn.id, following_id: req.params.id }
             })
             .then(() => {
-                res.redirect('/users/' + req.params.id);
+                db.User.findByPk(req.params.id)
+                .then(user => {
+                    res.redirect('/users/' + user.username);
+                })
+            }).catch(error => {
+                return res.render(error);
+            })
+    },
+    like: function (req, res) {
+        if (!req.session.userLoggedOn) {
+            res.redirect('/posts/' + req.params.id);
+        }
+        db.Like.create({
+            user_id: req.session.userLoggedOn.id,
+            post_id: req.params.id
+        }).then(like => {
+            db.User.findByPk(req.params.id)
+            .then(user => {
+                res.redirect('/users/' + user.username);
+            })
+        }).catch(error => {
+            return res.send(error);
+        })
+    },
+    dislike: function (req, res) {
+        if (!req.session.userLoggedOn) {
+            res.redirect('/posts/' + req.params.id);
+        }
+        db.Like.destroy(
+            {
+                where: { user_id: req.session.userLoggedOn.id, post_id: req.params.id }
+            })
+            .then(() => {
+                db.User.findByPk(req.params.id)
+                .then(user => {
+                    res.redirect('/users/' + user.username);
+                })
             }).catch(error => {
                 return res.render(error);
             })

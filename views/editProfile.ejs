@@ -39,8 +39,12 @@
     
     </form>
 
-    <form action="/users/myprofile/<%= userLoggedOn.username %>" method="get">
+    <form action="/users/myprofile/<%= userLoggedOn.username %>" method="GET" class="cancel">
       <button type="submit" class="btn btn-primary">Cancelar</button>
+    </form>
+
+    <form action="/users/myprofile/<%= userLoggedOn.username %>" method="GET" class="delete">
+      <button type="submit" class="btn btn-primary">Eliminar perfil</button>
     </form>
 
     <% } else { %>

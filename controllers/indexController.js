@@ -48,6 +48,7 @@ var indexController = {
                 email: req.body.email,
                 level: req.body.level,
                 date_birth: req.body.date_birth,
+                profile_picture: 'profile.png',
                 password: bcrypt.hashSync(req.body.password, 10)
             }).then(user => {
                 req.session.userLoggedOn = user;
@@ -69,7 +70,7 @@ var indexController = {
     list: function (req, res) {
         db.Post.findAll({
             order:[['id','DESC']],
-            include: [{association: 'comments', include: {association: 'user'}}, {association: 'user'}]
+            include: [{association: 'comments', include: {association: 'user'}}, {association: 'user'}, {association: 'user'}, {association: 'likes'}]
         })
         .then((posts) => {
             res.render ('index', { posts });
@@ -90,11 +91,11 @@ var indexController = {
         res.render('searchResults', {posts, search: req.query.search})
     },
     like: function (req, res) {
-        if (!req.session.user) {
+        if (!req.session.userLoggedOn) {
             res.redirect('/posts/' + req.params.id);
         }
         db.Like.create({
-            user_id: req.session.user.id,
+            user_id: req.session.userLoggedOn.id,
             post_id: req.params.id
         }).then(like => {
             res.redirect('/#post_' + req.params.id);
@@ -103,12 +104,12 @@ var indexController = {
         })
     },
     dislike: function (req, res) {
-        if (!req.session.user) {
+        if (!req.session.userLoggedOn) {
             res.redirect('/posts/' + req.params.id);
         }
         db.Like.destroy(
             {
-                where: { user_id: req.session.user.id, post_id: req.params.id }
+                where: { user_id: req.session.userLoggedOn.id, post_id: req.params.id }
             })
             .then(() => {
                 res.redirect('/#post_' + req.params.id);

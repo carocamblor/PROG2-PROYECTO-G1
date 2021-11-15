@@ -12,7 +12,7 @@
     <%- include('partials/header')%>
     <main>
       <% for (let post of posts) { %>  
-        <div class="card" id= <%=post.id %> style="width: 18rem;">
+        <div class="card" id="post_<%=post.id %>" style="width: 18rem;">
           <a class="streched-link" href="posts/<%= post.id %>">
           <img src="/images/<%= post.picture %>" class="card-img-top" alt="..."></a> 
           <div class="card-body">
@@ -26,9 +26,19 @@
             <a class="streched-link" href="posts/<%= post.id %>">
               <p class="post-description card-text"><%= post.description %></p> 
             </a>
-            <p class="card-text post-date"><%= post.createdAt %></p> 
-            <img src="/images/like.png" class="card-post-like">
-            <p class="post-comment">Comentar</p> 
+            <p class="card-text post-date"><%= post.createdAt %></p>
+
+            <% if (locals.userLoggedOn && userLoggedOn) { %> 
+              <% if (post.likes.find(like => like.user_id == locals.userLoggedOn.id)) { %>
+                <a href="/feed/<%= post.id %>/dislike"><img src="/images/like.png" class="card-post-like"></a>
+              <% } else { %>
+                <a href="/feed/<%= post.id %>/like"><img src="/images/no_like.png" class="card-post-like"></a>
+              <% } %>
+              <% } else { %>
+                <img src="/images/like.png" class="card-post-like">
+              <% } %>
+              <p style="display: inline;"><%= post.likes.length %> </p>
+
             <hr>
               <% for (let comment of post.comments) { %>
                 <a class="streched-link" href="/users/<%=comment.user.username%>"><p class="post-username-comment">@<%=comment.user.username%></p></a>

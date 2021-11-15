@@ -9,7 +9,23 @@
   
   <body class="text-center">
 
-    <%- include('partials/header')%> 
+    <%- include('partials/header')%>
+
+    <% if (locals.userLoggedOn && userLoggedOn) { %>
+      <div class="card card-alert-login">
+        <h5 class="card-header">Aviso</h5>
+        <div class="card-body">
+          <p class="card-text" style="margin-bottom: 16px;">Actualmente ha iniciado sesión como @<%= userLoggedOn.username  %>, necesita salir antes de volver a entrar con un usuario diferente.</p>
+          <form action="/logout" method="GET" style="display: inline;">
+            <button type="submit" class="actions btn btn-primary">Cerrar sesión</button>
+          </form>
+          <form action="/" method="GET" style="display: inline;">
+            <button type="submit" class="actions btn btn-primary">Volver al inicio</button>
+          </form>
+        </div>
+      </div>
+      <% } else { %> 
+
 
     <% if (locals.errors && errors.length > 0) { %>
       <% for(let error of errors) { %> 
@@ -55,6 +71,7 @@
         <button style="background-color: #48b9a8ff; border-color: #48b9a8ff;" class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
         <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
       </form>
+      <% } %> 
     </main>
       
     <%- include('partials/footer') %> 

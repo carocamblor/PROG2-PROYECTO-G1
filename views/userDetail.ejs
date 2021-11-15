@@ -16,15 +16,19 @@
         <h6 class="card-subtitle mb-2 text-muted"> <%= user.username %> </h6> 
         <p class="card-text"> <%= user.biography %> </p>
         <p class="card-text follows">Recetas: <%= posts.length %> </p>
-        <p class="card-text follows">Seguidos: 100</p>
+        <p class="card-text follows">Seguidos: <%= user.following.length %></p>
         <p class="card-text follows">Seguidores: <%= user.followers.length %> </p>
 
         <% if (locals.userLoggedOn && userLoggedOn) { %>
         <% if (user.id !=locals.userLoggedOn.id) { %>
             <% if (user.followers.find(follow=> follow.follower_id == locals.userLoggedOn.id)) { %>
-              <button type="button" class="btn btn-secondary btn-sm">Dejar de seguir</button>
+              <form action="/users/<%= user.id %>/unfollow" method="POST">
+                <button type="submit" class="btn btn-secondary btn-sm">Dejar de seguir</button>
+              </form>
               <% } else { %>
-                <button type="button" class="btn btn-secondary btn-sm">Seguir</button>
+                <form action="/users/<%= user.id %>/follow" method="POST">
+                  <button type="submit" class="btn btn-secondary btn-sm">Seguir</button>
+                </form>
                 <% } %>
           <% } %>
           <% } %>
@@ -48,8 +52,16 @@
               <p class="post-description card-text"><%= post.description %></p>
             </a>
             <p class="card-text post-date">Fecha: <%= post.createdAt %></p> 
-            <p class="post-like">Like</p>
-            <p class="post-comment">Comentar</p> 
+            <% if (locals.userLoggedOn && userLoggedOn) { %> 
+            <% if (post.likes.find(like => like.user_id == locals.userLoggedOn.id)) { %>
+              <a href="/users/<%= post.id %>/dislike"><img src="/images/like.png" class="card-post-like"></a>
+            <% } else { %>
+              <a href="/users/<%= post.id %>/like"><img src="/images/no_like.png" class="card-post-like"></a>
+            <% } %>
+              <% } else { %>
+                <img src="/images/like.png" class="card-post-like">
+              <% } %>
+            <p style="display: inline;"><%= post.likes.length %> </p>
             <hr>
             <% for (let comment of post.comments) { %>
               <a class="streched-link" href="/users/<%=comment.user.username%>"><p class="post-username-comment">@<%=comment.user.username%></p></a>

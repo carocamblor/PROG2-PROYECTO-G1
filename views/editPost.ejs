@@ -12,7 +12,7 @@
 
     <h4 class="title">Edita tu receta</h4>
 
-    <form action="/posts/<%= post.id %>/edit" class="new-post" method="POST"> 
+    <form action="/posts/<%= post.id %>/edit" class="new-post" method="POST" enctype="multipart/form-data"> 
       <div class="input-group">
         <span class="input-group-text">Titulo</span>
         <input type="text" aria-label="Title" name="name" class="form-control">

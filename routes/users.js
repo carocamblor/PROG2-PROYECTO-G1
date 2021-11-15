@@ -1,14 +1,23 @@
 var express = require('express');
 var router = express.Router();
+const multer = require ('multer');
+const upload = multer ({dest: 'public/images/'})
 var usersController = require('../controllers/usersController');
+
+router.get('/:id/like', usersController.like);
+
+router.get('/:id/dislike', usersController.dislike);
 
 router.get('/myprofile/:username', usersController.myProfile);
 
-router.all('/editprofile', usersController.editProfile);
+router.all('/editprofile', upload.single('profile_picture'), usersController.editProfile);
 
 router.get('/:username', usersController.userDetail);
 
-router.get('/:id/follow', usersController.follow);
+router.post('/:id/follow', usersController.follow);
 
-router.get('/:id/unfollow', usersController.unfollow);
+router.post('/:id/unfollow', usersController.unfollow);
+
+
+
 module.exports = router; 

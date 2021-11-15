@@ -6,7 +6,7 @@ const op = db.Sequelize.Op;
 var postsController = { 
     detail: async function (req, res) {
         const post = await db.Post.findByPk(req.params.postid,
-            { include: [{ association: 'user' }, { association: 'comments', include: [{ association: 'user'}]}] });
+            { include: [{ association: 'user' }, { association: 'likes' }, { association: 'comments', include: [{ association: 'user'}]}] });
             
         if (!post) {
             res.render('error', {error: 'Lo sentimos! No encontramos la receta que estás buscando.'});
@@ -56,6 +56,7 @@ var postsController = {
             description: req.body.description,
             ingredients: req.body.ingredients,
             instructions: req.body.instructions,
+            picture: req.body.picture,
         }, { where: { id: req.params.postid } }).then(post => {
             res.redirect('/');
         }).catch(error => {
@@ -83,11 +84,11 @@ var postsController = {
         })
     },
     like: function (req, res) {
-        if (!req.session.user) {
+        if (!req.session.userLoggedOn) {
             res.redirect('/posts/' + req.params.id);
         }
         db.Like.create({
-            user_id: req.session.user.id,
+            user_id: req.session.userLoggedOn.id,
             post_id: req.params.id
         }).then(like => {
             res.redirect('/posts/' + req.params.id);
@@ -96,12 +97,12 @@ var postsController = {
         })
     },
     dislike: function (req, res) {
-        if (!req.session.user) {
+        if (!req.session.userLoggedOn) {
             res.redirect('/posts/' + req.params.id);
         }
         db.Like.destroy(
             {
-                where: { user_id: req.session.user.id, post_id: req.params.id }
+                where: { user_id: req.session.userLoggedOn.id, post_id: req.params.id }
             })
             .then(() => {
                 res.redirect('/posts/' + req.params.id);

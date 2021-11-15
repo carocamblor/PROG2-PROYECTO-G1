@@ -7,7 +7,13 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
             primaryKey: true,
             type: dataTypes.INTEGER
-        }
+        },
+        id_user: {
+            type: dataTypes.INTEGER
+        },
+        id_post: {
+            type: dataTypes.INTEGER
+        },
     }
 
     const config = {
@@ -25,7 +31,7 @@ module.exports = (sequelize, dataTypes) => {
         });
         Like.belongsTo(models.Post, {
             as: 'post',
-            foreignKey: 'post_id'
+            foreignKey: 'id_post'
         });
     };
 

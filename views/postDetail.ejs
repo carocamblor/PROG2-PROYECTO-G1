@@ -40,7 +40,9 @@
                 </form>
                 <hr>
               <% } %> 
-          <% } %>  
+          <% } %>
+          <img src="/images/like.png" class="card-post-like">
+          <p style="display: inline;"><%= post.likes.length %> </p>
           <h5 class="card-title">Comentarios</h5>
           <% for(let comment of comments) { %>
             <a class="streched-link" href="/users/<%= comment.user.username %>"><p class="post-username-comment">@<%= comment.user.username %></p></a>
