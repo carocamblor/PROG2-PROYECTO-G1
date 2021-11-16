@@ -20,17 +20,17 @@
       
       <div class="input-group">
         <span class="input-group-text">Descripción</span>
-        <textarea class="form-control" aria-label="With textarea" name="description"><%=post.description%></textarea>
+        <textarea class="form-control" value="<%= post.description %>" aria-label="With textarea" name="description"><%=post.description%></textarea>
       </div>
       
       <div class="input-group">
           <span class="input-group-text">Ingredientes</span>
-          <textarea class="form-control" aria-label="With textarea" name="ingredients"><%=post.ingredients%></textarea>
+          <textarea class="form-control" value="<%= post.ingredients %>" aria-label="With textarea" name="ingredients"><%=post.ingredients%></textarea>
       </div>
       
       <div class="input-group">
           <span class="input-group-text">Instrucciones</span>
-          <textarea class="form-control" aria-label="With textarea" name="instructions"><%=post.instructions%></textarea>
+          <textarea class="form-control"  value="<%= post.instructions %>" aria-label="With textarea" name="instructions"><%=post.instructions%></textarea>
       </div>
       
       <div class="input-group mb-3">
