@@ -72,7 +72,7 @@ var indexController = {
     },
     list: function (req, res) {
         db.Post.findAll({
-            order:[['id','DESC']],
+            order:[['createdAt','DESC']],
             include: [{association: 'comments', include: {association: 'user'}}, {association: 'user'}, {association: 'user'}, {association: 'likes'}]
         })
         .then((posts) => {
