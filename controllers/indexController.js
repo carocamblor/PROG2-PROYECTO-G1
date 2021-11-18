@@ -33,13 +33,21 @@ var indexController = {
             if (req.body.password.length < 3) {
                 errors.push('La contraseña debe tener al menos 3 digitos.')
             };
-            let exists = await db.User.findOne({
+            let emailExists = await db.User.findOne({
                 where: {
                     email: req.body.email
                 }
             })
-            if (exists) {
+            if (emailExists) {
                 errors.push('Esta dirección de mail ya fue utilizada.')
+            }
+            let usernameExists = await db.User.findOne({
+                where: {
+                    username: req.body.username
+                }
+            })
+            if (usernameExists) {
+                errors.push('Esta nombre de usuario ya fue utilizado.')
             }
             if (errors.length > 0) {
                 return res.render('register', {errors})
