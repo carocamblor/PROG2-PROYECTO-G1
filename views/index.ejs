@@ -19,12 +19,12 @@
             <a class="streched-link" href="posts/<%= post.id %>">
               <h4 class="post-title"><%= post.name %></h4> 
             </a>
-            <% if (locals.userLoggedOn.username == post.user.username) { %> 
+            <% if ((locals.userLoggedOn && userLoggedOn) && userLoggedOn.username == post.user.username) { %> 
             <a class="streched-link" href="users/myprofile/<%= post.user.username %>">
               <img src="/images/<%= post.user.profile_picture %>" class="card-post-profile-picture"> 
               <p class="post-username">@<%= post.user.username %> </p> 
             </a>
-            <% } else if  (locals.userLoggedOn && userLoggedOn != post.user.username ) { %>
+            <% } else if  ((locals.userLoggedOn && userLoggedOn) && userLoggedOn.username != post.user.username ) { %>
               <a class="streched-link" href="users/<%= post.user.username %>">
                 <img src="/images/<%= post.user.profile_picture %>" class="card-post-profile-picture"> 
                 <p class="post-username">@<%= post.user.username %> </p> 
