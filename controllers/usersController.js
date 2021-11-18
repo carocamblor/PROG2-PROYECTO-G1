@@ -152,6 +152,16 @@ var usersController = {
                 return res.render(error);
             })
     },
+    delete: function (req, res) {
+        db.User.destroy({ where: { id: req.params.id } })
+            .then(() => {
+                res.clearCookie('user');
+                req.session.userLoggedOn = null;
+                res.redirect('/login'); 
+            }).catch(error => {
+                return res.send(error);
+            })
+    },
 };
 
 module.exports = usersController;

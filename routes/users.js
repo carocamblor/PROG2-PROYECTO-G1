@@ -12,6 +12,8 @@ router.get('/myprofile/:username', usersController.myProfile);
 
 router.all('/editprofile', upload.single('profile_picture'), usersController.editProfile);
 
+router.post('/myprofile/delete/:id', usersController.delete);
+
 router.get('/:username', usersController.userDetail);
 
 router.post('/:id/follow', usersController.follow);
