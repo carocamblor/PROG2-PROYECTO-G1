@@ -127,10 +127,9 @@ var usersController = {
             user_id: req.session.userLoggedOn.id,
             post_id: req.params.id
         }).then(like => {
-            
-            db.User.findByPk(req.params.id)
-            .then(user => {
-                res.redirect('/users/' + user.username);
+            db.Post.findByPk(req.params.id, { include: [{ association: 'user' },] })
+            .then(post => {
+                res.redirect('/users/' + post.user.username + '#' + req.params.id);
             })
         }).catch(error => {
             return res.send(error);
