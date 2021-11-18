@@ -95,6 +95,16 @@ var indexController = {
         })
     },
     results: async function (req, res, next) {
+        const users = await db.Post.findAll({
+            where: {
+                [op.or]: {
+                    name: { [op.like]: `%${req.query.search}%` },
+                    username: { [op.like]: `%${req.query.search}%` },
+                }
+            },
+            order: [['username','ASC']],
+            limit: 5,
+        });
         const posts = await db.Post.findAll({
             where: {
                 [op.or]: {
@@ -110,7 +120,7 @@ var indexController = {
             const element = posts[i];
             element.date = moment(element.createdAt).format('LL');
         }
-        res.render('searchResults', {posts, search: req.query.search})
+        res.render('searchResults', { posts, search: req.query.search, users })
     },
     like: function (req, res) {
         if (!req.session.userLoggedOn) {
