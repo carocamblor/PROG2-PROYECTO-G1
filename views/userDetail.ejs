@@ -19,6 +19,12 @@
         <p class="card-text follows">Seguidos: <%= user.following.length %></p>
         <p class="card-text follows">Seguidores: <%= user.followers.length %> </p>
 
+        <% if ((locals.userLoggedOn && userLoggedOn) && userLoggedOn.username==user.username) { %>
+
+        <form action="/users/editprofile">
+          <button type="submit" class="btn btn-secondary btn-sm">Editar Perfil</button>
+        </form>
+      <% }%>
         <% if (locals.userLoggedOn && userLoggedOn) { %>
         <% if (user.id !=locals.userLoggedOn.id) { %>
             <% if (user.followers.find(follow=> follow.follower_id == locals.userLoggedOn.id)) { %>

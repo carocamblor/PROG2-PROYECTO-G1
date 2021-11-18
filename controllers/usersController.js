@@ -127,6 +127,7 @@ var usersController = {
             user_id: req.session.userLoggedOn.id,
             post_id: req.params.id
         }).then(like => {
+            
             db.User.findByPk(req.params.id)
             .then(user => {
                 res.redirect('/users/' + user.username);
