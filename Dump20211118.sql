@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 8.0.26, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: baseprueba
+-- Host: 127.0.0.1    Database: sweet_avenue
 -- ------------------------------------------------------
--- Server version	5.5.5-10.4.20-MariaDB
+-- Server version	5.5.5-10.4.21-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -32,8 +32,8 @@ CREATE TABLE `comments` (
   PRIMARY KEY (`id`),
   KEY `id_user` (`id_user`),
   KEY `id_post` (`id_post`),
-  CONSTRAINT `comments_ibfk_19` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE,
-  CONSTRAINT `comments_ibfk_20` FOREIGN KEY (`id_post`) REFERENCES `posts` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE
+  CONSTRAINT `comments_ibfk_29` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  CONSTRAINT `comments_ibfk_30` FOREIGN KEY (`id_post`) REFERENCES `posts` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -63,7 +63,7 @@ CREATE TABLE `follow` (
   KEY `following_id` (`following_id`),
   CONSTRAINT `follow_ibfk_1` FOREIGN KEY (`follower_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `follow_ibfk_2` FOREIGN KEY (`following_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,6 +72,7 @@ CREATE TABLE `follow` (
 
 LOCK TABLES `follow` WRITE;
 /*!40000 ALTER TABLE `follow` DISABLE KEYS */;
+INSERT INTO `follow` VALUES (4,2,3),(5,2,1);
 /*!40000 ALTER TABLE `follow` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -84,14 +85,14 @@ DROP TABLE IF EXISTS `like`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `like` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) DEFAULT NULL,
-  `post_id` int(11) DEFAULT NULL,
+  `id_user` int(11) DEFAULT NULL,
+  `id_post` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `user_id` (`user_id`),
-  KEY `post_id` (`post_id`),
-  CONSTRAINT `like_ibfk_19` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
-  CONSTRAINT `like_ibfk_20` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  KEY `id_post` (`id_post`),
+  KEY `id_user` (`id_user`),
+  CONSTRAINT `like_ibfk_3` FOREIGN KEY (`id_post`) REFERENCES `posts` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  CONSTRAINT `like_ibfk_4` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -100,6 +101,7 @@ CREATE TABLE `like` (
 
 LOCK TABLES `like` WRITE;
 /*!40000 ALTER TABLE `like` DISABLE KEYS */;
+INSERT INTO `like` VALUES (56,2,1),(60,2,8),(63,2,5),(65,2,4),(70,2,2),(73,2,3),(74,2,10);
 /*!40000 ALTER TABLE `like` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -123,7 +125,7 @@ CREATE TABLE `posts` (
   PRIMARY KEY (`id`),
   KEY `id_user` (`id_user`),
   CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -132,7 +134,7 @@ CREATE TABLE `posts` (
 
 LOCK TABLES `posts` WRITE;
 /*!40000 ALTER TABLE `posts` DISABLE KEYS */;
-INSERT INTO `posts` VALUES (1,1,'pastafrola.png','La pasta frolla más rica del mundo.','200 g de manteca, 150 g de azúcar, 1/2 cucharadita de sal, 2 huevos, Ralladura de 1/2 limón, 1/2 cucharada de esencia de vainilla, 400 g de harina 0000, 10 g de polvo leudante, 400 g de dulce de membrillos, 400 g de dulce de membrillos, 50 cc de vino opor','Estirar 3/4 de la masa con ayuda de un palote hasta lograr unos 5 mm de espesor. Forrar una tartera de 26 a 28 cm de diámetro. Presionar ligeramente la masa sobre los bordes de la tartera y cortar el excedente. Unir la masa sobrante a los recortes y estir','pasta frola','2021-11-11 23:23:02','2021-11-11 23:23:02'),(2,2,'selvanegra.png','El postre más rico que vas a probar!','6 huevos, 6 huevos, 140 g de harina 0000, 40 g de cacao amargo, 40 g de cacao amargo, 200 g de guindas o cerezas al natural sin carozos, 100 cc de almíbar de las guindas, 100 cc de almíbar de las guindas, 100 cc de almíbar de las guindas, 360 g de crema d','Batir los huevos con el azúcar sobre baño María hasta entibiar, a unos 45 °C aproximadamente. Retirar del calor y batir hasta llegar a punto letra. Retirar del calor y batir hasta llegar a punto letra. Finalmente añadir la manteca derretida. Volcar la mas','TORTA DE LA SELVA NEGRA','2021-11-11 23:23:02','2021-11-11 23:23:02'),(3,3,'moka.png','El postre más rico que vas a probar!','250 g de azúcar orgánico, 2 yemas, 6 huevos, 200 g de harina 0000, 100 g de nueces procesadas, 80 cc de aceite de maíz, Ralladura de la piel de 1 naranja, 100 g de nueces en mitades, 50 g de azúcar, 2 cucharadas de agua, 3 claras, 240 g de azúcar, 300 g d','Colocar los huevos, las yemas y el azúcar orgánico en un bol metálico. Calentar sobre baño María y batir constantemente hasta llegar a 40 oC. Luego, fuera del calor, batir con batidora eléctrica hasta alcanzar el punto letra. Perfumar con la ralladura de ','TORTA MOKA','2021-11-11 23:23:02','2021-11-11 23:23:02'),(4,1,'browniemerengada.png','Con esta receta vas a impresionar a todos tus amigos','3 huevos, 250 g de azúcar, 200 g de manteca, 125 g de chocolate amargo, 130 g de harina, 20 g de cacao amargo, 125 g de nueces3 claras, 220 g de azúcar, 70 cc de agua, Gotas de jugo de limón','Fundir el chocolate con la manteca y entibiar. Batir ligeramente los huevos con el azúcar hasta que formen una espuma blanca. Tamizar la harina con el cacao y unir al batido junto con el chocolate fundido y tibio. Finalmente unir las nueces picadas groser','BROWNIE MERENGADA','2021-11-11 23:23:02','2021-11-11 23:23:02'),(5,2,'balcarce.png','Si preparas este postre, toda tu familia te va a amar.','6 huevos, 120 g de azúcar, 120 g de harina, Esencia de vainilla 800 g de crema de leche, 150 g de azúcar, 150 g de azúcar, 250 g de ricotta, 100 g de nueces peladas, 200 g de castañas en almíbar, 200 g de merengue seco','Batir los huevos con el azúcar hasta montar a punto letra. Perfumar con la esencia de vainilla. Incorporarle la harina tamizada con movimientos envolventes. Disponer la preparación en una placa enmantecada y empapelada de 50x40 cm de lado y llevar a un ho','POSTRE BALCARCE','2021-11-11 23:23:02','2021-11-11 23:23:02'),(6,3,'velvet.png','La receta de mi abuela :)','380 g de harina, 20 g de polvo para hornear, 1 cucharadita de sal fina, 15 g de cacao amargo, 170 g de manteca, 450 g de azúcar, 3 huevos, Ralladura de 2 naranjas, 340 cc de leche, 20 cc de jugo de limón, 2 cucharadas de colorante rojo carmín, 1 y 1/2 cuc','Mezclar la leche con el jugo de limón y dejar reposar 10 minutos. Luego incorporarle el colorante y diluirlo. Tamizar la harina con el polvo para hornear, la sal y el cacao. Batir los huevos con la manteca, el azúcar y la ralladura de naranjas. Mezclar lo','RED VELVET CAKE','2021-11-11 23:23:02','2021-11-11 23:23:02'),(7,1,'coconut.png','Comparto con ustedes mi receta favorita!','250 g de manteca, 330 g de azúcar, 4 huevos, 100 cc de leche de coco, 100 cc de pulpa de maracuyá, 100 cc de pulpa de maracuyá, 1 pizca de sal fina, 380 g de harina, 20 g de polvo de hornear, 1 clara, 250 g de azúcar impalpable, 50 g de puré de mango o pu','Blanquear la manteca con el azúcar. Agregar los huevos de a uno por vez. Remojar el coco rallado en la leche y el maracuyá. Tamizar la harina con la sal y el polvo leudante. Integrar los secos al batido alternando con el coco húmedo. Volcar la masa en un ','TROPICAL COCONUT CAKE','2021-11-11 23:23:02','2021-11-11 23:23:02'),(8,2,'kuchen.png','Este postre es lo más','250 g de azúcar orgánico, 140 g de manteca, 140 cc de aceite de maíz, girasol o canola, 160 cc de leche, 5 huevos, 350 g de harina, 50 g de almidón de maíz, 20 g de polvo de hornear, Una pizca de sal fina, Esencia de vainilla, c/n, 1 kg de manzanas verdes','Blanquear la manteca con el azúcar y perfumar con la vainilla. Incorporar el aceite, y luego los huevos de a uno. Tamizar los secos e incorporar alternando con la leche. Para el relleno, pelar y cortar las manzanas en láminas o bastones delgados. Mezclar ','KUCHEN DE MANZANAS','2021-11-11 23:23:02','2021-11-11 23:23:02'),(9,3,'citrus.png','Esta torta es re rica, no te vas a arrepentir','260 g de manteca, 180 g de queso Philadelphia, 450 g de azúcar, 1 cucharada de esencia de vainilla, Ralladura de 1 limón y de 1 naranja, 5 huevos, 1 pizca de sal fina, 350 g de harina, 15g de polvo de hornear, 1/2 cucharadita de bicarbonato de sodio','Mezclar los huevos, la sal, y la esencia de vainilla. Batir rápidamente solo para desligar los huevos. Colocar la manteca pomada en la batidora. Blanquear 1 o 2 minutos sola, luego incorporar el queso, las ralladuras y el azúcar, y continuar el batido. Co','torta naranja','2021-11-11 23:23:02','2021-11-11 23:23:02'),(10,1,'cerezaypist.png','El postre más rico que vas a probar!','100 g de semillas de amapolasrecién molidas, 100 cc de leche, 100 g de manteca, 100 g de azúcar impalpable, 4 yemas, 50 g de almendras en polvo, 80 g de harina, 5 g de polvo de hornear, 4 claras, 60 g de azúcar, Ralladura de la piel de 1/2 limón, 14 g de ','Calentar la leche a primer hervor y volcar sobre las semillas molidas de amapola. Dejar en infusión por algunos minutos. Blanquear la manteca con el azúcar impalpable. Agregar la ralladura de limón y las yemas de a una. Incorporar las semillas hidratadas.','torta verde','2021-11-11 23:23:02','2021-11-11 23:23:02');
+INSERT INTO `posts` VALUES (1,1,'pastafrola.png','La pasta frolla más rica del mundo.','200 g de manteca, 150 g de azúcar, 1/2 cucharadita de sal, 2 huevos, Ralladura de 1/2 limón, 1/2 cucharada de esencia de vainilla, 400 g de harina 0000, 10 g de polvo leudante, 400 g de dulce de membrillos, 400 g de dulce de membrillos, 50 cc de vino opor','Estirar 3/4 de la masa con ayuda de un palote hasta lograr unos 5 mm de espesor. Forrar una tartera de 26 a 28 cm de diámetro. Presionar ligeramente la masa sobre los bordes de la tartera y cortar el excedente. Unir la masa sobrante a los recortes y estir','pasta frola','2021-11-11 23:23:02','2021-11-11 23:23:02'),(2,2,'selvanegra.png','El postre más rico que vas a probar!','6 huevos, 6 huevos, 140 g de harina 0000, 40 g de cacao amargo, 40 g de cacao amargo, 200 g de guindas o cerezas al natural sin carozos, 100 cc de almíbar de las guindas, 100 cc de almíbar de las guindas, 100 cc de almíbar de las guindas, 360 g de crema d','Batir los huevos con el azúcar sobre baño María hasta entibiar, a unos 45 °C aproximadamente. Retirar del calor y batir hasta llegar a punto letra. Retirar del calor y batir hasta llegar a punto letra. Finalmente añadir la manteca derretida. Volcar la mas','TORTA DE LA SELVA NEGRA','2021-12-11 23:23:55','2021-11-11 23:23:02'),(3,3,'moka.png','El postre más rico que vas a probar!','250 g de azúcar orgánico, 2 yemas, 6 huevos, 200 g de harina 0000, 100 g de nueces procesadas, 80 cc de aceite de maíz, Ralladura de la piel de 1 naranja, 100 g de nueces en mitades, 50 g de azúcar, 2 cucharadas de agua, 3 claras, 240 g de azúcar, 300 g d','Colocar los huevos, las yemas y el azúcar orgánico en un bol metálico. Calentar sobre baño María y batir constantemente hasta llegar a 40 oC. Luego, fuera del calor, batir con batidora eléctrica hasta alcanzar el punto letra. Perfumar con la ralladura de ','TORTA MOKA','2021-11-11 23:23:04','2021-11-11 23:23:02'),(4,1,'browniemerengada.png','Con esta receta vas a impresionar a todos tus amigos','3 huevos, 250 g de azúcar, 200 g de manteca, 125 g de chocolate amargo, 130 g de harina, 20 g de cacao amargo, 125 g de nueces3 claras, 220 g de azúcar, 70 cc de agua, Gotas de jugo de limón','Fundir el chocolate con la manteca y entibiar. Batir ligeramente los huevos con el azúcar hasta que formen una espuma blanca. Tamizar la harina con el cacao y unir al batido junto con el chocolate fundido y tibio. Finalmente unir las nueces picadas groser','BROWNIE MERENGADA','2021-11-11 23:23:05','2021-11-11 23:23:02'),(5,2,'balcarce.png','Si preparas este postre, toda tu familia te va a amar.','6 huevos, 120 g de azúcar, 120 g de harina, Esencia de vainilla 800 g de crema de leche, 150 g de azúcar, 150 g de azúcar, 250 g de ricotta, 100 g de nueces peladas, 200 g de castañas en almíbar, 200 g de merengue seco','Batir los huevos con el azúcar hasta montar a punto letra. Perfumar con la esencia de vainilla. Incorporarle la harina tamizada con movimientos envolventes. Disponer la preparación en una placa enmantecada y empapelada de 50x40 cm de lado y llevar a un ho','POSTRE BALCARCE','2021-11-11 23:23:06','2021-11-11 23:23:02'),(6,3,'velvet.png','La receta de mi abuela :)','380 g de harina, 20 g de polvo para hornear, 1 cucharadita de sal fina, 15 g de cacao amargo, 170 g de manteca, 450 g de azúcar, 3 huevos, Ralladura de 2 naranjas, 340 cc de leche, 20 cc de jugo de limón, 2 cucharadas de colorante rojo carmín, 1 y 1/2 cuc','Mezclar la leche con el jugo de limón y dejar reposar 10 minutos. Luego incorporarle el colorante y diluirlo. Tamizar la harina con el polvo para hornear, la sal y el cacao. Batir los huevos con la manteca, el azúcar y la ralladura de naranjas. Mezclar lo','RED VELVET CAKE','2021-11-11 23:23:07','2021-11-11 23:23:02'),(7,1,'coconut.png','Comparto con ustedes mi receta favorita!','250 g de manteca, 330 g de azúcar, 4 huevos, 100 cc de leche de coco, 100 cc de pulpa de maracuyá, 100 cc de pulpa de maracuyá, 1 pizca de sal fina, 380 g de harina, 20 g de polvo de hornear, 1 clara, 250 g de azúcar impalpable, 50 g de puré de mango o pu','Blanquear la manteca con el azúcar. Agregar los huevos de a uno por vez. Remojar el coco rallado en la leche y el maracuyá. Tamizar la harina con la sal y el polvo leudante. Integrar los secos al batido alternando con el coco húmedo. Volcar la masa en un ','TROPICAL COCONUT CAKE','2021-11-11 23:23:08','2021-11-11 23:23:02'),(8,2,'kuchen.png','Este postre es lo más','250 g de azúcar orgánico, 140 g de manteca, 140 cc de aceite de maíz, girasol o canola, 160 cc de leche, 5 huevos, 350 g de harina, 50 g de almidón de maíz, 20 g de polvo de hornear, Una pizca de sal fina, Esencia de vainilla, c/n, 1 kg de manzanas verdes','Blanquear la manteca con el azúcar y perfumar con la vainilla. Incorporar el aceite, y luego los huevos de a uno. Tamizar los secos e incorporar alternando con la leche. Para el relleno, pelar y cortar las manzanas en láminas o bastones delgados. Mezclar ','KUCHEN DE MANZANAS','2021-11-11 23:23:09','2021-11-11 23:23:02'),(9,3,'citrus.png','Esta torta es re rica, no te vas a arrepentir','260 g de manteca, 180 g de queso Philadelphia, 450 g de azúcar, 1 cucharada de esencia de vainilla, Ralladura de 1 limón y de 1 naranja, 5 huevos, 1 pizca de sal fina, 350 g de harina, 15g de polvo de hornear, 1/2 cucharadita de bicarbonato de sodio','Mezclar los huevos, la sal, y la esencia de vainilla. Batir rápidamente solo para desligar los huevos. Colocar la manteca pomada en la batidora. Blanquear 1 o 2 minutos sola, luego incorporar el queso, las ralladuras y el azúcar, y continuar el batido. Co','torta naranja','2021-11-11 23:23:10','2021-11-11 23:23:02'),(10,1,'cerezaypist.png','El postre más rico que vas a probar!','100 g de semillas de amapolasrecién molidas, 100 cc de leche, 100 g de manteca, 100 g de azúcar impalpable, 4 yemas, 50 g de almendras en polvo, 80 g de harina, 5 g de polvo de hornear, 4 claras, 60 g de azúcar, Ralladura de la piel de 1/2 limón, 14 g de ','Calentar la leche a primer hervor y volcar sobre las semillas molidas de amapola. Dejar en infusión por algunos minutos. Blanquear la manteca con el azúcar impalpable. Agregar la ralladura de limón y las yemas de a una. Incorporar las semillas hidratadas.','torta verde','2021-11-11 23:23:00','2021-11-11 23:23:02');
 /*!40000 ALTER TABLE `posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -157,7 +159,7 @@ CREATE TABLE `users` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -179,4 +181,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-11 20:45:58
+-- Dump completed on 2021-11-18 22:53:04
