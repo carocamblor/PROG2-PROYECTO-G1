@@ -39,7 +39,7 @@
               </a>
               <p class="card-text post-date"><%= post.date %></p> 
               <% if (locals.userLoggedOn && userLoggedOn) { %> 
-                <% if (post.likes.find(like => like.user_id == locals.userLoggedOn.id)) { %>
+                <% if (post.likes.find(like => like.id_user == locals.userLoggedOn.id)) { %>
                   <a href="/results/<%= post.id %>/dislike"><img src="/images/like.png" class="card-post-like"></a>
                 <% } else { %>
                   <a href="/results/<%= post.id %>/like"><img src="/images/no_like.png" class="card-post-like"></a>

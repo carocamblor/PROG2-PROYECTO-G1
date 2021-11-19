@@ -88,8 +88,8 @@ var postsController = {
             res.redirect('/posts/' + req.params.id);
         }
         db.Like.create({
-            user_id: req.session.userLoggedOn.id,
-            post_id: req.params.id
+            id_user: req.session.userLoggedOn.id,
+            id_post: req.params.id
         }).then(like => {
             res.redirect('/posts/' + req.params.id);
         }).catch(error => {
@@ -102,7 +102,7 @@ var postsController = {
         }
         db.Like.destroy(
             {
-                where: { user_id: req.session.userLoggedOn.id, post_id: req.params.id }
+                where: { id_user: req.session.userLoggedOn.id, id_post: req.params.id }
             })
             .then(() => {
                 res.redirect('/posts/' + req.params.id);
@@ -115,8 +115,8 @@ var postsController = {
             res.redirect('/posts/' + req.params.id);
         }
         db.Like.create({
-            user_id: req.session.userLoggedOn.id,
-            post_id: req.params.id
+            id_user: req.session.userLoggedOn.id,
+            id_post: req.params.id
         }).then(like => {
             res.redirect('/posts/' + req.params.id);
         }).catch(error => {
@@ -129,7 +129,7 @@ var postsController = {
         }
         db.Like.destroy(
             {
-                where: { user_id: req.session.userLoggedOn.id, post_id: req.params.id }
+                where: { id_user: req.session.userLoggedOn.id, id_post: req.params.id }
             })
             .then(() => {
                 res.redirect('/posts/' + req.params.id);

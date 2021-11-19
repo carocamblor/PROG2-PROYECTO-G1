@@ -48,7 +48,7 @@ var usersController = {
                         id_user: user.id
                     },
                     order:[['createdAt','DESC']],
-            include: [{association: 'comments', include: {association: 'user'}}, {association: 'user'}, {association: 'likes'}]
+                    include: [{association: 'comments', include: {association: 'user'}}, {association: 'user'}, {association: 'likes'}]
                 })
                     .then((posts) => {
                         for (let i = 0; i < posts.length; i++) {
@@ -124,12 +124,12 @@ var usersController = {
             res.redirect('/posts/' + req.params.id);
         }
         db.Like.create({
-            user_id: req.session.userLoggedOn.id,
-            post_id: req.params.id
+            id_user: req.session.userLoggedOn.id,
+            id_post: req.params.id
         }).then(like => {
             db.Post.findByPk(req.params.id, { include: [{ association: 'user' },] })
             .then(post => {
-                res.redirect('/users/' + post.user.username + '#' + req.params.id);
+                res.redirect('/users/' + post.user.username);
             })
         }).catch(error => {
             return res.send(error);
@@ -141,13 +141,40 @@ var usersController = {
         }
         db.Like.destroy(
             {
-                where: { user_id: req.session.userLoggedOn.id, post_id: req.params.id }
+                where: { id_user: req.session.userLoggedOn.id, id_post: req.params.id }
             })
             .then(() => {
-                db.User.findByPk(req.params.id)
-                .then(user => {
-                    res.redirect('/users/' + user.username);
+                db.Post.findByPk(req.params.id, { include: [{ association: 'user' },] })
+                .then(post => {
+                    res.redirect('/users/' + post.user.username);
                 })
+            }).catch(error => {
+                return res.render(error);
+            })
+    },
+    likeProfile: function (req, res) {
+        if (!req.session.userLoggedOn) {
+            res.redirect('/login');
+        }
+        db.Like.create({
+            id_user: req.session.userLoggedOn.id,
+            id_post: req.params.id
+        }).then(like => {
+                res.redirect('/users/myprofile/' + req.session.userLoggedOn.username);
+        }).catch(error => {
+            return res.send(error);
+        })
+    },
+    dislikeProfile: function (req, res) {
+        if (!req.session.userLoggedOn) {
+            res.redirect('/login');
+        }
+        db.Like.destroy(
+            {
+                where: { id_user: req.session.userLoggedOn.id, id_post: req.params.id }
+            })
+            .then(() => {
+                    res.redirect('/users/myprofile/' + req.session.userLoggedOn.username);
             }).catch(error => {
                 return res.render(error);
             })

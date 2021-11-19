@@ -8,6 +8,10 @@ router.get('/:id/like', usersController.like);
 
 router.get('/:id/dislike', usersController.dislike);
 
+router.get('/myprofile/:id/like', usersController.likeProfile);
+
+router.get('/myprofile/:id/dislike', usersController.dislikeProfile);
+
 router.get('/myprofile/:username', usersController.myProfile);
 
 router.all('/editprofile', upload.single('profile_picture'), usersController.editProfile);

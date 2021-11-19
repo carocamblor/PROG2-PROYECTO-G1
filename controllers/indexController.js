@@ -127,8 +127,8 @@ var indexController = {
             res.redirect('/posts/' + req.params.id);
         }
         db.Like.create({
-            user_id: req.session.userLoggedOn.id,
-            post_id: req.params.id
+            id_user: req.session.userLoggedOn.id,
+            id_post: req.params.id
         }).then(like => {
             res.redirect('/#post_' + req.params.id);
         }).catch(error => {
@@ -141,7 +141,7 @@ var indexController = {
         }
         db.Like.destroy(
             {
-                where: { user_id: req.session.userLoggedOn.id, post_id: req.params.id }
+                where: { id_user: req.session.userLoggedOn.id, id_post: req.params.id }
             })
             .then(() => {
                 res.redirect('/#post_' + req.params.id);
@@ -154,8 +154,8 @@ var indexController = {
             res.redirect(req.headers.referer);
         }
         db.Like.create({
-            user_id: req.session.userLoggedOn.id,
-            post_id: req.params.id
+            id_user: req.session.userLoggedOn.id,
+            id_post: req.params.id
         }).then(like => {
             res.redirect(req.headers.referer);
         }).catch(error => {
@@ -168,7 +168,7 @@ var indexController = {
         }
         db.Like.destroy(
             {
-                where: { user_id: req.session.userLoggedOn.id, post_id: req.params.id }
+                where: { id_user: req.session.userLoggedOn.id, id_post: req.params.id }
             })
             .then(() => {
                 res.redirect(req.headers.referer);
