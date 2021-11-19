@@ -10,6 +10,17 @@ main div {
   width: 100%!important;
 }
 
+.usersResults {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 16px;
+  padding: 0 16px;
+}
+
+.usersResults div.card {
+  width: 100!important;
+}
+
 img.card-post-profile-picture {
   height: 10px;
   width: 10px;

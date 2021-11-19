@@ -95,7 +95,7 @@ var indexController = {
         })
     },
     results: async function (req, res, next) {
-        const users = await db.Post.findAll({
+        const users = await db.User.findAll({
             where: {
                 [op.or]: {
                     name: { [op.like]: `%${req.query.search}%` },

@@ -9,11 +9,27 @@
   
   <body>
     <%- include('partials/header')%>
-    <h4 class="title"> Resultados de la busqueda: "<%= search %>"</h4>
 
+    <h4 class="title"> Resultados de la busqueda: "<%= search %>"</h4>
+    <h5 style="margin: 16px">Usuarios:</h5>
+    <div class="usersResults">
+      <% if(users.length === 0) { %> 
+        <p style="margin: 16px">No encontramos usuarios su criterio de búsqueda.</p>
+        <% } else { %> 
+          <% for(let user of users) { %>
+          <div class="card" style="width: 18rem;">
+          <div class="card-body">
+          <h5 class="card-title"><%=user.name%> <%= user.username%></h5>
+          <h6 class="card-subtitle mb-2 text-muted">@<%=user.username%></h6>
+          </div>
+        </div>
+        <% }%>
+        <% } %>
+    </div>
+    <h5 style="margin: 16px">Recetas:</h5>
     <main> 
       <% if(posts.length === 0) { %> 
-      <p>No hay resultados para su criterio de búsqueda.</p>
+      <p>No encontramos recetas para su criterio de búsqueda.</p>
       <% } else { %> 
         <% for (let post of posts) { %>  
           <div class="card" style="width: 18rem;">
