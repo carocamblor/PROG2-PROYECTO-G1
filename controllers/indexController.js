@@ -49,11 +49,11 @@ var indexController = {
             if (usernameExists) {
                 errors.push('Este nombre de usuario ya fue utilizado.')
             }
-            var now = moment(new Date()); //todays date
-            var end = moment(req.body.date_birth); // another date
+            var now = moment(new Date());
+            var end = moment(req.body.date_birth);
             var duration = moment.duration(now.diff(end));
-            var days = duration.asDays();
-            if (days < 13) {
+            var years = duration.asYears();
+            if (years < 13) {
                 errors.push('Debes tener 13 años o más para registrarte.')
             }
             if (errors.length > 0) {
