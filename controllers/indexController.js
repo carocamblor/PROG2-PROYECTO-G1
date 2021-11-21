@@ -53,8 +53,7 @@ var indexController = {
             var end = moment(req.body.date_birth); // another date
             var duration = moment.duration(now.diff(end));
             var days = duration.asDays();
-            if (days >= 13) {
-                console.log('hola')
+            if (days < 13) {
                 errors.push('Debes tener 13 años o más para registrarte.')
             }
             if (errors.length > 0) {
