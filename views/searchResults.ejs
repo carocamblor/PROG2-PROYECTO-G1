@@ -39,7 +39,7 @@
               <a class="streched-link" href="posts/<%= post.id %>">
                 <h4 class="post-title"><%= post.name %></h4> 
               </a>
-              <% if (locals.userLoggedOn.username == post.user.username) { %> 
+              <% if (locals.userLoggedOn && locals.userLoggedOn.username == post.user.username) { %> 
                 <a class="streched-link" href="users/myprofile/<%= post.user.username %>">
                   <img src="/images/<%= post.user.profile_picture %>" class="card-post-profile-picture"> 
                   <p class="post-username">@<%= post.user.username %> </p> 
@@ -59,7 +59,7 @@
                 <p class="post-description card-text"><%= post.description %></p> 
               </a>
               <p class="card-text post-date"><%= post.date %></p> 
-              <% if (locals.userLoggedOn && userLoggedOn) { %> 
+              <% if (locals.userLoggedOn && locals.userLoggedOn && userLoggedOn) { %> 
                 <% if (post.likes.find(like => like.id_user == locals.userLoggedOn.id)) { %>
                   <a href="/results/<%= post.id %>/dislike"><img src="/images/like.png" class="card-post-like"></a>
                 <% } else { %>
