@@ -16,7 +16,7 @@
       </div>
       <div class="card-header username">
         
-        <% if (locals.userLoggedOn.username == post.user.username) { %> 
+        <% if (locals.userLoggedOn && userLoggedOn.username == post.user.username) { %> 
           <a class="streched-link" href="/users/myprofile/<%= post.user.username %>">@<%= post.user.username %></a> 
 
           <% } else if  (locals.userLoggedOn && userLoggedOn != post.user.username ) { %>
