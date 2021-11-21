@@ -4,15 +4,13 @@ const multer = require ('multer');
 const upload = multer ({dest: 'public/images/'})
 var postsController = require('../controllers/postsController');
 
-//router.get ('/publish', postsController.publish); no esta en controlador
-
 router.post('/publish', upload.single('picture'), postsController.store);
 
 router.get('/newpost', postsController.newPost);
 
-router.get('/:postid/edit', postsController.edit); //muestra vista edit post
+router.get('/:postid/edit', postsController.edit); 
 
-router.post('/:postid/edit', upload.single('picture'), postsController.update); //manda a base de datos
+router.post('/:postid/edit', upload.single('picture'), postsController.update); 
 
 router.post('/:postid/delete', postsController.delete);
 
