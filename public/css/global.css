@@ -177,3 +177,7 @@ form.cancel, form.delete {
     padding: 0px 300px;
     margin-top: 16px;
 }
+
+div.alert-danger {
+  margin: 3vh 30vw 0;
+}

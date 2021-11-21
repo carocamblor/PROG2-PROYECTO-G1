@@ -47,7 +47,15 @@ var indexController = {
                 }
             })
             if (usernameExists) {
-                errors.push('Esta nombre de usuario ya fue utilizado.')
+                errors.push('Este nombre de usuario ya fue utilizado.')
+            }
+            var now = moment(new Date()); //todays date
+            var end = moment(req.body.date_birth); // another date
+            var duration = moment.duration(now.diff(end));
+            var days = duration.asDays();
+            if (days >= 13) {
+                console.log('hola')
+                errors.push('Debes tener 13 años o más para registrarte.')
             }
             if (errors.length > 0) {
                 return res.render('register', {errors})
