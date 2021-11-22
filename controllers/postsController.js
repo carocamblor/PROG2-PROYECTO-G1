@@ -61,6 +61,17 @@ var postsController = {
         }).catch(error => {
             return res.send(error);
         })
+        } else {
+            db.Post.update({
+                name: req.body.name,
+                description: req.body.description,
+                ingredients: req.body.ingredients,
+                instructions: req.body.instructions,
+            }, { where: { id: req.params.postid } }).then(post => {
+                res.redirect('/');
+            }).catch(error => {
+                return res.send(error);
+            })
         }
     },
    
