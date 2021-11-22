@@ -83,33 +83,6 @@ var postsController = {
             return res.send(error);
         })
     },
-    like: function (req, res) {
-        if (!req.session.userLoggedOn) {
-            res.redirect('/posts/' + req.params.id);
-        }
-        db.Like.create({
-            id_user: req.session.userLoggedOn.id,
-            id_post: req.params.id
-        }).then(like => {
-            res.redirect('/posts/' + req.params.id);
-        }).catch(error => {
-            return res.send(error);
-        })
-    },
-    dislike: function (req, res) {
-        if (!req.session.userLoggedOn) {
-            res.redirect('/posts/' + req.params.id);
-        }
-        db.Like.destroy(
-            {
-                where: { id_user: req.session.userLoggedOn.id, id_post: req.params.id }
-            })
-            .then(() => {
-                res.redirect('/posts/' + req.params.id);
-            }).catch(error => {
-                return res.render(error);
-            })
-    },
     likeDetail: function (req, res) {
         if (!req.session.userLoggedOn) {
             res.redirect('/posts/' + req.params.id);
