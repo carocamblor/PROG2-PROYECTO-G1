@@ -31,7 +31,7 @@ var indexController = {
         } else if (req.method == 'POST'){
             let errors = [];
             if (req.body.password.length < 3) {
-                errors.push('La contraseña debe tener al menos 3 digitos.')
+                errors.push('La contraseña debe tener al menos 3 dígitos.')
             };
             let emailExists = await db.User.findOne({
                 where: {
