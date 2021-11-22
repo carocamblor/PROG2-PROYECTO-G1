@@ -19,7 +19,7 @@
           <% for(let user of users) { %>
           <div class="card" style="width: 18rem;">
           <div class="card-body">
-          <a href="users/<%= user.username %> "><h5 class="card-title"><%=user.name%> <%= user.username%></h5></a>
+          <a href="users/<%= user.username %> "><h5 class="card-title"><%=user.name%> - @<%= user.username%></h5></a>
           <a href=""><h6 class="card-subtitle mb-2 text-muted">@<%=user.username%></h6></a>
           </div>
         </div>
