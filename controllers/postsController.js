@@ -17,7 +17,7 @@ var postsController = {
                 where: {id_post: req.params.postid},
                 order: [['createdAt','DESC']],
                 include: [{ association: 'user' }] 
-                }, //busco coment del posteo. la borro
+                }, 
             )
             post.date = moment(post.createdAt).format('LL');
             res.render('postDetail', {post, comments}); 
