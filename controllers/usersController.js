@@ -35,12 +35,13 @@ var usersController = {
     },
     //hay que implementar relaciones con el include association
     myProfile: function (req, res) {
+        if (req.session.userLoggedOn && req.session.userLoggedOn.username == req.params.username) {
         db.User.findOne({
             where: {
                 username: req.params.username
             },
             include: [{association: 'followers'}, {association: 'following'}]
-        })
+            })
             .then((user) => {
                 if (user) {
                 db.Post.findAll({
@@ -61,6 +62,9 @@ var usersController = {
                     res.render('error', { error: '¡Lo sentimos! No encontramos ningún usuario con ese nombre.'});
                 }
             })
+        } else {
+            res.render('error', {error: 'Debes iniciar sesión para ver tu perfil.'})
+        }
     },
     editProfile: function (req, res) {
         if (req.method == 'GET') {

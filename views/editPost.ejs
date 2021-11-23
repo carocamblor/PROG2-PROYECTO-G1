@@ -42,8 +42,8 @@
 
     </form>
     
-    <form action="/posts/<%= post.id %>" method="get">
-      <button type="submit" class="btn btn-primary cancel">Cancelar</button>
+    <form action="/posts/<%= post.id %>" method="GET" class="cancel">
+      <button type="submit" class="btn btn-primary actions">Cancelar</button>
     </form>
 
     <%- include('partials/footer') %> 

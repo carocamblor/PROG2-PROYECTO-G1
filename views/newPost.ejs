@@ -3,7 +3,7 @@
   <%- include('partials/head') %>  
   
   <head>
-    <title>Nueva receta| Sweet Avenue</title>
+    <title>Nueva receta | Sweet Avenue</title>
     <link rel="stylesheet" href="/css/newPost.css"> 
   </head>
 
@@ -43,11 +43,9 @@
       <button type="submit" class="actions btn btn-primary">Hecho</button>
     </form>
 
-    <div class="input-group">
-      <form action="/users/myprofile/<%= userLoggedOn.username %>" method="GET" class="cancel">
-        <button type="submit" class="button.actions" class="btn btn-primary">Cancelar</button>
+      <form action="/" method="GET" class="cancel">
+        <button type="submit" class="btn btn-primary actions">Cancelar</button>
       </form>
-    </div>
 
     <% } else { %>
       <div class="card">

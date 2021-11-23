@@ -44,6 +44,10 @@ var postsController = {
         const post = await db.Post.findByPk(req.params.postid)
         if (!post) {
             return res.render('error', {error: 'No encontramos la receta que queres editar!'});
+        } else if(req.session.userLoggedOn && post.id_user != req.session.userLoggedOn.id){
+            return res.render('error', {error: 'No puedes editar la receta de otra persona.'});
+        } else if(!req.session.userLoggedOn){
+            return res.render('error', {error: 'Debes iniciar sesión para editar tus recetas.'});
         } else {
             res.render('editPost', { post });
         }
@@ -57,7 +61,7 @@ var postsController = {
             instructions: req.body.instructions,
             picture: req.file.filename,
         }, { where: { id: req.params.postid } }).then(post => {
-            res.redirect('/');
+            res.redirect(`/posts/${req.params.postid}`);
         }).catch(error => {
             return res.send(error);
         })
