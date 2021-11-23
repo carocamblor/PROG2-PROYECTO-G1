@@ -13,48 +13,51 @@
     <% if (locals.userLoggedOn && userLoggedOn) { %>
       <div class="card card-alert-login">
         <h5 class="card-header">Aviso</h5>
+
         <div class="card-body">
           <p class="card-text" style="margin-bottom: 16px;">Actualmente ha iniciado sesión como @<%= userLoggedOn.username  %>, necesita salir antes de volver a entrar con un usuario diferente.</p>
+
           <form action="/logout" method="GET" style="display: inline;">
             <button type="submit" class="actions btn btn-primary">Cerrar sesión</button>
           </form>
+
           <form action="/" method="GET" style="display: inline;">
             <button type="submit" class="actions btn btn-primary">Volver al inicio</button>
           </form>
         </div>
       </div>
+    
       <% } else { %> 
+        <% if (locals.error && error) { %>
+            <div class="alert alert-danger" role="alert">
+              <%= error %>
+            </div>
+        <% } %> 
+        <main class="form-signin"> 
+          <form method="POST" style="padding: 30px 500px 0px 500px;">
+            <img class="mb-4" src="/images/logo.png" alt="" width="110" height="110">
+            <h1 class="h3 mb-3 fw-normal">Iniciá sesión</h1>
+          
+            <div class="form-floating">
+              <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Mail</label>
+            </div>
 
-    <% if (locals.error && error) { %>
-        <div class="alert alert-danger" role="alert">
-          <%= error %>
-        </div>
-    <% } %> 
-      
-      <main class="form-signin"> 
-        <form method="POST" style="padding: 30px 500px 0px 500px;">
-          <img class="mb-4" src="/images/logo.png" alt="" width="110" height="110">
-          <h1 class="h3 mb-3 fw-normal">Iniciá sesión</h1>
-      
-          <div class="form-floating">
-            <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Mail</label>
-          </div>
-          <div class="form-floating">
-            <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Contraseña</label>
-          </div>
-      
-          <div class="checkbox mb-3">
-            <label>
-              <input type="checkbox" name="remember_me"> Recordarme
-            </label>
-          </div>
-          <button style="background-color: #48b9a8ff; border-color: #48b9a8ff;" class="w-100 btn btn-lg btn-primary" type="submit">Inicia sesión</button>
-          <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
-        </form>
-      </main>
-
+            <div class="form-floating">
+              <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">
+              <label for="floatingPassword">Contraseña</label>
+            </div>
+          
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" name="remember_me"> Recordarme
+              </label>
+            </div>
+            
+            <button style="background-color: #48b9a8ff; border-color: #48b9a8ff;" class="w-100 btn btn-lg btn-primary" type="submit">Inicia sesión</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+            </form>
+        </main>
       <% } %> 
     <%- include('partials/footer') %> 
   </body>

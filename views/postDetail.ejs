@@ -13,21 +13,17 @@
     <div class="card post-detail">
       <div class="card-header title">
         <%= post.name %> 
-      </div>
-      <div class="card-header username">
-        
-        <% if (locals.userLoggedOn && userLoggedOn.username == post.user.username) { %> 
-          <a class="streched-link" href="/users/myprofile/<%= post.user.username %>">@<%= post.user.username %></a> 
+    </div>
+    
+    <div class="card-header username">
+      <% if (locals.userLoggedOn && userLoggedOn.username == post.user.username) { %> 
+        <a class="streched-link" href="/users/myprofile/<%= post.user.username %>">@<%= post.user.username %></a> 
+      <% } else { %>
+        <a class="streched-link" href="/users/<%= post.user.username %>">@<%= post.user.username %></a> 
+      <% }%>
+    </div> 
 
-          <% } else { %>
-            <a class="streched-link" href="/users/<%= post.user.username %>">@<%= post.user.username %></a> 
-            <% }%>
-
-
-
-
-      </div> 
-      <div class="card-body">
+    <div class="card-body">
         <section>
           <img src="/images/<%= post.picture %> " class="card-img-top" alt="..."> 
           <p class="card-text description"><%= post.description %></p> 

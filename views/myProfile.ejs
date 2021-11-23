@@ -11,7 +11,6 @@
     <%- include('partials/header')%>
     <div class="card user-card" style="width: 100;">
         <img class="imgMy" src="/images/<%= user.profile_picture %>" alt=""> 
-
         <div class="card-body">
           <h5 class="card-title"><%= user.name %> <%= user.surname %></h5> 
           <h6 class="card-subtitle mb-2 text-muted">@<%= user.username %></h6> 
@@ -24,12 +23,15 @@
           </form>
         </div>
     </div>
+
     <main>
       <% for(let post of posts) { %>  
         <div class="card" style="width: 18rem;">
+
           <a class="streched-link" href="/posts/<%= post.id %>"> 
           <img src="/images/<%= post.picture %>" class="card-img-top" alt="...">
           </a> 
+
           <div class="card-body">
             <a class="streched-link" href="/posts/<%= post.id %>"> 
             <h4 class="post-title"><%= post.name %></h4> 
@@ -49,6 +51,7 @@
                 <% } %>
               <p style="display: inline;"><%= post.likes.length %> </p>
             <hr>
+            
             <% for (let comment of post.comments) { %>
               <a class="streched-link" href="/users/<%=comment.user.username%>"><p class="post-username-comment">@<%=comment.user.username%></p></a>
               <p class="post-comment-content"><%=comment.text%></p>
