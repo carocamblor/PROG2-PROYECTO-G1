@@ -24,6 +24,4 @@ router.post('/:id/follow', usersController.follow);
 
 router.post('/:id/unfollow', usersController.unfollow);
 
-
-
 module.exports = router; 

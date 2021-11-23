@@ -33,7 +33,6 @@ var usersController = {
                 }
             })
     },
-    //hay que implementar relaciones con el include association
     myProfile: function (req, res) {
         if (req.session.userLoggedOn && req.session.userLoggedOn.username == req.params.username) {
         db.User.findOne({

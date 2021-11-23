@@ -17,7 +17,7 @@
           <p class="card-text"><%= user.biography %></p> 
           <p class="card-text follows">Recetas: <%= posts.length %> </p>
           <p class="card-text follows">Seguidos: <%= user.following.length %></p>
-        <p class="card-text follows">Seguidores: <%= user.followers.length %> </p>
+          <p class="card-text follows">Seguidores: <%= user.followers.length %> </p>
           <form action="/users/editprofile">
           <button type="submit" class="btn btn-secondary btn-sm">Editar Perfil</button>
           </form>
@@ -29,15 +29,15 @@
         <div class="card" style="width: 18rem;">
 
           <a class="streched-link" href="/posts/<%= post.id %>"> 
-          <img src="/images/<%= post.picture %>" class="card-img-top" alt="...">
+            <img src="/images/<%= post.picture %>" class="card-img-top" alt="...">
           </a> 
 
           <div class="card-body">
             <a class="streched-link" href="/posts/<%= post.id %>"> 
-            <h4 class="post-title"><%= post.name %></h4> 
+              <h4 class="post-title"><%= post.name %></h4> 
             </a>
             <a class="streched-link" href="/posts/<%= post.id %>"> 
-            <p class="post-description card-text"><%= post.description %></p>
+              <p class="post-description card-text"><%= post.description %></p>
             </a> 
             <p class="card-text post-date"><%= post.date %></p> 
             <% if (locals.userLoggedOn && userLoggedOn) { %> 
