@@ -52,6 +52,14 @@ var postsController = {
             res.render('editPost', { post });
         }
     },
+    delete: function (req, res) {
+        db.Post.destroy({ where: { id: req.params.postid } })
+            .then(() => {
+                res.redirect('/');
+            }).catch(error => {
+                return res.send(error);
+            })
+    },
     update: function (req, res) {
         if (req.file){
         db.Post.update({
@@ -78,14 +86,6 @@ var postsController = {
             })
         }
     }, 
-    delete: function (req, res) {
-        db.Post.destroy({ where: { id: req.params.postid } })
-            .then(() => {
-                res.redirect('/');
-            }).catch(error => {
-                return res.send(error);
-            })
-    },
     comment: function (req, res) {
         db.Comment.create({
             id_post: req.params.postid,
