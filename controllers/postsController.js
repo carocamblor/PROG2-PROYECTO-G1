@@ -77,8 +77,7 @@ var postsController = {
                 return res.send(error);
             })
         }
-    },
-   
+    }, 
     delete: function (req, res) {
         db.Post.destroy({ where: { id: req.params.postid } })
             .then(() => {
