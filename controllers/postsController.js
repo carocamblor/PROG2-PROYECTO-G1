@@ -4,7 +4,6 @@ const op = db.Sequelize.Op;
 const moment = require('moment');
 const { post } = require('../routes/posts');
 
-
 var postsController = { 
     detail: async function (req, res) {
         const post = await db.Post.findByPk(req.params.postid,
@@ -53,7 +52,7 @@ var postsController = {
             res.render('editPost', { post });
         }
     },
-    delete: function (req, res) {
+    delete: function (req, res) { ///trae error. Mirar aca!!!
         if (req.session.userLoggedOn) {
             db.Post.destroy({ where: { id: req.params.postid } })
             .then(() => {
@@ -130,5 +129,4 @@ var postsController = {
             })
     },
 };
-
 module.exports = postsController;
