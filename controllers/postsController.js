@@ -2,6 +2,7 @@ const posts = require ('../data/posts');
 const db = require ('../database/models');
 const op = db.Sequelize.Op;
 const moment = require('moment');
+const { post } = require('../routes/posts');
 
 
 var postsController = { 
@@ -53,12 +54,16 @@ var postsController = {
         }
     },
     delete: function (req, res) {
-        db.Post.destroy({ where: { id: req.params.postid } })
+        if (req.session.userLoggedOn) {
+            db.Post.destroy({ where: { id: req.params.postid } })
             .then(() => {
                 res.redirect('/');
-            }).catch(error => {
+            }) .catch(error => {
                 return res.send(error);
             })
+        } else {
+            return res.render('error', {error: 'No puedes eliminar la receta de otra persona.'});
+        }
     },
     update: function (req, res) {
         if (req.file){
