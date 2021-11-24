@@ -2,7 +2,6 @@ const posts = require ('../data/posts');
 const db = require ('../database/models');
 const op = db.Sequelize.Op;
 const moment = require('moment');
-const { post } = require('../routes/posts');
 
 var postsController = { 
     detail: async function (req, res) {
@@ -52,8 +51,8 @@ var postsController = {
             res.render('editPost', { post });
         }
     },
-    delete: function (req, res) { ///trae error. Mirar aca!!!
-        if (req.session.userLoggedOn) {
+    delete: function (req, res) { 
+        if (req.session.userLoggedOn.id) {
             db.Post.destroy({ where: { id: req.params.postid } })
             .then(() => {
                 res.redirect('/');
