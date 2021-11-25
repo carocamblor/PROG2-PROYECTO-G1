@@ -183,7 +183,8 @@ var usersController = {
             })
     },
     delete: function (req, res) {
-        db.User.destroy({ where: { id: req.params.id } })
+        if (req.session.userLoggedOn && req.session.userLoggedOn.id == req.params.id) {
+            db.User.destroy({ where: { id: req.params.id } })
             .then(() => {
                 res.clearCookie('user');
                 req.session.userLoggedOn = null;
@@ -191,6 +192,9 @@ var usersController = {
             }).catch(error => {
                 return res.send(error);
             })
+        } else {
+            res.redirect('/')
+        }
     },
 };
 

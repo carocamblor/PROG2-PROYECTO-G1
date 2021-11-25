@@ -51,18 +51,6 @@ var postsController = {
             res.render('editPost', { post });
         }
     },
-    delete: function (req, res) { 
-        if (req.session.userLoggedOn.id) {
-            db.Post.destroy({ where: { id: req.params.postid } })
-            .then(() => {
-                res.redirect('/');
-            }) .catch(error => {
-                return res.send(error);
-            })
-        } else {
-            return res.render('error', {error: 'No puedes eliminar la receta de otra persona.'});
-        }
-    },
     update: function (req, res) {
         if (req.file){
         db.Post.update({
@@ -94,12 +82,21 @@ var postsController = {
         if (!req.session.userLoggedOn) {
             res.redirect('/posts/' + req.params.postid )
         } else {
-        db.Post.destroy({ where: { id: req.params.postid } })
-            .then(() => {
-                res.redirect('/');
-            }).catch(error => {
-                return res.send(error);
-            })
+           db.Post.findByPk(req.params.postid,)
+           .then(post => {
+                if (post.id_user == req.session.userLoggedOn.id) {
+                    db.Post.destroy({ where: { id: req.params.postid } })
+                    .then(() => {
+                    res.redirect('/');
+                    }).catch(error => {
+                    return res.send(error);
+                    })
+                } else {
+                    res.redirect('/posts/' + req.params.postid )
+                }
+            }
+            )
+            
         }
     },
     comment: function (req, res) {
