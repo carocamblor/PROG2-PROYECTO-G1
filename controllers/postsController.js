@@ -80,14 +80,21 @@ var postsController = {
     },
    
     delete: function (req, res) {
+        if (!req.session.userLoggedOn) {
+            res.redirect('/posts/' + req.params.postid )
+        } else {
         db.Post.destroy({ where: { id: req.params.postid } })
             .then(() => {
                 res.redirect('/');
             }).catch(error => {
                 return res.send(error);
             })
+        }
     },
     comment: function (req, res) {
+        if (!req.session.userLoggedOn) {
+            res.redirect('/posts/' + req.params.postid )
+        } else {
         db.Comment.create({
             id_post: req.params.postid,
             id_user: req.session.userLoggedOn.id,
@@ -97,6 +104,7 @@ var postsController = {
         }).catch(error => {
             return res.send(error);
         })
+        }
     },
     likeDetail: function (req, res) {
         if (!req.session.userLoggedOn) {
