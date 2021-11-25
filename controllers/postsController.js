@@ -3,7 +3,6 @@ const db = require ('../database/models');
 const op = db.Sequelize.Op;
 const moment = require('moment');
 
-
 var postsController = { 
     detail: async function (req, res) {
         const post = await db.Post.findByPk(req.params.postid,
@@ -50,6 +49,18 @@ var postsController = {
             return res.render('error', {error: 'Debes iniciar sesión para editar tus recetas.'});
         } else {
             res.render('editPost', { post });
+        }
+    },
+    delete: function (req, res) { 
+        if (req.session.userLoggedOn.id) {
+            db.Post.destroy({ where: { id: req.params.postid } })
+            .then(() => {
+                res.redirect('/');
+            }) .catch(error => {
+                return res.send(error);
+            })
+        } else {
+            return res.render('error', {error: 'No puedes eliminar la receta de otra persona.'});
         }
     },
     update: function (req, res) {
@@ -134,5 +145,4 @@ var postsController = {
             })
     },
 };
-
 module.exports = postsController;
