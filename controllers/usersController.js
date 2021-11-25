@@ -96,6 +96,9 @@ var usersController = {
         
     },
     follow: function (req, res) {
+        if (!req.session.userLoggedOn) {
+            res.redirect('/users/'+req.params.id);
+        }
         db.Follow.create({
             follower_id: req.session.userLoggedOn.id,
             following_id: req.params.id
@@ -109,6 +112,9 @@ var usersController = {
         })
     },
     unfollow: function (req, res) {
+        if (!req.session.userLoggedOn) {
+            res.redirect('/users/'+req.params.id);
+        }
         db.Follow.destroy(
             {
                 where: { follower_id: req.session.userLoggedOn.id, following_id: req.params.id }
